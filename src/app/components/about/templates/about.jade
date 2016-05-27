@@ -1,0 +1,55 @@
+section(class="{{ComponentClass}}")
+	.subheader.mrb-2r
+		.container-fluid
+			.row
+				.col-xs-9
+					h2.title About Us
+				.col-xs-3
+	article.content.mrb-2r
+		.container-fluid
+			.row
+				.col-xl-offset-1.col-xl-10
+					.row
+						.col-md-8.col-lg-9
+							include ./aboutcontent.jade
+						.col-md-4.col-lg-3
+							nav.accmenu
+								.flex.flex-col
+									accordion([closeOthers]='NAV_oneAtATime')
+										.header
+											i.icon.ion-android-list
+											span About us
+										accordion-group(#dashboard='', [isOpen]="status.isFirstOpen")
+											div(accordion-heading)
+												.title
+													i.icon.ion-monitor
+													span Dashboard
+													em.pull-right.icon([ngClass]="{'ion-android-arrow-dropup': dashboard?.isOpen, 'ion-android-arrow-dropdown': !dashboard?.isOpen}")
+											.content
+												ul.nav
+													li.nav-item
+														a.nav-link(href="javascript:void(0);") 
+															i.icon.ion-monitor
+															span Home  
+													li.nav-item
+														a.nav-link(href="javascript:void(0);") 
+															i.icon.ion-monitor
+															span About  
+													li.nav-item
+														a.nav-link(href="javascript:void(0);") 
+															i.icon.ion-monitor
+															span Home  
+													li.nav-item
+														a.nav-link(href="javascript:void(0);") 
+															i.icon.ion-monitor
+															span About
+										accordion-group
+											div(accordion-heading='fg')
+												.title
+													i.icon.ion-ios-pulse-strong
+													span Live FX Rates
+										accordion-group
+											div(accordion-heading)
+												.title
+													i.icon.ion-arrow-graph-up-right
+													span My Rates

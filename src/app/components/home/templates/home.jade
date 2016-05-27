@@ -1,0 +1,18 @@
+section.container-fluid(class="{{ComponentClass}}")
+	//- Quick Start
+	.row
+		.col-lg-12.flex.flex-col
+			include start.jade
+	.row.flex.flex-md-col
+		.col-lg-6.flex.flex-col
+			//- Booking Table 
+			include booking.jade
+		.col-lg-6.flex.flex-col
+			//- Live Rate Table
+			include liverate.jade
+	//- My Rates
+	.row
+		.col-lg-12.flex.flex-col
+			include myrate.jade
+
+

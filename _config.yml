@@ -1,0 +1,44 @@
+## BIZ4X Configuration
+## Docs: http://localhost:1234/
+
+## Site
+title: BIZ4X APP
+name: BIZ4X
+slogan: Beta Version 
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit
+author: 4XLabs
+keywords: BIZ4X
+language: en
+timezone:
+baseUrl: '/'
+
+host: localhost
+port: 8080
+ENV: ENV
+HMR: false
+
+## URL
+url: 4xlabs.co
+sitemap_url: biz4x.com
+icon: resources/img/logo.png
+
+## Notification
+notification: 
+    title: BIX4X Notification
+    desc: Welcome to BIZ4X 
+
+## Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+## SEO
+seo:
+  google_analytics: UA-XXXXX-X
+  app_appleID: 12345678
+  seo_geo: VN-64
+  seo_geo_lng: 12.345678
+  seo_geo_dlg: 164.0090909
+  app_facebook_adminsID: XXXXXXX,XXXXXXX
+  app_facebook_ID: XXXXXXX
+  
+  

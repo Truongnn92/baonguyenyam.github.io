@@ -1,0 +1,19 @@
+=set-button($value, $bg: #000, $color :#FFF, $per: 5%)
+	.btn
+		&.btn-#{$value}
+			+border-radius(3px)
+			+link ($color)
+			+bg ($bg, darken($bg, $per), darken($bg, $per))
+
++set-button(link, $color-link)
++set-button(hover, $color-hover)
++set-button(muted, $color-brown)
++set-button(main, $color-main)
++set-button(con, $color-con)
++set-button(danger, $color-danger)
++set-button(primary, $color-peter-river)
++set-button(warning, $color-warning)
++set-button(success, $color-success)
++set-button(voted, $color-sun-flower)
++set-button(amethyst, $color-amethyst)
++set-button(turquoise, $color-turquoise)

@@ -1,0 +1,13 @@
+describe('<%= name %>', function () {
+
+  beforeEach(function () {
+    browser.get('/');
+  });
+
+  it('should have <<%= name %>>', function () {
+    var <%= name %> = element(by.css('app <%= name %>'));
+    expect(<%= name %>.isPresent()).toEqual(true);
+    expect(<%= name %>.getText()).toEqual("<%= name %> Works!");
+  });
+
+});

@@ -1,0 +1,15 @@
+.card-container
+  md-card.sample-content(x-large='') Your Content Here
+  md-card
+    md-card-title Local State
+    md-card-content
+      form((ngsubmit)='submitState(localState.value)', autocomplete='off')
+        md-input(placeholder='Submit Local State to App State', [value]='localState.value', (input)='localState.value = $event.target.value', autofocus='')
+        button(md-raised-button='', color='primary') Submit Value
+      //
+        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
+        Rather than wiring up two-way data-binding ourselves with [value] and (input)
+        we can use Angular's [(ngModel)] syntax
+        <input type="text" [(ngModel)]="localState.value" autofocus>
+      pre.
+        \nthis.localState = {{ localState | json }}        

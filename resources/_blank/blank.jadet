@@ -1,0 +1,2 @@
+section.<%= name %>.container-fluid
+	h1 <%= name %>

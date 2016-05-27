@@ -1,0 +1,24 @@
+section.container-fluid(class="{{ComponentClass}}")
+	.row.mrt-xs-3r.mrb-xs-3r.mrt-md-5r.mrb-md-5r
+		.col-sm-offset-1.col-sm-10.col-md-offset-2.col-md-8.col-lg-offset-3.col-lg-6
+			.box.box-primary.box-lg.box-ribbon.free-size
+				.box-header
+					h3.title Forgot your password
+					.group-control
+						ul.nav
+							li.nav-link
+								a([routerLink]="['/AuthenticationContainer','AuthenticationHomeContainer']")
+									i.icon.ion-ios-undo
+					.sub-header Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				.box-content.padding.padding-large
+					form
+						.row
+							.col-sm-12
+								fieldset
+									input.form-control(value="", placeholder="Email")
+				.box-footer
+					.row
+						.col-sm-6.xs-center.sm-left
+							a.btn(href="") Login!
+						.col-sm-6.xs-center.sm-right
+							button.btn.btn-primary.btn-xs-block(type='button') Forgot!

@@ -1,0 +1,45 @@
+section.container-fluid(class="{{ComponentClass}}")
+	.row.mrt-xs-3r.mrb-xs-3r.mrt-md-5r.mrb-md-5r
+		.col-sm-offset-1.col-sm-10.col-md-offset-2.col-md-8.col-lg-offset-3.col-lg-6
+			.box.box-primary.box-lg.box-ribbon.free-size
+				.box-header
+					h3.title Login Page
+					.group-control
+						ul.nav
+							li.nav-link
+								a([routerLink]="['/AuthenticationContainer','ForgotAccountContainer']")
+									i.icon.ion-locked
+					alert([hidden]='!errorMessage', dismissOnTimeout="1000000", type="danger", dismissible="true", closable="true") {{errorMessage}}
+					.sub-header Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				form(role='form', (submit)='login($event, username.value, password.value)')
+					.box-content.padding.padding-large
+							.row
+								.col-sm-8.box-left
+									fieldset.form-group
+										input.form-control(type='text', #username='', ngControl="username", placeholder='Username', required)
+									fieldset
+										input.form-control(type='password', #password='', ngControl="password", placeholder='Password', required)
+								.col-sm-4.box-right.sm-right.xs-center
+									fieldset.form-group
+										| Login with
+									ul.nav.xs-center.sm-right.control
+										li.nav-link
+											a(href="javascript:void(0);", tooltip="Facebook", tooltipPlacement="bottom")
+												i.icon.ion-social-facebook
+										li.nav-link
+											a(href="javascript:void(0);", tooltip="Twitter", tooltipPlacement="bottom")
+												i.icon.ion-social-twitter
+										li.nav-link
+											a(href="javascript:void(0);", tooltip="Google", tooltipPlacement="bottom")
+												i.icon.ion-social-google
+					.box-footer
+						.row
+							.col-sm-6.xs-center.sm-left
+								.checkbox
+									label.c-input.c-checkbox
+										input(type='checkbox')
+										span.c-indicator
+										| 
+										|  Remember password
+							.col-sm-6.xs-center.sm-right
+								button.btn.btn-primary.btn-xs-block(type='submit') Login

@@ -1,0 +1,176 @@
+// Margin
+$gennumtop: 0
+$gennumbot: 0
+$gennumtoprem: 0
+$gennumbotrem: 0
+$lineheight: 0
+@while $gennumtop < 200
+  .mrt-#{$gennumtop}
+    margin-top: #{$gennumtop}px
+  .mrt-xs-#{$gennumtop}
+    @include media-breakpoint-down(sm)
+      margin-top: #{$gennumtop}px
+  .mrt-sm-#{$gennumtop}
+    @include media-breakpoint-up(sm)
+      margin-top: #{$gennumtop}px
+  .mrt-md-#{$gennumtop}
+    @include media-breakpoint-up(md)
+      margin-top: #{$gennumtop}px
+  .mrt-lg-#{$gennumtop}
+    @include media-breakpoint-up(lg)
+      margin-top: #{$gennumtop}px
+  .mrt-xl-#{$gennumtop}
+    @include media-breakpoint-up(xl)
+      margin-top: #{$gennumtop}px
+  .pdl-#{$gennumtop}
+    padding-left: #{$gennumtop}px
+  .pdl-xs-#{$gennumtop}
+    @include media-breakpoint-down(sm)
+      padding-left: #{$gennumtop}px
+  .pdl-sm-#{$gennumtop}
+    @include media-breakpoint-up(sm)
+      padding-left: #{$gennumtop}px
+  .pdl-md-#{$gennumtop}
+    @include media-breakpoint-up(md)
+      padding-left: #{$gennumtop}px
+  .pdl-lg-#{$gennumtop}
+    @include media-breakpoint-up(lg)
+      padding-left: #{$gennumtop}px
+  .pdl-xl-#{$gennumtop}
+    @include media-breakpoint-up(xl)
+      padding-left: #{$gennumtop}px
+  $gennumtop: $gennumtop + 5
+@while $gennumbot < 200
+  .mrb-#{$gennumbot}
+    margin-bottom: #{$gennumbot}px
+  .mrb-xs-#{$gennumbot}
+    @include media-breakpoint-down(sm)
+      margin-bottom: #{$gennumbot}px
+  .mrb-sm-#{$gennumbot}
+    @include media-breakpoint-up(sm)
+      margin-bottom: #{$gennumbot}px
+  .mrb-md-#{$gennumbot}
+    @include media-breakpoint-up(md)
+      margin-bottom: #{$gennumbot}px
+  .mrb-lg-#{$gennumbot}
+    @include media-breakpoint-up(lg)
+      margin-bottom: #{$gennumbot}px
+  .mrb-xl-#{$gennumbot}
+    @include media-breakpoint-up(xl)
+      margin-bottom: #{$gennumbot}px
+  .pdr-#{$gennumbot}
+    padding-right: #{$gennumbot}px
+  .pdr-xs-#{$gennumbot}
+    @include media-breakpoint-down(sm)
+      padding-right: #{$gennumbot}px
+  .pdr-sm-#{$gennumbot}
+    @include media-breakpoint-up(sm)
+      padding-right: #{$gennumbot}px
+  .pdr-md-#{$gennumbot}
+    @include media-breakpoint-up(md)
+      padding-right: #{$gennumbot}px
+  .pdr-lg-#{$gennumbot}
+    @include media-breakpoint-up(lg)
+      padding-right: #{$gennumbot}px
+  .pdr-xl-#{$gennumbot}
+    @include media-breakpoint-up(xl)
+      padding-right: #{$gennumbot}px
+  $gennumbot: $gennumbot + 5
+
+@while $gennumtoprem < 10
+  $indexrem: str-replace(''+ $gennumtoprem, '.', '')
+  .mrt-#{$indexrem}r
+    margin-top: #{$gennumtoprem}rem
+  .mrt-xs-#{$indexrem}r
+    @include media-breakpoint-down(sm)
+      margin-top: #{$gennumtoprem}rem
+  .mrt-sm-#{$indexrem}r
+    @include media-breakpoint-up(sm)
+      margin-top: #{$gennumtoprem}rem
+  .mrt-md-#{$indexrem}r
+    @include media-breakpoint-up(md)
+      margin-top: #{$gennumtoprem}rem
+  .mrt-lg-#{$indexrem}r
+    @include media-breakpoint-up(lg)
+      margin-top: #{$gennumtoprem}rem
+  .mrt-xl-#{$indexrem}r
+    @include media-breakpoint-up(xl)
+      margin-top: #{$gennumtoprem}rem
+  .pdl-#{$indexrem}r
+    padding-left: #{$gennumtoprem}rem
+  .pdl-xs-#{$indexrem}r
+    @include media-breakpoint-down(sm)
+      padding-left: #{$gennumtoprem}rem
+  .pdl-sm-#{$indexrem}r
+    @include media-breakpoint-up(sm)
+      padding-left: #{$gennumtoprem}rem
+  .pdl-md-#{$indexrem}r
+    @include media-breakpoint-up(md)
+      padding-left: #{$gennumtoprem}rem
+  .pdl-lg-#{$indexrem}r
+    @include media-breakpoint-up(lg)
+      padding-left: #{$gennumtoprem}rem
+  .pdl-xl-#{$indexrem}r
+    @include media-breakpoint-up(xl)
+      padding-left: #{$gennumtoprem}rem
+  $gennumtoprem: $gennumtoprem + .1
+@while $gennumbotrem < 10
+  $indexrem: str-replace(''+ $gennumbotrem, '.', '')
+  .mrb-#{$indexrem}r
+    margin-bottom: #{$gennumbotrem}rem
+  .mrb-xs-#{$indexrem}r
+    @include media-breakpoint-down(sm)
+      margin-bottom: #{$gennumbotrem}rem
+  .mrb-sm-#{$indexrem}r
+    @include media-breakpoint-up(sm)
+      margin-bottom: #{$gennumbotrem}rem
+  .mrb-md-#{$indexrem}r
+    @include media-breakpoint-up(md)
+      margin-bottom: #{$gennumbotrem}rem
+  .mrb-lg-#{$indexrem}r
+    @include media-breakpoint-up(lg)
+      margin-bottom: #{$gennumbotrem}rem
+  .mrb-xl-#{$indexrem}r
+    @include media-breakpoint-up(xl)
+      margin-bottom: #{$gennumbotrem}rem
+  .pdr-#{$indexrem}r
+    padding-right: #{$gennumbotrem}rem
+  .pdr-xs-#{$indexrem}r
+    @include media-breakpoint-down(sm)
+      padding-right: #{$gennumbotrem}rem
+  .pdr-sm-#{$indexrem}r
+    @include media-breakpoint-up(sm)
+      padding-right: #{$gennumbotrem}rem
+  .pdr-md-#{$indexrem}r
+    @include media-breakpoint-up(md)
+      padding-right: #{$gennumbotrem}rem
+  .pdr-lg-#{$indexrem}r
+    @include media-breakpoint-up(lg)
+      padding-right: #{$gennumbotrem}rem
+  .pdr-xl-#{$indexrem}r
+    @include media-breakpoint-up(xl)
+      padding-right: #{$gennumbotrem}rem
+  $gennumbotrem: $gennumbotrem + .1
+
+@while $lineheight < 10
+  $indexrem: str-replace(''+ $lineheight, '.', '')
+  .lh-#{$indexrem}r
+    line-height: #{$lineheight}rem
+  .lh-xs-#{$indexrem}r
+    @include media-breakpoint-down(sm)
+      line-height: #{$lineheight}rem
+  .lh-sm-#{$indexrem}r
+    @include media-breakpoint-up(sm)
+      line-height: #{$lineheight}rem
+  .lh-md-#{$indexrem}r
+    @include media-breakpoint-up(md)
+      line-height: #{$lineheight}rem
+  .lh-lg-#{$indexrem}r
+    @include media-breakpoint-up(lg)
+      line-height: #{$lineheight}rem
+  .lh-xl-#{$indexrem}r
+    @include media-breakpoint-up(xl)
+      line-height: #{$lineheight}rem
+  $lineheight: $lineheight + .1
+
+

@@ -1,0 +1,55 @@
+.box.box-success.box-lg.box-ribbon.flex.flex-col
+	.box-header
+		h3.title My Rates
+			span.label.label-pill.label-noted 34
+		.group-control
+			ul.nav
+				li.nav-link
+					.quicksearch
+						label(for="quicksearchlive",(click)="MyRate_isCollapsed = !MyRate_isCollapsed")
+							i.icon.ion-search
+						.se([ngClass]="{active: MyRate_isCollapsed}")
+							input#quicksearchlive.form-control(placeholder="Search Live FX Rates") 
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-refresh
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-minus
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-arrow-expand
+	.box-content
+		table.table.table-sm.tablerate
+			thead.thead-default
+				tr
+					th No
+					th CCY
+					th Buy
+					th Mid Market
+					th Sell
+					th Display
+			tbody
+				tr(*ngFor='let item of liverate')
+					td.no
+						span.flag-icon.flag-icon-squared(class="flag-icon-{{item.Code}}")
+					th.ccy(scope='row')
+						a(href="javascript:void(0);") {{item.Name}}
+						| 
+						a(href="javascript:void(0);") 
+							i.icon.ion-arrow-graph-up-right
+					td.buy 
+						a(href="javascript:void(0);") {{item.Buy}}
+					td.mid 
+						a(href="javascript:void(0);") {{item.Mid}}
+					td.sell
+						a(href="javascript:void(0);") {{item.Sell}}
+							| 
+							i.icon.ion-android-arrow-up
+					td.display 
+						.tg-list
+							.tg-list-item
+								input.tgl.tgl-flat(id="{{item.Name}}", type='checkbox', checked ,*ngIf="item.Display")
+								input.tgl.tgl-flat(id="{{item.Name}}",type='checkbox',*ngIf="!item.Display")
+								label.tgl-btn(for='')
+	.box-footer

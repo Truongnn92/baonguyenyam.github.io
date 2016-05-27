@@ -1,0 +1,77 @@
+.box.flex.flex-col
+	.box-header
+		h3.title Booking GET4X
+			span.label.label-pill.label-noted 10
+		.group-control
+			ul.nav
+				li.nav-link
+					.quicksearch
+						label(for="quicksearchbooking",(click)="Booking_isCollapsed = !Booking_isCollapsed")
+							i.icon.ion-search
+						.se([ngClass]="{active: Booking_isCollapsed}")
+							input#quicksearchbooking.form-control(placeholder="Search Booking") 
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-refresh
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-minus
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-arrow-expand
+	.box-content.padding.padding-large
+		.list-group
+			.list-group-item.has-status(*ngFor="let item of booking", #bookingGroup, [ngClass]="{'inactive': bookingGroup?.isOpen, '': !bookingGroup?.isOpen}")
+				.item
+					span.status([ngClass]="{'red':item.status=='booking','blue':item.status=='done', 'status-blue':item.status_child=='edit','':item.status_child=='remove','status-red':item.status_child=='expired','status-cyan':item.status_child=='redirect','status-yellow':item.status_child=='waiting' }")
+						sup(*ngIf="item.status_child")
+						| {{item.ID}}
+					strong BUY {{item.buy}}/SELL {{item.sell}}
+						| 
+					a(href="javascript:void(0);") {{item.rate}}
+					| 
+					.control
+						ul.nav
+							li.nav-link
+								time {{item.time}}s
+							li.nav-link(*ngIf="item.status=='booking'")
+								a.accept(href="javascript:void(0);")
+									i.icon.ion-ios-checkmark
+							li.nav-link(*ngIf="item.status=='booking'")
+								a.more(href="javascript:void(0);")
+									i.icon.ion-more((click)="booking.isOpen = !booking.isOpen; bookingGroup.isOpen = !bookingGroup.isOpen")
+				.collapse(#booking, [ngClass]="{'in': booking?.isOpen, '': !booking?.isOpen}")
+					.list-group.mrb-10(*ngIf="item.status=='booking'")
+						.list-group-item
+							.row.item
+								.col-xs-10
+									strong Booking request ID {{item.code}} 
+								.col-xs-2.time
+									time {{item.time}}s
+							.row.item
+								.col-xs-10
+									strong BUY AMOUNT CCY – SELL AMOUNT CCY
+								.col-xs-2.accept
+									a(href="javascript:void(0);")
+										i.icon.ion-checkmark-circled
+							.row.item
+								.col-xs-10
+									strong 
+										| Rate at
+										|  
+										span.edittext 
+											| {{item.rate}}
+											| 
+											input.input-sm(value="{{item.rate}}")
+										| 
+										| based on your last update.
+								.col-xs-2.edit
+									a(href="javascript:void(0);")
+										i.edit.icon.ion-edit
+							.row.item
+								.col-xs-10
+									strong.text-danger Cancel
+								.col-xs-2.delete
+									a(href="javascript:void(0);")
+										i.icon.ion-close-circled
+	.box-footer

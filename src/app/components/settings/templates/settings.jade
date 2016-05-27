@@ -1,0 +1,109 @@
+section.container-fluid(class="{{ComponentClass}}")
+	.row.mrt-2r
+		.col-lg-12
+			.box.free-size
+				.box-header
+					.row
+						.col-xs-12
+							h3.cost.title Settings
+				.box-content
+					.row
+						.col-lg-9
+							h4 General Settings
+							hr 
+							form
+								.form-group
+									label(for='inputEmail3') 
+										strong Email
+									input#inputEmail3.form-control.w-sm-12.w-lg-6(type='email', placeholder='Email')
+									small.text-muted We'll never share your email with anyone else.
+								.form-group
+									label(for='inputPassword3') 
+										strong Password
+									input#inputPassword3.form-control.w-sm-12.w-lg-6(type='password', placeholder='Password')
+								.radio
+									label.c-input.c-radio
+										input#radio1(name='radio', type='radio')
+										strong.c-indicator
+										|   Toggle
+									label.c-input.c-radio
+										input#radio2(name='radio', type='radio')
+										strong.c-indicator
+										| Radio
+								.radio
+									.c-inputs-stacked
+										label.c-input.c-radio
+											input#radio1(name='radio', type='radio')
+											strong.c-indicator
+											|   Toggle this custom radio
+										label.c-input.c-radio
+											input#radio2(name='radio', type='radio')
+											strong.c-indicator
+											|   Or toggle this other custom radio
+								.checkbox
+									label.c-input.c-checkbox
+										input(type='checkbox')
+										strong.c-indicator
+										| Check this custom checkbox
+								.form-group
+									label
+										strong Select
+									div 
+										select.c-select.form-control.w-sm-12.w-lg-6
+											option(selected='') Open this select menu
+											option(value='1') One
+											option(value='2') Two
+											option(value='3') Three
+								button.mrt-2r.btn.btn-con.text-uppercase Save Change
+
+								h4.mrt-2r Tax and Pricing
+								hr 
+								.form-group
+									label
+										strong Files
+									input.form-control-file#file(type='file')
+								h5 Relationships
+								p To get you up and running quickly, we recommend you to invite some customers to your B2B eCommerce platform. You can manage this per company and per contact in the Relationships section; you may also invite them all below.
+								kbd NOTE
+								p This will not invite contacts of disabled companies or contacts you have already invited.
+
+								button.mrt-2r.btn.btn-con.text-uppercase.btn-lg Invite all Business Customers
+
+						.col-lg-3
+							h4.title.text-con
+								i.icon.ion-bag
+								| 
+								| Your Store
+							p You have 
+								span.label.label-con.label-pill 89
+								| 
+								| items in your cart
+							hr
+							p.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi labore quia, repellendus ea culpa harum, saepe commodi eos tempore illum, praesentium quibusdam eveniet quod ullam nostrum sed. Maiores, iure, vel.
+							ul.nav
+								li.nav-item
+									a.nav-link(href="#")
+										i.icon.ion-android-arrow-dropright
+										| 
+										| Lorem ipsum dolor sit amet
+								li.nav-item
+									a.nav-link(href="#")
+										i.icon.ion-android-arrow-dropright
+										| 
+										| Consectetur adipiscing elit
+								li.nav-item
+									a.nav-link(href="#")
+										i.icon.ion-android-arrow-dropright
+										| 
+										| Integer molestie lorem at massa
+								li.nav-item
+									a.nav-link(href="#")
+										i.icon.ion-android-arrow-dropright
+										| 
+										| Facilisis in pretium nisl aliquet
+							blockquote.blockquote.mrt-1r
+								p.m-b-0
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+								footer.blockquote-footer
+									| Someone famous in 
+									cite(title='Source Title') Source Title

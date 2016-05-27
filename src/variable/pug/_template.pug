@@ -1,0 +1,30 @@
+doctype html
+//
+	 
+	$$$$$$$\  $$$$$$\ $$$$$$$$\ $$\   $$\ $$\   $$\
+	$$  __$$\ \_$$  _|\____$$  |$$ |  $$ |$$ |  $$ |
+	$$ |  $$ |  $$ |      $$  / $$ |  $$ |\$$\ $$  |
+	$$$$$$$\ |  $$ |     $$  /  $$$$$$$$ | \$$$$  /
+	$$  __$$\   $$ |    $$  /   \_____$$ | $$  $$<
+	$$ |  $$ |  $$ |   $$  /          $$ |$$  /\$$\
+	$$$$$$$  |$$$$$$\ $$$$$$$$\       $$ |$$ /  $$ |
+	\_______/ \______|\________|      \__|\__|  \__|
+
+//- https://github.com/ampedandwired/html-webpack-plugin/tree/master/examples/jade-loader
+
+html(dir='ltr', lang='en')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name='format-detection', content='telephone=no')
+		meta(name='msapplication-tap-highlight', content='no')
+		base(href=webpackConfig.metadata.baseUrl)
+		title= webpackConfig.metadata.title
+		include _favicon.jade
+		//- include _seo.jade
+		include _css.jade
+	body
+		app Loading...
+		include _script.jade
+		if (webpackConfig.metadata.ENV === 'development')
+			script(src="/webpack-dev-server.js")

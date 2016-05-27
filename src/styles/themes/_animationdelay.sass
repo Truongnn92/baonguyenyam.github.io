@@ -1,0 +1,8 @@
+$genanimation: 0
+
+@while $genanimation < 10
+  $indexrem: str-replace(''+ $genanimation, '.', '')
+  .animated.delay-#{$indexrem}
+    -webkit-animation-delay: #{$genanimation}s
+    animation-delay: #{$genanimation}s
+  $genanimation: $genanimation + .1

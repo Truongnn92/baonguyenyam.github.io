@@ -1,0 +1,93 @@
+@-moz-document url-prefix()
+	fieldset
+		display: table-cell
+
+.tablerate
+	thead
+		&.thead-default
+			tr
+				th, td
+					vertical-align: middle
+					font-weight: 400
+					&:first-child
+						+pad(1rem, left)
+					+border(darken($color-white, 10%), 2px, 1, bottom)
+					a
+						color: darken($color-white, 40%)
+						i
+							font-weight: bold
+							font-size: 1.2rem
+					.sorter
+						display: block
+						position: relative
+						i 
+							+position(1, 0, '', '', 0)
+							+opacity(.25)
+						&:hover
+							i 
+								+opacity(1)
+	tbody
+		color: darken($color-white,60%)
+		tr
+			&:nth-of-type(even)
+				background-color: $color-white
+			td, th
+				font-weight: 400
+				vertical-align: middle
+				&:first-child
+					+pad(1rem, left)
+				&.status
+					+fz(.8rem)
+					.status
+						background: darken($color-white, 5%)
+						+pad(0 .3rem)
+						+border-radius(1rem)
+						+lh(1.3rem)
+						display: inline-block
+						height: 1.3rem
+						i 
+							&:before
+								+lh(1.3rem)
+						&.status-online
+							i
+								color: $color-success
+						&.status-offline
+							i
+								color: darken($color-white, 30%)
+				&.available
+					span 
+						color: $color-success
+				&.check
+					width: 10px
+				&.avatar
+					width: 50px
+					img
+						max-width: 40px
+						+border-radius(3px)
+				&.time 
+					color: darken($color-white, 15%)
+					+fz(.85rem)
+				&.pair
+					i
+						color: $color-tb-02-con
+						font-weight: bold
+						font-size: 1.2rem
+				&.change
+					&.up
+						a 
+							color: $color-tb-02-link
+					&.down
+						a 
+							color: $color-tb-02-hover
+				&.ccy
+					i
+						color: $color-tb-03-link
+						font-weight: bold
+						font-size: 1.2rem
+				&.no
+					.flag-icon-squared 
+						width: 1.5rem
+						height: 1.5rem
+						+border-radius(50%)
+						+border(darken($color-white, 7%), 1px, 1, '')
+					

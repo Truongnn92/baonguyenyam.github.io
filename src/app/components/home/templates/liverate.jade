@@ -1,0 +1,47 @@
+.box.box-liverate.box-lg.box-ribbon.flex.flex-col
+	.box-header
+		h3.title LIVE FX Rates
+			span.label.label-pill.label-noted 6
+		.group-control
+			ul.nav
+				li.nav-link
+					.quicksearch
+						label(for="quicksearchlive",(click)="Live_isCollapsed = !Live_isCollapsed")
+							i.icon.ion-search
+						.se([ngClass]="{active: Live_isCollapsed}")
+							input#quicksearchlive.form-control([(ngModel)]="LiveRateQuery", placeholder="Search Live FX Rates") 
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-refresh
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-minus
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-arrow-expand
+	.box-content
+		table.table.table-sm.tablerate
+			thead.thead-default
+				tr
+					th(*ngFor="let col of columnsLiveRate", #sortLiveRateGroup, [ngClass]="{'sort-up': sortLiveRateGroup?.isOpen, 'sort-down': !sortLiveRateGroup?.isOpen}")
+						a.sorter(href="javascript:void(0);", (click)='sortLiveRate(col.name); sortLiveRateGroup.isOpen = !sortLiveRateGroup.isOpen') {{col.descr}}  
+							i.icon.ion-android-arrow-up(*ngIf="sortLiveRateGroup?.isOpen")
+							i.icon.ion-android-arrow-down(*ngIf="!sortLiveRateGroup?.isOpen")
+			tbody
+				tr(*ngFor="let item of rowLiveFxRate")
+					//- td(*ngFor='let col of columnsLiveRate') {{i}} {{row[col.name]}}
+					th.pair(scope='row')
+						a(href="{{item.Map}}", target="_blank") {{item.Name}}
+						| 
+						a(href="{{item.Map}}", target="_blank") 
+							i.icon.ion-arrow-graph-up-right
+					td.pid 
+						a(href="javascript:void(0);") {{item.Pid}}
+					td.ask 
+						a(href="javascript:void(0);") {{item.Ask}}
+					td.change.down
+						a(href="javascript:void(0);") {{item.Change}}
+							| 
+							i.icon.ion-android-arrow-up
+					td.time {{item.Update}}
+	.box-footer

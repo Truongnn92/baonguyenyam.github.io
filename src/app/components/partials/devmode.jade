@@ -1,0 +1,45 @@
+section.devmode-btn([ngClass]="{active: DEVMODE_isGlobalCollapsed}")
+	a.btn.btn-sm.btn-voted(href="javascript:void(0);", (click)="TodoList.open()") TODO LIST
+	| 
+	a.btn.btn-sm.btn-muted(href="javascript:void(0);",  (click)="DEVMODE_isGlobalCollapsed = !DEVMODE_isGlobalCollapsed") DEV MODE
+section.devmode([ngClass]="{active: DEVMODE_isGlobalCollapsed, hidebg: DEVMODEBG_isGlobalCollapsed, hide: DEVMODEGRID_isGlobalCollapsed}")
+	.dev-control
+		kbd.mrb-1r DEV MODE
+		.devmode-btn
+			a.btn.btn-sm.btn-muted(href="javascript:void(0);",  (click)="DEVMODEGRID_isGlobalCollapsed = !DEVMODEGRID_isGlobalCollapsed") HIDE GRID
+			| 
+			a.btn.btn-sm.btn-muted(href="javascript:void(0);",  (click)="DEVMODEBG_isGlobalCollapsed = !DEVMODEBG_isGlobalCollapsed") HIDE BG
+			| 
+			a.btn.btn-sm.btn-muted(href="javascript:void(0);",  (click)="DEVMODE_isGlobalCollapsed = !DEVMODE_isGlobalCollapsed") CLOSE DEV MODE
+	.container-fluid 
+		.row
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+			.col-xs-1
+				.gitter
+
+	modal(#TodoList, title='Todo List', modalClass="modal-lg modal-sm todolist")
+		modal-content
+			include:marked ../../../TODO.md
+		modal-footer
+			button.btn.btn-danger((click)='TodoList.close()') CLOSE

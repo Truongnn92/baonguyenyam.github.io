@@ -1,0 +1,482 @@
+.menuleft
+	+position('', 0, -250px, '','')
+	background: $color-midnight-blue
+	width: 250px
+	color: lighten($color-midnight-blue, 10%)
+	z-index: 1000
+	height: 100% !important
+	+transition(all 0.5s ease-in-out)
+	&.active
+		+position('', 0, 0, '','')
+	// List 
+	accordion
+		.header
+			color: $color-white
+			background: $color-con
+			+pad(0 1rem)
+			+fz(1.2rem)
+			+lh(3.6rem)
+			position: relative
+			.app-icon
+				+position(1, .7rem, 1rem, '', '')
+				overflow: hidden
+				svg 
+					width: 30px
+					height: 30px
+
+			i
+				+fz(1.5rem)
+				// +mar(.5rem, right)
+				width: 1.5rem
+				text-align: center
+				display: inline-block
+				+position(1, .65rem, 1rem, '', '')
+			em 
+				+position(1, 0, '', '', 1rem)
+				cursor: pointer
+			span 
+				+transition(all 0.5s ease-in-out)
+				+pad(3rem,left)
+		accordion-group
+			.panel
+				position: relative
+				+border(darken($color-midnight-blue, 3%), 1px, 1, bottom)
+				&:after
+					content: ''
+					display: block
+					width: 100%
+					height: 1px 
+					+position(1, '', 0, -2px, '')
+					background: lighten($color-midnight-blue, 10%)
+				.panel-heading
+					background: $color-midnight-blue
+					.panel-title
+						+lh(3rem)
+						+mar(0)
+						.accordion-toggle
+							text-decoration: none
+							+fw(400)
+							&:focus
+								outline: none
+							.title
+								+pad(.75rem 1rem)
+								+lh(1.5rem)
+								color: lighten($color-midnight-blue, 20%)
+								text-decoration: none
+								+fz(1rem)
+								i
+									+fz(1.5rem)
+									+mar(.5rem, right)
+									width: 1.5rem
+									text-align: center
+									display: inline-block
+								.label 
+									+fz(.8rem)
+									+fw(400)
+								span
+									+transition(all 0.5s ease-in-out)
+				.panel-collapse
+					.panel-body
+						.content
+							// +pad(.5rem 0)
+							.nav
+								.nav-item
+									.nav-link
+										+pad(.5rem 1rem)
+										display: block
+										+link(lighten($color-midnight-blue, 20%), $color-white, $color-white)
+										+lh(1.5rem)
+										i
+											+fz(1.1rem)
+											+mar(.5rem, right)
+									&:hover
+										+bg(darken($color-midnight-blue, 3%), '', '')
+			&.panel-open, &:hover
+				.panel
+					.panel-heading
+						background: darken($color-midnight-blue, 7%)
+						.panel-title
+							.accordion-toggle
+								.title
+									color: $color-white
+					.panel-collapse
+						background: darken($color-midnight-blue, 5%)
+			&.panel-open
+				.panel
+					.panel-collapse
+						+border(darken($color-midnight-blue, 3%), 1px, 1, top)
+	.version
+		+justify-content(flex-end)
+		+flex-basis(0)
+		+flex-grow(1)
+		+pad(1rem)
+		text-align: center
+		color: $color-con
+	.layout 
+		accordion
+			.headersub
+				color: $color-white
+				+pad(0 1rem)
+				+fz(1.2rem)
+				+lh(3rem)
+				height: 3rem !important
+				background: darken($color-midnight-blue, 10%)
+				white-space: nowrap
+				overflow: hidden
+				*
+					white-space: nowrap
+				i
+					+position(2, '', '', '', '')
+				span 
+					+transition(all 0.5s ease-in-out)
+					// +pad(1rem,left)
+			accordion-group
+				.panel
+					.panel-collapse
+						.panel-body
+							.content 
+								label 
+									+mar(0)
+									+link(lighten($color-midnight-blue, 20%), $color-white, $color-white)
+									// display: block
+	&.active
+		.layout 
+			accordion
+				.headersub
+					i
+						+fz(1.5rem)
+					span
+						+mar(1rem, left)
+.biz4xapp
+	width: 100%
+	height: 100%
+	&.menu-biz4x-default
+		.menuleft
+			overflow-y: auto
+	&.menu-biz4x-floaticon,&.menu-biz4x-float
+		&.active 
+			.menuleft
+				overflow-y: auto
+				+box-shadow(3px, 0px, 4px, rgba(0,0,0,.3))
+	&.menu-biz4x-inline
+		+pad(250px, left)
+		+transition(all .5s ease-in-out)
+		header .navbar .collapse .nav.navbar-right .nav-item .textnote
+			white-space: nowrap
+			max-width: 200px
+			overflow: hidden
+			text-overflow: ellipsis
+			+transition(all .5s ease-in-out)
+		&.active
+			+pad(60px, left)
+			header .navbar .collapse .nav.navbar-right .nav-item .textnote
+				white-space: nowrap
+				max-width: 410px
+				overflow: hidden
+				text-overflow: ellipsis
+		.menuleft
+			+position('', 0, 0, '','')
+			overflow-y: auto
+			.header
+				height: 3.6rem
+				overflow: hidden
+				*
+					white-space: nowrap
+				// em 
+				// 	display: none
+			accordion-group
+				.panel
+					.panel-heading
+						.panel-title
+							height: 3rem
+							overflow: hidden
+							*
+								white-space: nowrap
+							.accordion-toggle
+								.title
+									position: relative
+			.layout 
+				.headersub
+					overflow: hidden
+					*
+						white-space: nowrap
+					span
+						+mar(1rem, left)
+					i
+						+fz(1.5rem)
+			&.active
+				width: 60px
+				overflow-y: initial
+				accordion
+					.header
+						text-align: center
+						i
+							+mar(0)
+							+fz(2rem)
+						span, em
+							+transition(all 1s ease-out)
+							display: none
+							white-space: nowrap
+					accordion-group
+						.panel
+							.panel-heading
+								.panel-title
+									.accordion-toggle
+										.title
+											text-align: center
+											i
+												+mar(0)
+												+fz(2rem)
+											span, em
+												+transition(all 1s ease-out)
+												display: none
+												white-space: nowrap
+											.label
+												+position(1, 6px, '', '',6px)
+							.panel-collapse
+								+position(1, 0, 100%, '','')
+								width: 252px
+								.panel-body
+									.content
+										.nav
+											.nav-item
+												.nav-link
+													+lh(2rem)
+				.layout
+					accordion
+						.headersub
+							text-align: center
+							i
+								+mar(0)
+								+fz(2rem)
+							span, em
+								+transition(all 1s ease-out)
+								display: none
+								white-space: nowrap
+	&.menu-biz4x-inlineicon
+		+pad(60px, left)
+		+transition(all .5s ease-in-out)
+		&.active
+			+pad(250px, left)
+		.menuleft
+			+position('', 0, 0, '','')
+			width: 60px
+			accordion
+				.header
+					height: 3.6rem
+					text-align: center
+					i
+						+mar(0)
+						+fz(2rem)
+					span, em
+						+transition(all 1s ease-out)
+						display: none
+						// white-space: nowrap
+				accordion-group
+					.panel
+						.panel-heading
+							.panel-title
+								.accordion-toggle
+									.title
+										text-align: center
+										i
+											+mar(0)
+											+fz(2rem)
+										span, em
+											+transition(all 1s ease-out)
+											display: none
+											// white-space: nowrap
+										.label
+											+position(1, 6px, '', '',6px)
+						.panel-collapse
+							+position(1, 0, 100%, '','')
+							width: 252px
+							.panel-body
+								.content
+									.nav
+										.nav-item
+											.nav-link
+												+lh(2rem)
+			.layout 
+				accordion
+					.headersub
+						text-align: center
+						i
+							+mar(0)
+							+fz(2rem)
+						span, em
+							+transition(all 1s ease-out)
+							display: none
+							+mar(1rem, left)
+	
+			&.active
+				width: 250px
+				overflow-y: auto
+				accordion
+					.header
+						height: 3.6rem
+						overflow: hidden
+						text-align: left
+						*
+							white-space: nowrap
+						em, span
+							display: inline-block
+						i 
+							+fz(1.5rem)
+							+mar(0.5rem, right)
+					accordion-group
+						.panel
+							.panel-heading
+								.panel-title
+									height: 3rem
+									overflow: hidden
+									text-align: left
+									*
+										white-space: nowrap
+									i 
+										+mar(0.5rem, right)
+									.accordion-toggle
+										.title
+											text-align: left
+											position: relative
+											i 
+												+fz(1.5rem)
+												+mar(0.5rem, right)
+											em, span
+												display: inline-block
+											.label
+												+position(2, 0, '', '',0) 
+												+mar(.5rem, left)
+							.panel-collapse
+								+position(2, 0, 0, '','')
+								width: 100%
+								.panel-body
+									.content
+										.nav
+											.nav-item
+												.nav-link
+				.layout
+					accordion
+						.headersub
+							overflow: hidden
+							text-align: left
+							*
+								white-space: nowrap
+							em, span
+								display: inline-block
+							i 
+								+fz(1.5rem)
+								// +mar(0.5rem, right)
+
+	&.menu-biz4x-floaticon
+		+pad(60px, left)
+		+transition(all .5s ease-in-out)
+		&.active
+			// +pad(250px, left)
+		.menuleft
+			+position(3, 0, 0, '','')
+			width: 60px
+			accordion
+				.header
+					height: 3.6rem
+					text-align: center
+					i
+						+mar(0)
+						+fz(2rem)
+					span, em
+						+transition(all 1s ease-out)
+						display: none
+						// white-space: nowrap
+				accordion-group
+					.panel
+						.panel-heading
+							.panel-title
+								.accordion-toggle
+									.title
+										text-align: center
+										i
+											+mar(0)
+											+fz(2rem)
+										span, em
+											+transition(all 1s ease-out)
+											display: none
+											// white-space: nowrap
+										.label
+											+position(1, 6px, '', '',6px)
+						.panel-collapse
+							+position(1, 0, 100%, '','')
+							width: 252px
+							.panel-body
+								.content
+									.nav
+										.nav-item
+											.nav-link
+												+lh(2rem)
+			.layout
+				accordion
+					.headersub
+						text-align: center
+						i
+							+mar(0)
+							+fz(2rem)
+						span, em
+							// +transition(all 1s ease-out)
+							display: none
+							// white-space: nowrap
+			&.active
+				width: 250px
+				accordion
+					.header
+						height: 3.6rem
+						overflow: hidden
+						text-align: left
+						*
+							white-space: nowrap
+						em, span
+							display: inline-block
+						i 
+							+fz(1.5rem)
+							+mar(0.5rem, right)
+					accordion-group
+						.panel
+							.panel-heading
+								.panel-title
+									height: 3rem
+									overflow: hidden
+									text-align: left
+									*
+										white-space: nowrap
+									i 
+										+mar(0.5rem, right)
+									.accordion-toggle
+										.title
+											text-align: left
+											position: relative
+											i 
+												+fz(1.5rem)
+												+mar(0.5rem, right)
+											em, span
+												display: inline-block
+											.label
+												+position(2, 0, '', '',0) 
+												+mar(.5rem, left)
+							.panel-collapse
+								+position(2, 0, 0, '','')
+								width: 100%
+								.panel-body
+									.content
+										.nav
+											.nav-item
+												.nav-link
+				.layout
+					accordion
+						.headersub
+							overflow: hidden
+							text-align: left
+							*
+								white-space: nowrap
+							em, span
+								display: inline-block
+								+transition(all 1s ease-out)
+							i 
+								+fz(1.5rem)

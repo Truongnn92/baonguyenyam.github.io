@@ -1,0 +1,38 @@
+section.controlbar.container-fluid([hidden]="DisableBreadcrumb")
+	.row([ngStyle]="{'font-size': 1 + 'rem'}")
+		.col-sm-6
+			breadcrumbs.hidden-xs-down
+				ol.breadcrumb
+					li
+						a BIZ4X
+			//- breadcrumb.hidden-sm-down([routeConfig]="routeConfig")
+		.col-xs-12.col-sm-6
+			ul.nav.pull-xs-right.control
+				li.nav-link.title([ngClass]="{active: isCollapsed}") {{BIZ4XNAV_title}}
+				li.nav-link
+					a(href="javascript:void(0);", [ngClass]="{active: isCollapsed}", (click)="isCollapsed = !isCollapsed")
+						i.icon.ion-android-settings
+			ul.nav.nav-sub.pull-xs-right.control([ngClass]="{active: isCollapsed}")
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.fa.fa-undo
+				li.nav-link
+					a([ngClass]="{active: isBold}", href="javascript:void(0);", (click)="isBold = !isBold")
+						i.fa.fa-bold
+				li.nav-link
+					a(href="javascript:void(0);", (click)="onChangeFontSize(0)")
+						i.fa.fa-font
+				li.nav-link
+					a(href="javascript:void(0);", (click)="onChangeFontSize(0.01)")
+						i.fa.fa-font
+						em.icon.ion-plus
+				li.nav-link
+					a(href="javascript:void(0);", (click)="onChangeFontSize(-0.01)")
+						i.fa.fa-font
+						em.icon.ion-minus
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-android-expand
+				li.nav-link
+					a(href="javascript:void(0);")
+						i.icon.ion-loop

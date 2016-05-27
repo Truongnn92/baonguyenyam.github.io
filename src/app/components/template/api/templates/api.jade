@@ -1,0 +1,205 @@
+section(class="{{ComponentClass}}")
+	.row.mrt-1r
+		.col-xs-12
+			.btn-group(role='group', aria-label='Basic example')
+				a.btn.btn-secondary([routerLink]="['/TemplateContainer']") Typography
+				a.btn.btn-secondary([routerLink]="['/TemplateContainer', 'BlockTemplateContainer']") Block
+				a.btn.btn-secondary([routerLink]="['/TemplateContainer', 'TableTemplateContainer']") Table
+				a.btn.btn-secondary([routerLink]="['/TemplateContainer', 'FormTemplateContainer']") Form
+				a.btn.btn-secondary([routerLink]="['/TemplateContainer', 'ApiTemplateContainer']") Api
+	hr 
+	h4.mrt-1r.mrb-1r Api 
+	.row 
+		.col-sm-12
+			.box.free-size
+				.box-content.padding.padding-large
+					h5 How to define the
+						code router
+						| for
+						code main page
+					hr
+					dl.dl-horizontal.row
+						dt.col-xs-5
+							code Step 1: Create the new component, use command
+						dd.col-xs-7
+							kbd gulp g -n PageName --jade --ts --e2e --spec
+						dt.col-xs-5
+							code Step 2: In the routes.ts file. Create new patch for the page in step 1.
+						dd.col-xs-7 
+							| { path: '/PageName/...', component: PageName, as: 'PageName', data: { ComponentClass: 'PageName', DisableBreadcrumb: true } }
+						dt.col-xs-5
+							code Step 3: Create the menu link to new page
+						dd.col-xs-7 
+							| li.nav-link([class.active]="router.isRouteActive(router.generate(['/PageName']))")} }
+							br
+							span.pdl-20 a([routerLink]="['/PageName']") 
+							em PageNameLabel
+					p
+						strong #Note
+						code PageNameLabel
+						| should be define in the settings.ts file and call from JSON Data Language
+					br
+					h5 How to define the
+						code router
+						| for
+						code child page
+					hr
+					dl.dl-horizontal.row
+						dt.col-xs-5
+							code Step 1: Import Route Config from 'angular2/router'
+						dd.col-xs-7 @import { RouteConfig } from 'angular2/router';
+						dt.col-xs-5
+							code Step 2: Define the router for child page
+						dd.col-xs-7 
+							| @RouteConfig([
+							br
+							span.pdl-20 { path: '/', component: ChildPage, as: 'ChildPage', useAsDefault: true, data: { ComponentClass: 'childPage'} }
+							br
+							span.pdl-20 { path: '/Add', component: AddPage, as: 'AddPage', data: { ComponentClass: 'add'} },
+							br
+							span.pdl-20 { path: '/Edit', component: EditPage, as: 'EditPage', data: { ComponentClass: 'edit'} }
+							br
+							| ])
+						dt.col-xs-5
+							code Step 3: On the template put the tag 
+							kbd router-outlet
+						dd.col-xs-7 
+							ol.pdl-10
+					br
+					h5 How to use 
+						code Settings.ts
+						| file on each component.
+					hr
+					dl.dl-horizontal.row
+						dt.col-xs-5
+							code Step 1: Import setting.ts file on the component;
+						dd.col-xs-7 import {Settings} from '../../services/settings';
+						dt.col-xs-5
+							code Step 2: Registry settings.ts on providers
+						dd.col-xs-7
+							| @Component({
+							br
+							span.pdl-20 directives: [Settings]
+							br
+							| })
+						dt.col-xs-5
+							code Step 3: Add Settings to constructor component
+						dd.col-xs-7
+							| export class YourComponent {
+							br
+							span.pdl-20 constructor(..., private setting: Settings, ...)
+							br
+							span.pdl-20 setting.getYourFunctionOrVariableOrConstants...your define ....
+							br
+							| }
+					br
+					h5 Create 
+						code abstract class
+						| and re-use
+					hr
+					dl.dl-horizontal.row
+						dt.col-xs-5
+							code Step 1: Define abstract class in the ../../services/core/...
+						dd.col-xs-7
+							| @Injectable()
+							br
+							| export abstract class NameAbstractClass {
+							br
+							span.pdl-20 constructor(public api: Api) {}
+							br
+							| }
+						dt.col-xs-5
+							code Step 2: Registry the abstract class in the component.
+						dd.col-xs-7
+							| @Component({
+							br
+							span.pdl-20 providers: [NameAbstractClass]
+							br
+							| }
+					p
+						strong #Note 
+						| We should be create the abstract class and extends it, a void duplicate code.
+					br
+					h5 How to apply the function 
+						code Search
+						| on App
+					hr
+					dl.dl-horizontal.row
+						dt.col-xs-5
+							code Step 1: Import function
+						dd.col-xs-7 @import {Search} from './pipes/search';
+						dt.col-xs-5
+							code Step 2: Add the function to Pipes
+						dd.col-xs-7 
+							| @Component({
+							br
+							span.pdl-20 selector: 'section',
+							br
+							span.pdl-20 directives: [],
+							br
+							span.pdl-20 pipes: [Search]
+							br
+							| })
+						dt.col-xs-5
+							code Step 3: On the template, define and use it. Ex:
+						dd.col-xs-7 
+							ol.pdl-10
+								li input([(ngModel)]="MyQuery", placeholder="Search ...") 
+								li (*ngFor="#item of items | search : MyQuery: 'condition 1' : 'condition 2' : 'condition 3'")
+					br
+					h5 How to apply the function 
+						code Order
+						| on App
+					hr
+					dl.dl-horizontal.row
+						dt.col-xs-5
+							code Step 1: Import function
+						dd.col-xs-7 @import {OrderBy} from './pipes/order';
+						dt.col-xs-5
+							code Step 2: Add the function to Pipes
+						dd.col-xs-7
+							| @Component({
+							br
+							span.pdl-20 selector: 'section',
+							br
+							span.pdl-20 directives: [],
+							br
+							span.pdl-20 pipes: [OrderBy]
+							br
+							| })
+						dt.col-xs-5
+							code Step 3: On the template, define and use it. Ex:
+						dd.col-xs-7
+							ol.pdl-10
+								li (*ngFor="#item of items | orderBy : ['condition 1', 'condition 2'])
+					br
+					h5 How to apply the function 
+						code Sort table
+						| on App
+					hr
+					dl.dl-horizontal.row
+						dt.col-xs-5
+							code Step 1: Import function
+						dd.col-xs-7 import {Column} from './pipes/column';
+							| import {Sorter} from './pipes/sorter';
+						dt.col-xs-5
+							code Step 2: New a sorter
+						dd.col-xs-7
+							| 
+							code private sorter = new Sorter();
+							| on the controller.
+						dt.col-xs-5
+							code Step 3: Add event when click on columns on the template
+						dd.col-xs-7 
+							| sortLiveRate(key) {
+							br
+							span.pdl-20 this.sorter.sort(key, your_data_binding);
+							br
+							| }
+					p
+						strong #Note
+					p
+						code your_data_binding
+						| should be define and return to a 
+						code array[]
+					p You should be define the interface and binding data to this interface. The function sorter is implemented standard, we can modify it on each case.
