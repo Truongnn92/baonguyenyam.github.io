@@ -200,9 +200,9 @@ module.exports = {
       }, {
         test: /\.sass$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
+        // loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
         // loader: ExtractTextPlugin.extract('style-loader', 'raw-loader!sass-loader')
-        // loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
+        loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
       }
 
       // {

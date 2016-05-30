@@ -22,17 +22,17 @@ export class SettingControl {
 
 	// Get cookies on site support for render layout choisen
     public getAppCookies($this) {
-		if (!Cookie.getCookie(SettingControl.View.CookieBIZ4XMenu)) {
-			Cookie.setCookie(SettingControl.View.CookieBIZ4XMenu, this.MENU_CLASS_DEFAULT);
+		if (!Cookie.get(SettingControl.View.CookieBIZ4XMenu)) {
+			Cookie.set(SettingControl.View.CookieBIZ4XMenu, this.MENU_CLASS_DEFAULT);
 			$this.setClasses = this.MENU_CLASS_DEFAULT;
 		} else {
-			$this.setClasses = Cookie.getCookie(SettingControl.View.CookieBIZ4XMenu);
+			$this.setClasses = Cookie.get(SettingControl.View.CookieBIZ4XMenu);
 		}
-		if (!Cookie.getCookie(SettingControl.View.CookieBIZ4XFont)) {
-			Cookie.setCookie(SettingControl.View.CookieBIZ4XFont, this.FONT_CLASS_DEFAULT);
+		if (!Cookie.get(SettingControl.View.CookieBIZ4XFont)) {
+			Cookie.set(SettingControl.View.CookieBIZ4XFont, this.FONT_CLASS_DEFAULT);
 			$this.setFonts = this.FONT_CLASS_DEFAULT;
 		} else {
-			$this.setFonts = Cookie.getCookie(SettingControl.View.CookieBIZ4XFont);
+			$this.setFonts = Cookie.get(SettingControl.View.CookieBIZ4XFont);
 		}
 	}
 
@@ -75,10 +75,10 @@ export class SettingControl {
 	}
 
 	public setFontSize($this) {
-		if (!Cookie.getCookie(SettingControl.View.CookieBIZ4XFontSize)) {
+		if (!Cookie.get(SettingControl.View.CookieBIZ4XFontSize)) {
 			$this.size = 1;
 		} else {
-			$this.size = parseFloat(Cookie.getCookie(SettingControl.View.CookieBIZ4XFontSize));
+			$this.size = parseFloat(Cookie.get(SettingControl.View.CookieBIZ4XFontSize));
 		}
 	}
 }

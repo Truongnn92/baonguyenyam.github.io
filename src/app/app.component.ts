@@ -102,18 +102,18 @@ export class App {
 
   // Change Menu Layout
   onChangeLayout(value) {
-    Cookie.setCookie(SettingControl.View.CookieBIZ4XMenu, value);
+    Cookie.set(SettingControl.View.CookieBIZ4XMenu, value);
     window.location.reload(false);
   };
   // Change Font
   onChangeFont(value) {
-    Cookie.setCookie(SettingControl.View.CookieBIZ4XFont, value);
+    Cookie.set(SettingControl.View.CookieBIZ4XFont, value);
     window.location.reload(false);
   };
   // Change font-size
   onChangeFontSize(value) {
     var currentValue = this.fontSize + value;
-    Cookie.setCookie(SettingControl.View.CookieBIZ4XFontSize, currentValue);
+    Cookie.set(SettingControl.View.CookieBIZ4XFontSize, currentValue);
     if (value === 0) {
       this.fontSize = 1;
     } else if (currentValue > SettingControl.View.MinFontSize && currentValue < SettingControl.View.MaxFontSize) {
