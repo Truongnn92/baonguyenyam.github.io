@@ -1,6 +1,6 @@
 @echo off
 ECHO ===================
-ECHO BIZ4X Update System
+ECHO BAONGUYEN Update System
 ECHO ===================
 ECHO Are You ready?!?
 Pause

@@ -17,7 +17,7 @@ describe('App', () => {
   ]);
 
   it('should have a url', inject([App], (app) => {
-    expect(app.url).toEqual('https://twitter.com/BIZ4X');
+    expect(app.url).toEqual('https://twitter.com/BAONGUYEN');
   }));
 
 });

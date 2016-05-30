@@ -1,5 +1,5 @@
 /**
- * @BIZ4X-App
+ * @BAONGUYEN-App
  */
 
 // Look in ./config folder for webpack.dev.js

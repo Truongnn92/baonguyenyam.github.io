@@ -1,5 +1,5 @@
 /**
- * @BIZ4X-App
+ * @BAONGUYEN-App
  */
 
 var path = require('path');

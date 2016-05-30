@@ -1,6 +1,6 @@
-Copyright (c) 2012-2016 BIZ4X Team
+Copyright (c) 2012-2016 BAONGUYEN Team
 
-# BIZ4X DOCS
+# BAONGUYEN DOCS
 
 ### Hướng dẫn cài đặt
 

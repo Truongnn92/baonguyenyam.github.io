@@ -1,8 +1,8 @@
 #!/bin/bash
 printf "\033[1;36m=====================================\033[0m\n"
-printf "\033[1;36mWelcome to the BIZ4X-App. This is the products of Asian Mobile Ventures\033[0m\n"
+printf "\033[1;36mWelcome to the BAONGUYEN-App. This is the products of Asian Mobile Ventures\033[0m\n"
 printf "\033[1;36mCopyright 2016\033[0m\n"
-printf "\033[1;36mBuild by BIZ4X Team\033[0m\n"
+printf "\033[1;36mBuild by BAONGUYEN Team\033[0m\n"
 printf "\033[1;36m=====================================\033[0m\n"
 printf "\033[0;33mAre You ready to install?!?\033[0m\n"
 read -p "Press enter to continue..." nothing

@@ -1,8 +1,8 @@
 @echo off
 ECHO =====================================
-ECHO Welcome to the BIZ4X-App. This is the products of Asian Mobile Ventures
+ECHO Welcome to the BAONGUYEN-App. This is the products of Asian Mobile Ventures
 ECHO Copyright 2016
-ECHO Build by BIZ4X Team
+ECHO Build by BAONGUYEN Team
 ECHO =====================================
 ECHO Are You ready to install?!?
 Pause

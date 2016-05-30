@@ -1,5 +1,5 @@
 /**
- * @BIZ4X-App
+ * @BAONGUYEN-App
  */
 
 module.exports = function(config) {

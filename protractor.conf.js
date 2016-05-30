@@ -1,5 +1,5 @@
 /**
- * @BIZ4X-App
+ * @BAONGUYEN-App
  */
 
 // look in ./config for protractor.conf.js

@@ -1,5 +1,5 @@
 /**
- * @BIZ4X-App
+ * @BAONGUYEN-App
  */
 
 const helpers = require('./helpers');

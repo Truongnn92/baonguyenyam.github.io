@@ -1,10 +1,10 @@
-Copyright (c) 2012-2016 BIZ4X Team
+Copyright (c) 2012-2016 BAONGUYEN Team
 
-# BIZ4X APP
+# BAONGUYEN APP
 
-![BIZ4X](src/resources/img/biz4x.svg "BIZ4X")
+![BAONGUYEN](src/resources/img/biz4x.svg "BAONGUYEN")
 
-[https://www.biz4x.com](https://www.biz4x.com)
+[https://www.baonguyenyam.github.io](https://www.baonguyenyam.github.io)
 
 ---
 

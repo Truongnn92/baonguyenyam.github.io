@@ -1,5 +1,5 @@
 /**
- * @BIZ4X-App
+ * @BAONGUYEN-App
  */
 const webpack = require('webpack');
 const helpers = require('./helpers');

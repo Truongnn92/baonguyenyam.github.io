@@ -3,13 +3,13 @@ title: Install System
 date: 2016-04-26 14:48:29
 ---
 
-Copyright (c) 2012-2016 BIZ4X Team
+Copyright (c) 2012-2016 BAONGUYEN Team
 
-# BIZ4X APP
+# BAONGUYEN APP
 
-![BIZ4X](/images/biz4x.svg "BIZ4X")
+![BAONGUYEN](/images/biz4x.svg "BAONGUYEN")
 
-[https://www.biz4x.com](https://www.biz4x.com)
+[https://www.baonguyenyam.github.io](https://www.baonguyenyam.github.io)
 
 ---
 
