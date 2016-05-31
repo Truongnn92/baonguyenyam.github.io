@@ -51,7 +51,6 @@ import routes from './routes';
   styles: [
     require('../styles/main.sass'),
     require('../../bower_components/animate.css/animate.min.css'),
-    require('../../bower_components/flag-icon-css/css/flag-icon.css')
   ],
   template: require('./app.jade')()
 })
@@ -86,14 +85,14 @@ export class App {
     userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
     translate.getTranslation(userLang);
     // custom notification
-    notificationControl.showNotification('Notification Title', 'BODY HERE', null, null);
+    // notificationControl.showNotification('Notification Title', 'BODY HERE', null, null);
   }
 
   ngOnInit() {
     // Welcome title App 
-    console.log('%cBIZ4X', 'font-size:100px;color:#2196f3;text-shadow:0 1px 0 #1472BD,0 2px 0 #1472BD ,0 3px 0 #1472BD ,0 4px 0 #1472BD ,0 5px 0 #1472BD ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);');
-    console.log('%c BIZ4X APP ' + '%c - Load Done ', 'border-radius: 2px; padding: 3px; background: #2196f3; color: #FFF', 'color: #2196f3');
-    console.log('Initial App State', this.appState.state);
+    console.log('%cBAONGUYEN', 'font-size:100px;color:#2196f3;text-shadow:0 1px 0 #1472BD,0 2px 0 #1472BD ,0 3px 0 #1472BD ,0 4px 0 #1472BD ,0 5px 0 #1472BD ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);');
+    console.log('%c BAONGUYEN APP ' + '%c - Load Done ', 'border-radius: 2px; padding: 3px; background: #2196f3; color: #FFF', 'color: #2196f3');
+    // console.log('Initial App State', this.appState.state);
   }
 
   isActive(instruction: any[]): boolean {
@@ -102,18 +101,18 @@ export class App {
 
   // Change Menu Layout
   onChangeLayout(value) {
-    Cookie.set(SettingControl.View.CookieBIZ4XMenu, value);
+    Cookie.set(SettingControl.View.CookieBNMenu, value);
     window.location.reload(false);
   };
   // Change Font
   onChangeFont(value) {
-    Cookie.set(SettingControl.View.CookieBIZ4XFont, value);
+    Cookie.set(SettingControl.View.CookieBNFont, value);
     window.location.reload(false);
   };
   // Change font-size
   onChangeFontSize(value) {
     var currentValue = this.fontSize + value;
-    Cookie.set(SettingControl.View.CookieBIZ4XFontSize, currentValue);
+    Cookie.set(SettingControl.View.CookieBNFontSize, currentValue);
     if (value === 0) {
       this.fontSize = 1;
     } else if (currentValue > SettingControl.View.MinFontSize && currentValue < SettingControl.View.MaxFontSize) {

@@ -1,13 +1,9 @@
-section.wrapper.biz4xapp(class="{{setToggleBody + setClasses +' '+ setFonts +' '+ setBodyClass}}")
+section.wrapper.bnapp(class="{{setToggleBody + setClasses +' '+ setBodyClass}}")
 	//- NAV BAR
 	include components/partials/nav.jade
 	//- HEADER
 	include components/partials/header.jade
 	//- MAIN
-	main([ngClass]="{fontWeight: isBold}", [ngStyle]="{'font-size': fontSize + 'rem'}")
+	main
 		section.app
-			//- BREADCRUMB
-			include components/partials/breadcrumb.jade
 			router-outlet
-	//- FOOTER
-	include components/partials/footer.jade

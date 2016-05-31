@@ -1,8 +1,19 @@
-[
-    { "type": "BIZ4X Fonts", "val": "font-biz4x-default" }, 
-    { "type": "Roboto Fonts", "val": "font-biz4x-roboto" }, 
-    { "type": "Lato Fonts", "val": "font-biz4x-lato" }, 
-    { "type": "Open Sans Fonts", "val": "font-biz4x-opensans" }, 
-    { "type": "Roboto Condensed Fonts", "val": "font-biz4x-condensed" }, 
-    { "type": "Raleway Fonts", "val": "font-biz4x-raleway" }
-]
+[{
+    "type": "BN Fonts",
+    "val": "font-bn-default"
+}, {
+    "type": "Roboto Fonts",
+    "val": "font-bn-roboto"
+}, {
+    "type": "Lato Fonts",
+    "val": "font-bn-lato"
+}, {
+    "type": "Open Sans Fonts",
+    "val": "font-bn-opensans"
+}, {
+    "type": "Roboto Condensed Fonts",
+    "val": "font-bn-condensed"
+}, {
+    "type": "Raleway Fonts",
+    "val": "font-bn-raleway"
+}]

@@ -1,15 +1,16 @@
+//- https://cdn.materialdesignicons.com/1.6.50/
 nav.menuleft.flex.flex-col([ngClass]="{active: NAV_isGlobalCollapsed}")
 	.flex.flex-col.mrb-3r
 		accordion([closeOthers]='NAV_oneAtATime')
 			.header
-				.app-icon((click)="NAV_isGlobalCollapsed = !NAV_isGlobalCollapsed", [innerHTML]="BIZ4X_ICON")
-				span {{ 'BIX4X_TitleMenu' | translate }}
-				em.icon.ion-android-close((click)="NAV_isGlobalCollapsed = !NAV_isGlobalCollapsed")
+				.app-icon((click)="NAV_isGlobalCollapsed = !NAV_isGlobalCollapsed", [innerHTML]="BN_ICON")
+				span {{ 'BN_TitleMenu' | translate }}
+				em.mdi.mdi-close((click)="NAV_isGlobalCollapsed = !NAV_isGlobalCollapsed")
 			accordion-group(#dashboard='', [isOpen]='status.open')
 				div(accordion-heading)
 					.title
-						i.icon.ion-monitor
-						span {{ 'BIX4X_Dashboard' | translate }}
+						i.mdi.mdi-message-reply
+						span {{ 'BN_Dashboard' | translate }}
 						em.pull-right.icon([ngClass]="{'ion-android-arrow-dropup': dashboard?.isOpen, 'ion-android-arrow-dropdown': !dashboard?.isOpen}")
 				.content
 					ul.nav
@@ -33,7 +34,7 @@ nav.menuleft.flex.flex-col([ngClass]="{active: NAV_isGlobalCollapsed}")
 				div(accordion-heading)
 					.title
 						i.icon.ion-android-calendar
-						span {{ 'BIX4X_Booking' | translate }}
+						span {{ 'BN_Booking' | translate }}
 						| 
 						.label.label-pill.label-danger 09
 				.content
@@ -58,17 +59,17 @@ nav.menuleft.flex.flex-col([ngClass]="{active: NAV_isGlobalCollapsed}")
 				div(accordion-heading='fg')
 					.title
 						i.icon.ion-ios-pulse-strong
-						span {{ 'BIX4X_Livefxrates' | translate }}
+						span {{ 'BN_Livefxrates' | translate }}
 			accordion-group
 				div(accordion-heading)
 					.title
 						i.icon.ion-arrow-graph-up-right
-						span {{ 'BIX4X_MyRates' | translate }}
+						span {{ 'BN_MyRates' | translate }}
 			accordion-group(#settings='', [isOpen]='status.open')
 				div(accordion-heading)
 					.title
 						i.icon.ion-android-options
-						span {{ 'BIX4X_Setting' | translate }}
+						span {{ 'BN_Setting' | translate }}
 						em.pull-right.icon([ngClass]="{'ion-android-arrow-dropup': settings?.isOpen, 'ion-android-arrow-dropdown': !settings?.isOpen}")
 				.content
 					ul.nav
@@ -99,25 +100,25 @@ nav.menuleft.flex.flex-col([ngClass]="{active: NAV_isGlobalCollapsed}")
 						li.nav-item
 							a.nav-link(href="javascript:void(0);") 
 								i.icon.ion-ios-locked
-								span {{ 'BIX4X_Editpassword' | translate }}
+								span {{ 'BN_Editpassword' | translate }}
 						li.nav-item
 							a.nav-link(href="javascript:void(0);") 
 								i.icon.ion-gear-b
-								span {{ 'BIX4X_Changesetting' | translate }}
+								span {{ 'BN_Changesetting' | translate }}
 						li.nav-item
 							a.nav-link(href="javascript:void(0);") 
 								i.icon.ion-reply
-								span {{ 'BIX4X_Logout' | translate }}
+								span {{ 'BN_Logout' | translate }}
 		.layout
 			accordion([closeOthers]='NAV_oneAtATime')
 				.headersub
-					i.icon.ion-paintbucket
-					span {{ 'BIX4X_LayoutSetting' | translate }}
+					i.mdi.mdi-monitor
+					span {{ 'BN_LayoutSetting' | translate }}
 				accordion-group(#layouts='', [isOpen]='status.open')
 					div(accordion-heading)
 						.title
 							i.icon.ion-ios-list
-							span {{ 'BIX4X_Navigation' | translate }}
+							span {{ 'BN_Navigation' | translate }}
 							em.pull-right.icon([ngClass]="{'ion-android-arrow-dropup': layouts?.isOpen, 'ion-android-arrow-dropdown': !layouts?.isOpen}")
 					.content
 						ul.nav
@@ -136,7 +137,7 @@ nav.menuleft.flex.flex-col([ngClass]="{active: NAV_isGlobalCollapsed}")
 					div(accordion-heading)
 						.title
 							i.icon.ion-ios-at
-							span {{ 'BIX4X_Fonts' | translate }}
+							span {{ 'BN_Fonts' | translate }}
 							em.pull-right.icon([ngClass]="{'ion-android-arrow-dropup': fonts?.isOpen, 'ion-android-arrow-dropdown': !fonts?.isOpen}")
 					.content
 						ul.nav
@@ -146,24 +147,4 @@ nav.menuleft.flex.flex-col([ngClass]="{active: NAV_isGlobalCollapsed}")
 										input(id="font{{item.val}}", type='radio', name='fontLayout', [value]="item.val", (change)='onChangeFont($event.target.value)', [checked]='setFonts==item.val')
 										span.c-indicator
 										span {{item.type}}
-				accordion-group(#devMode='', [isOpen]='status.open')
-					div(accordion-heading)
-						.title
-							i.icon.ion-coffee
-							span {{ 'BIX4X_Template' | translate }}
-								| 
-								small.text-voted (Dev only)
-							em.pull-right.icon([ngClass]="{'ion-android-arrow-dropup': fonts?.isOpen, 'ion-android-arrow-dropdown': !fonts?.isOpen}")
-					.content
-						ul.nav
-							li.nav-item
-								a.nav-link([routerLink]="['/TemplateContainer']") Typography
-							li.nav-item
-								a.nav-link([routerLink]="['/TemplateContainer', 'BlockTemplateContainer']") Block
-							li.nav-item
-								a.nav-link([routerLink]="['/TemplateContainer', 'TableTemplateContainer']") Table
-							li.nav-item
-								a.nav-link([routerLink]="['/TemplateContainer', 'FormTemplateContainer']") Form
-							li.nav-item
-								a.nav-link([routerLink]="['/TemplateContainer', 'ApiTemplateContainer']") Api
-	.flex.flex-col.version.text-sm {{ 'BIX4X_Version' | translate }}
+	.flex.flex-col.version.text-sm {{ 'BN_Version' | translate }}

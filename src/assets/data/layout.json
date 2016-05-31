@@ -1,6 +1,17 @@
-[
-    { "type": "Toggle Menu", "val": "menu-biz4x-default", "mobile": true }, 
-    { "type": "Toggle Icon Menu", "val": "menu-biz4x-floaticon", "mobile": true },
-    { "type": "Inline Menu", "val": "menu-biz4x-inline", "mobile": false },
-    { "type": "Inline Icon Menu", "val": "menu-biz4x-inlineicon", "mobile": false }
-]
+[{
+    "type": "Toggle Menu",
+    "val": "menu-bn-default",
+    "mobile": true
+}, {
+    "type": "Toggle Icon Menu",
+    "val": "menu-bn-floaticon",
+    "mobile": true
+}, {
+    "type": "Inline Menu",
+    "val": "menu-bn-inline",
+    "mobile": false
+}, {
+    "type": "Inline Icon Menu",
+    "val": "menu-bn-inlineicon",
+    "mobile": false
+}]

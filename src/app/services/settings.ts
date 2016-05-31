@@ -10,34 +10,34 @@ contentHeaders.append('Content-Type', 'application/json');
 @Injectable()
 export class SettingControl {
     static View = class {
-        static CookieBIZ4XMenu: string = 'BIZ4XMenu';
-		static CookieBIZ4XFont: string = 'BIZ4XFont';
-		static CookieBIZ4XFontSize: string = 'BIZ4XFontSize';
+        static CookieBNMenu: string = 'BNMenu';
+		static CookieBNFont: string = 'BNFont';
+		static CookieBNFontSize: string = 'BNFontSize';
 		static MaxFontSize: number = 1.3;
 		static MinFontSize: number = 0.8;
     };
-	private MENU_CLASS_DEFAULT: string = 'menu-biz4x-default';
-	private FONT_CLASS_DEFAULT: string = 'font-biz4x-default';
-	private BIZ4X_ICON: any = '<?xml version="1.0" encoding="utf-8"?><!-- Generator: Bao Nguyen  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="520px" height="520px" viewBox="0 0 520 520" enable-background="new 0 0 520 520" xml:space="preserve"><path id="XMLID_1_" fill="#00568E" d="M459.6,520H60.4C27.1,520,0,492.9,0,459.6V60.4C0,27.1,27.1,0,60.4,0h399.1C492.9,0,520,27.1,520,60.4v399.1C520,492.9,492.9,520,459.6,520z"/><path id="XMLID_13_" fill="none" d="M381.2,262.5L463.8,371h-61.9l-51.7-67.9L298.6,371h-61.9l82.6-108.6L232.4,148h61.9l56,73.8L504.1,19.5C493,7.5,477.2,0,459.6,0H60.4C27.1,0,0,27.1,0,60.4v399.1C0,492.9,27.1,520,60.4,520h399.1c33.4,0,60.4-27.1,60.4-60.4V80.1L381.2,262.5z M220,332h-30v40h-49v-40H52.7L33,278.8L140.8,149H190v134h30V332z"/><path id="XMLID_14_" fill="#FFFFFF" d="M294.3,148h-61.9l86.9,114.4L236.7,371h61.9l51.7-67.9l51.7,67.9h61.9l-82.6-108.5L520,80.1V60.4c0-15.8-6-30.1-15.9-40.9L350.3,221.8L294.3,148z"/><path id="XMLID_17_" fill="#FFFFFF" d="M190,148.9h-49.2L33,278.8l19.7,53.4h88.2v39.6H190v-39.6h29.6v-49.2H190V148.9z M140.9,282.9H88.4l52.5-62.6V282.9z"/></svg>';
+	private MENU_CLASS_DEFAULT: string = 'menu-bn-default';
+	private FONT_CLASS_DEFAULT: string = 'font-bn-default';
+	private BN_ICON: any = '<?xml version="1.0" encoding="utf-8"?><!-- Generator: Bao Nguyen  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="520px" height="520px" viewBox="0 0 520 520" enable-background="new 0 0 520 520" xml:space="preserve"><path id="XMLID_1_" fill="#00568E" d="M459.6,520H60.4C27.1,520,0,492.9,0,459.6V60.4C0,27.1,27.1,0,60.4,0h399.1C492.9,0,520,27.1,520,60.4v399.1C520,492.9,492.9,520,459.6,520z"/><path id="XMLID_13_" fill="none" d="M381.2,262.5L463.8,371h-61.9l-51.7-67.9L298.6,371h-61.9l82.6-108.6L232.4,148h61.9l56,73.8L504.1,19.5C493,7.5,477.2,0,459.6,0H60.4C27.1,0,0,27.1,0,60.4v399.1C0,492.9,27.1,520,60.4,520h399.1c33.4,0,60.4-27.1,60.4-60.4V80.1L381.2,262.5z M220,332h-30v40h-49v-40H52.7L33,278.8L140.8,149H190v134h30V332z"/><path id="XMLID_14_" fill="#FFFFFF" d="M294.3,148h-61.9l86.9,114.4L236.7,371h61.9l51.7-67.9l51.7,67.9h61.9l-82.6-108.5L520,80.1V60.4c0-15.8-6-30.1-15.9-40.9L350.3,221.8L294.3,148z"/><path id="XMLID_17_" fill="#FFFFFF" d="M190,148.9h-49.2L33,278.8l19.7,53.4h88.2v39.6H190v-39.6h29.6v-49.2H190V148.9z M140.9,282.9H88.4l52.5-62.6V282.9z"/></svg>';
 
 	// Get cookies on site support for render layout choisen
     public getAppCookies($this) {
-		if (!Cookie.get(SettingControl.View.CookieBIZ4XMenu)) {
-			Cookie.set(SettingControl.View.CookieBIZ4XMenu, this.MENU_CLASS_DEFAULT);
+		if (!Cookie.get(SettingControl.View.CookieBNMenu)) {
+			Cookie.set(SettingControl.View.CookieBNMenu, this.MENU_CLASS_DEFAULT);
 			$this.setClasses = this.MENU_CLASS_DEFAULT;
 		} else {
-			$this.setClasses = Cookie.get(SettingControl.View.CookieBIZ4XMenu);
+			$this.setClasses = Cookie.get(SettingControl.View.CookieBNMenu);
 		}
-		if (!Cookie.get(SettingControl.View.CookieBIZ4XFont)) {
-			Cookie.set(SettingControl.View.CookieBIZ4XFont, this.FONT_CLASS_DEFAULT);
+		if (!Cookie.get(SettingControl.View.CookieBNFont)) {
+			Cookie.set(SettingControl.View.CookieBNFont, this.FONT_CLASS_DEFAULT);
 			$this.setFonts = this.FONT_CLASS_DEFAULT;
 		} else {
-			$this.setFonts = Cookie.get(SettingControl.View.CookieBIZ4XFont);
+			$this.setFonts = Cookie.get(SettingControl.View.CookieBNFont);
 		}
 	}
 
 	public getLogo($this) {
-		$this.BIZ4X_ICON = this.BIZ4X_ICON;
+		$this.BN_ICON = this.BN_ICON;
 	}
 
 	// Get data json - binding to front
@@ -67,18 +67,18 @@ export class SettingControl {
 	public setBodyClass($this, router) {
 		$this.router.subscribe((val) => {
 			if(val === '' || val === null) {
-				$this.setBodyClass = 'biz4x-home';
+				$this.setBodyClass = 'BN-home';
 			} else {
-				$this.setBodyClass = 'biz4x-' + val.toString().toLowerCase().replace("/", "-").replace("./", "");
+				$this.setBodyClass = 'BN-' + val.toString().toLowerCase().replace("/", "-").replace("./", "");
 			}
 		});
 	}
 
 	public setFontSize($this) {
-		if (!Cookie.get(SettingControl.View.CookieBIZ4XFontSize)) {
+		if (!Cookie.get(SettingControl.View.CookieBNFontSize)) {
 			$this.size = 1;
 		} else {
-			$this.size = parseFloat(Cookie.get(SettingControl.View.CookieBIZ4XFontSize));
+			$this.size = parseFloat(Cookie.get(SettingControl.View.CookieBNFontSize));
 		}
 	}
 }

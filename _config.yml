@@ -1,13 +1,13 @@
-## BIZ4X Configuration
+## BN Configuration
 ## Docs: http://localhost:1234/
 
 ## Site
-title: BIZ4X APP
-name: BIZ4X
+title: BN APP
+name: BN
 slogan: Beta Version 
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit
 author: 4XLabs
-keywords: BIZ4X
+keywords: BN
 language: en
 timezone:
 baseUrl: '/'
@@ -19,13 +19,13 @@ HMR: false
 
 ## URL
 url: 4xlabs.co
-sitemap_url: biz4x.com
+sitemap_url: BN.com
 icon: resources/img/logo.png
 
 ## Notification
 notification: 
     title: BIX4X Notification
-    desc: Welcome to BIZ4X 
+    desc: Welcome to BN 
 
 ## Date / Time format
 date_format: YYYY-MM-DD
