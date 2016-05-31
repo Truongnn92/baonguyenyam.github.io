@@ -14,7 +14,7 @@ import {RouteConfig, Router} from '@angular/router-deprecated';
 import {Http} from '@angular/http';
 import {TranslateService, TranslatePipe, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
 import {CollapseDirective, ACCORDION_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
-import {Modal} from "ng2-modal";
+// import {Modal} from "ng2-modal";
 import {Cookie} from 'ng2-cookies/ng2-cookies';
 import {Home} from './components/home';
 import {AppState} from './directives/app.state';
@@ -45,7 +45,7 @@ import routes from './routes';
     RouterActive,
     ACCORDION_DIRECTIVES,
     CollapseDirective,
-    Modal
+    // Modal
   ],
   encapsulation: ViewEncapsulation.None,
   styles: [
