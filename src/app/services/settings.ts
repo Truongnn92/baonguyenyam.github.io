@@ -67,9 +67,9 @@ export class SettingControl {
 	public setBodyClass($this, router) {
 		$this.router.subscribe((val) => {
 			if(val === '' || val === null) {
-				$this.setBodyClass = 'BN-home';
+				$this.setBodyClass = 'bn-home';
 			} else {
-				$this.setBodyClass = 'BN-' + val.toString().toLowerCase().replace("/", "-").replace("./", "");
+				$this.setBodyClass = 'bn-' + val.toString().toLowerCase().replace("/", "-").replace("./", "");
 			}
 		});
 	}
