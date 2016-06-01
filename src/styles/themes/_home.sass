@@ -1,6 +1,5 @@
 .bn-home
 	.homesite
-		background: #fff
 		position: fixed
 		width: 100%
 		height: 100%
@@ -23,7 +22,7 @@
 			width: 50px
 			height: 50px
 			border-width: 10px
-			border-color: #555 transparent #555 transparent
+			border-color: $color-con4 transparent $color-con4 transparent
 			+opacity(.7)
 			+animation(spinner-rotate-outer 2s ease-in-out infinite)
 			position: absolute
@@ -41,7 +40,7 @@
 				width: 24px
 				height: 24px
 				border-width: 6px
-				border-color: #000 transparent #000 transparent
+				border-color: $color-con2 transparent $color-con2 transparent
 				top: 3px
 				left: 3px
 				opacity: .9
@@ -55,8 +54,8 @@
 				left: -15px
 				opacity: .6
 				+animation(spinner-rotate-single-2 7s 0s ease-in-out infinite)
-				border-color: transparent transparent transparent $color-main
-				+box-shadow(2px, 0, 2px, $color-main)
+				border-color: transparent transparent transparent $color-white
+				+box-shadow(2px, 0, 2px, $color-con1)
 		.spinner-circle2
 			div
 				position: absolute
@@ -64,7 +63,7 @@
 				top: 50%
 				display: block
 				background: transparent
-				border: 10px solid $color-con
+				border: 10px solid $color-con3
 				border-left-color: transparent
 				border-right-color: transparent
 				+border-radius(50%)
@@ -79,11 +78,11 @@
 					margin-left: -102px
 					margin-top: -102px
 					padding: 70px 0px 30px
-					background-color: rgba(red($color-main),green($color-main),blue($color-main),.15)
-					border: 10px solid $color-main
+					// background-color: rgba(red($color-white),green($color-white),blue($color-white),.15)
+					border: 10px solid $color-con1
 					+border-radius(50%)
 					text-shadow: 2px 2px 0px rgba(0, 0, 0, 1)
-					+box-shadow(0px, 0px, 30px, $color-main)
+					// +box-shadow(0px, 0px, 30px, $color-main)
 					+animation(pulseShadow 5s infinite linear)
 					// &:after
 					// 	content: ''
@@ -112,9 +111,12 @@
 					z-index: 1
 					width: 270px
 					height: 270px
-					border-width: 2px
+					border-width: 6px
 					border-style: solid
-					+box-shadow(0px, 0px, 20px, $color-main)
+					border-color: $color-con2
+					border-bottom-color: transparent
+					border-top-color: transparent
+					// +box-shadow(0px, 0px, 20px, $color-con)
 					+animation(spinBG2 2s infinite linear)
 				&:nth-child(3)
 					margin-left: -150px
@@ -123,7 +125,10 @@
 					width: 296px
 					height: 296px
 					border-width: 2px
-					+box-shadowset(inset 0px 0px 25px $color-main)
+					border-color: $color-con
+					border-bottom-color: transparent
+					border-left-color: transparent
+					+box-shadowset(inset 0px 0px 15px rgba(red($color-con),green($color-con),blue($color-con),.4))
 					+animation(spinBG 12s infinite linear)
 				&:nth-child(4)
 					margin-left: -127px
@@ -133,5 +138,9 @@
 					height: 250px
 					border-width: 5px
 					border-style: solid
-					+box-shadowset(inset 0px 0px 25px $color-main)
+					border-top-color: $color-main
+					border-bottom-color: $color-con4
+					border-right-color: transparent
+					border-left-color: transparent
+					+box-shadowset(inset 0px 0px 25px $color-con4)
 					+animation(spinBG3 8s infinite linear)
