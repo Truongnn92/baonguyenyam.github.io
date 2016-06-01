@@ -10,6 +10,8 @@ const path = require('path');
 /*
  * Webpack Plugins
  */
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -81,6 +83,7 @@ module.exports = {
         alias: {
             'main': helpers.root('src/main.js'),
             'particles': helpers.root('bower_components/particles.js/particles.js'),
+            // 'jquery': helpers.root('bower_components/jquery/dist/jquery.js'),
             'angular2/core': helpers.root('node_modules/@angular/core/index.js'),
             'angular2/testing': helpers.root('node_modules/@angular/core/testing.js'),
             '@angular/testing': helpers.root('node_modules/@angular/core/testing.js'),
@@ -296,6 +299,14 @@ module.exports = {
         new ExtractTextPlugin('css/[name].[hash].css', {
             disable: false,
             allChunks: true
+        }),
+
+        new ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery',
+            // "Tether": 'tether',
+            // "window.Tether": "tether"
         })
 
     ],

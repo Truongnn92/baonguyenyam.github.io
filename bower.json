@@ -9,7 +9,8 @@
     "favico.js": "^0.3.10",
     "bootstrap": "4.0",
     "mdi": "^1.6.50",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "typed.js": "^1.1.1"
   },
   "devDependencies": {}
 }

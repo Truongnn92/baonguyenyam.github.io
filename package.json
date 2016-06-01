@@ -47,6 +47,7 @@
     "jade": "^1.11.0",
     "jade-html-loader": "0.0.3",
     "jade-loader": "^0.8.0",
+    "jquery": "^2.2.4",
     "js-yaml": "^3.6.0",
     "json-loader": "^0.5.4",
     "json2csv": "^3.4.1",
