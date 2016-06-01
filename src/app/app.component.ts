@@ -50,7 +50,7 @@ import routes from './routes';
   encapsulation: ViewEncapsulation.None,
   styles: [
     require('../styles/main.sass'),
-    require('../../bower_components/animate.css/animate.min.css'),
+    require('../../bower_components/animate.css/animate.min.css')
   ],
   template: require('./app.jade')()
 })

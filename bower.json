@@ -8,7 +8,8 @@
     "PACE": "pace#^1.0.2",
     "favico.js": "^0.3.10",
     "bootstrap": "4.0",
-    "mdi": "^1.6.50"
+    "mdi": "^1.6.50",
+    "particles.js": "^2.0.0"
   },
   "devDependencies": {}
 }
