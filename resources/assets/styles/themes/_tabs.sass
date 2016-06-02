@@ -1,0 +1,75 @@
+tabset
+	.nav-tabs
+		li
+			&.active
+				a
+					background: $color-white
+			a
+				+bg(darken($color-white,3%), darken($color-white,5%), darken($color-white,5%))
+	.tab-content
+		background: $color-white
+		tab
+			&.padding
+				+pad(1rem)
+
+.table-tab
+	position: relative
+	> .control 
+		+position(1, 0, '', '', 0)
+		.nav
+			.nav-link
+				+pad(0)
+				text-align: center
+				> a
+					+link(darken($color-white,40%),$color-white,$color-white )
+					+mar(.25rem,left)
+					+bg(darken($color-white,0%), $color-con, $color-con)
+					+border(darken($color-white,15%), 1px, 1, '')
+					+border-radius(5px)
+					+pad(0 .5rem)
+					display: block
+					+lh(1.8rem)
+					height: 1.8rem
+					i
+						&:before
+							+lh(1.6rem)
+				&.dropdown
+					.dropdown-toggle
+						&:after 
+							+border(0)
+							+mar(0)
+					&.open 
+						.dropdown-toggle
+							+bg($color-con, $color-con, $color-con)
+							+link($color-white,$color-white,$color-white)
+							&:after 
+								content: ''
+						.dropdown-menu
+							+position(1, 100%, initial, '', 0)
+							.dropdown-item
+								+bg(darken($color-white,0%), $color-con, $color-con)
+								+link(darken($color-white,40%),$color-white,$color-white)
+								+fz(.85rem)
+
+	tabset
+		.nav-tabs
+			li
+				+pad(.15rem, top)
+				&.active
+					+pad(0rem, top)
+					a
+						+bg($gray-lighter, $gray-lighter, $gray-lighter)
+						+box-shadow(0, 2px,0, $color-con, 'inset')
+						// +pad(0.5em 1em)
+						+lh(1.5rem)
+				a
+					+border-radius(2px 2px 0 0)
+					border: 0
+					+pad(0.35em 1em)
+					+bg(darken($color-white,3%), $gray-lighter, $gray-lighter)
+					color: darken($color-white,30%)
+					+lh(1.3rem)
+		.tab-content
+			+border(darken($color-white,5%), 1, 1px ,top)
+			background: $gray-lighter
+			+box-shadow(2px, 3px,5px, darken($color-white,15%), "")

@@ -1,0 +1,214 @@
+.top-bar
+	+bg($color-main)
+	+link(lighten($color-main, 35%))
+	+lh(2.6rem)
+	.top-bar-nav
+		@include media-breakpoint-up(sm)
+			text-align: right
+			ul
+				li
+					+link(lighten($color-main, 35%))
+					a
+						+link(lighten($color-main, 35%), $color-white, $color-white)
+						+fw(300)
+						text-decoration: none
+						+fz(.9rem)
+						+pad(0 .5rem)
+						+border(darken($color-main, 5%), 1px, 1, right)
+						position: relative
+						display: inline-block
+						+lh(initial)
+						&:after
+							content: ''
+							display: inline-block
+							+position(1, 0,'','', -2px)
+							height: 100%
+							width: 1px
+							+bg(lighten($color-main, 5%))
+					&:last-child
+						a
+							+border
+							&:after
+								content: none
+					&:hover, &.active
+						+bg(darken($color-main, 5%))
+						a
+							+link($color-white)
+
+header
+	.navbar
+		+border-radius(0)
+		+bg($color-white)
+		+box-shadow(0, 2px,4px, darken($color-white,30%), "")
+		.mobile
+			.navbar-brand
+				max-height: 2.2rem
+				+pad(0)
+				+mar(0)
+				.biz4x
+					height: 2.2rem 
+			.navbar-toggler
+				+bg($color-main, darken($color-main,5%), darken($color-main,5%))
+				+border-radius(0)
+				+link($color-white)
+				+border-radius(3px)
+			.globalmenu
+				height: 2.2rem
+				width: 2.2rem
+				+lh(2.2rem)
+				+mar(0, top)
+				+bg($color-con, $color-main, $color-main)
+				+link($color-white, $color-con, $color-con)
+				+border($color-white, 1px, 1, '')
+				+pad(0)
+				display: block
+				text-align: center
+				+border-radius(3px)
+				&:focus
+					outline: none
+				i
+					text-align: center
+		.collapse
+			// ng2-bootstrap Error
+			+transition(all 0s ease-in-out)
+			transition-duration: 0s !important
+			overflow: initial !important
+			// display: initial !important
+			height: initial !important
+			.globalmenu
+				height: 2rem
+				width: 2rem
+				+lh(2rem)
+				+mar(.5rem, top)
+				+bg($color-con, $color-main, $color-main)
+				+link($color-white, $color-con, $color-con)
+				+border($color-white, 1px, 1, '')
+				+pad(0)
+				display: block
+				text-align: center
+				+border-radius(3px)
+				&:focus
+					outline: none
+				i
+					text-align: center
+			.navbar-brand
+				max-height: 3rem
+				+lh(3rem)
+				+pad(0)
+				.biz4x
+					height: 3rem 
+					width: 70px
+					&:hover
+						&:before
+							background-color: $color-con
+			.nav
+				.nav-item
+					float: none
+					@include media-breakpoint-down(sm)
+						+ .nav-item
+							+mar(0)
+					.nav-link
+						+fw(700)
+						+fz(1.1rem)
+						.label
+							+lh(1rem)
+							+fw(400)
+							+mar(.2rem, left)
+						&.textnote
+							+link($color-tb-02-con)
+							text-decoration: underline
+
+						&.button
+							display: block
+							+bg($color-con, darken($color-con, 10%), darken($color-con, 10%))
+							+link($color-white)
+							+fw(300)
+							// text-transform: uppercase
+							letter-spacing: 1px
+							+pad(1rem, left)
+							+pad(1rem, right)
+							+border-radius(3px)
+							+mar(.5rem 0)
+							&.premium
+								+bg($color-tb-02-link, darken($color-tb-02-link, 10%), darken($color-tb-02-link, 10%))
+					.search
+						position: relative
+						+lh(4rem)
+						input
+							+border-radius(4rem)
+							+lh(1.6rem)
+							+mar(1rem, top)
+							+mar(.5rem, bottom)
+							+border(0)
+							+bg(darken($color-white, 7%))
+							+transition
+						label
+							+position(1,0.15rem,'','', 1rem)
+							+mar(0)
+							line-height: 2rem
+							height: 2rem
+							+link(darken($color-white, 20%), darken($color-white, 40%), darken($color-white, 40%))
+							+fz(1.5rem)
+							i 
+								&:before
+									+lh(2rem)
+				&.navbar-right
+					text-align: center
+					.nav-item
+						float: none
+					@include media-breakpoint-up(md)
+						text-align: left
+						float: left
+						.nav-item
+							float: left
+					@include media-breakpoint-up(lg)
+						text-align: left
+						float: right
+						.nav-item
+							float: left
+							.textnote
+								white-space: nowrap
+								max-width: 200px
+								overflow: hidden
+								text-overflow: ellipsis
+					@include media-breakpoint-up(xl)
+						.nav-item
+							.textnote
+								max-width: initial
+
+				@include media-breakpoint-up(md)
+					+lh(2.2rem)
+					.nav-item
+						float: left
+						.nav-link
+							&.button
+								+lh(1.6rem)
+								display: inline-block
+								+fz(1rem)
+								+mar(.2rem 0)
+						.search
+							input
+								width: 200px
+								+mar(.3rem, top)
+								+mar(.3rem, bottom)
+								&:focus
+									width: 250px
+
+								
+.menu-biz4x-floaticon,
+.menu-biz4x-inlineicon,
+.menu-biz4x-inline
+	header
+		.navbar
+			.collapse
+				.navbar-brand
+					display: none
+				.nav
+					.nav-item
+						&.togglemenu
+							display: none
+						&.togglesearch
+							+mar(0, left)
+				
+
+						
