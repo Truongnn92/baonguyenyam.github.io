@@ -1,57 +1,27 @@
-.top-bar
-	+bg($color-main)
-	+link(lighten($color-main, 35%))
-	+lh(2.6rem)
-	.top-bar-nav
-		@include media-breakpoint-up(sm)
-			text-align: right
-			ul
-				li
-					+link(lighten($color-main, 35%))
-					a
-						+link(lighten($color-main, 35%), $color-white, $color-white)
-						+fw(300)
-						text-decoration: none
-						+fz(.9rem)
-						+pad(0 .5rem)
-						+border(darken($color-main, 5%), 1px, 1, right)
-						position: relative
-						display: inline-block
-						+lh(initial)
-						&:after
-							content: ''
-							display: inline-block
-							+position(1, 0,'','', -2px)
-							height: 100%
-							width: 1px
-							+bg(lighten($color-main, 5%))
-					&:last-child
-						a
-							+border
-							&:after
-								content: none
-					&:hover, &.active
-						+bg(darken($color-main, 5%))
-						a
-							+link($color-white)
-
 header
+	font-family: 'BN-Fonts'
 	.navbar
 		+border-radius(0)
 		+bg($color-white)
 		+box-shadow(0, 2px,4px, darken($color-white,30%), "")
+		+transition(all .5s ease-in-out)
 		.mobile
 			.navbar-brand
-				max-height: 2.2rem
+				max-height: 34px
 				+pad(0)
 				+mar(0)
-				.biz4x
-					height: 2.2rem 
+				.bn
+					// height: 2.2rem 
+					min-height: 34px
+					min-width: 62px
+					width: 62px
 			.navbar-toggler
 				+bg($color-main, darken($color-main,5%), darken($color-main,5%))
 				+border-radius(0)
 				+link($color-white)
 				+border-radius(3px)
+				+pad(.35rem .5rem)
+				+mar(2px, top)
 			.globalmenu
 				height: 2.2rem
 				width: 2.2rem
@@ -68,13 +38,10 @@ header
 					outline: none
 				i
 					text-align: center
-		.collapse
-			// ng2-bootstrap Error
-			+transition(all 0s ease-in-out)
-			transition-duration: 0s !important
-			overflow: initial !important
-			// display: initial !important
-			height: initial !important
+		#BNGlobalMenu
+			@include media-breakpoint-down(sm)
+				+mar(.5rem,top)
+				+border(darken($color-white,5%), 1px, 1, top)
 			.globalmenu
 				height: 2rem
 				width: 2rem
@@ -95,7 +62,7 @@ header
 				max-height: 3rem
 				+lh(3rem)
 				+pad(0)
-				.biz4x
+				.bn
 					height: 3rem 
 					width: 70px
 					&:hover
@@ -104,12 +71,18 @@ header
 			.nav
 				.nav-item
 					float: none
+					+ .nav-item
+						+mar(0)
 					@include media-breakpoint-down(sm)
 						+ .nav-item
 							+mar(0)
 					.nav-link
-						+fw(700)
 						+fz(1.1rem)
+						text-transform: uppercase
+						+fw(bold)
+						+pad(.75rem, right)
+						+pad(.75rem, left)
+						color: darken($color-white,40%)
 						.label
 							+lh(1rem)
 							+fw(400)
@@ -131,6 +104,18 @@ header
 							+mar(.5rem 0)
 							&.premium
 								+bg($color-tb-02-link, darken($color-tb-02-link, 10%), darken($color-tb-02-link, 10%))
+					&.active, &:hover, &:visited, &:active
+						.nav-link
+							position: relative
+							+link($color-main, $color-main, $color-main)
+							@include media-breakpoint-up(md)
+								&:before
+									content: ''
+									width: 100%
+									height: 3px
+									background-color: $color-main
+									+position(1,-0.5rem,'','', 0)
+
 					.search
 						position: relative
 						+lh(4rem)
@@ -158,11 +143,6 @@ header
 						float: none
 					@include media-breakpoint-up(md)
 						text-align: left
-						float: left
-						.nav-item
-							float: left
-					@include media-breakpoint-up(lg)
-						text-align: left
 						float: right
 						.nav-item
 							float: left
@@ -171,6 +151,16 @@ header
 								max-width: 200px
 								overflow: hidden
 								text-overflow: ellipsis
+					// @include media-breakpoint-up(lg)
+					// 	text-align: left
+					// 	float: right
+					// 	.nav-item
+					// 		float: left
+					// 		.textnote
+					// 			white-space: nowrap
+					// 			max-width: 200px
+					// 			overflow: hidden
+					// 			text-overflow: ellipsis
 					@include media-breakpoint-up(xl)
 						.nav-item
 							.textnote
@@ -195,12 +185,12 @@ header
 									width: 250px
 
 								
-.menu-biz4x-floaticon,
-.menu-biz4x-inlineicon,
-.menu-biz4x-inline
+.menu-bn-floaticon,
+.menu-bn-inlineicon,
+.menu-bn-inline
 	header
 		.navbar
-			.collapse
+			#BNGlobalMenu
 				.navbar-brand
 					display: none
 				.nav

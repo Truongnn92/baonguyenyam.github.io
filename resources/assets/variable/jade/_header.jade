@@ -1,0 +1,25 @@
+header.pos-f-t
+  .navbar.navbar-light.navbar-static-top.bd-navbar(role='banner')
+    .clearfix.mobile
+      button.navbar-toggler.hidden-md-up.pull-sm-right.pull-xs-right(type='button', data-toggle='collapse', data-target='#BNGlobalMenu')
+        i.mdi.mdi-menu
+      ul.nav.navbar-nav.hidden-md-up
+        li.nav-item
+          a.navbar-brand(href='javascript:void(0);')
+            i.app-icon.get4x.hvr-wobble-horizontal
+    #BNGlobalMenu.collapse.navbar-toggleable-sm
+      a.navbar-brand.hidden-sm-down(href='#')
+        i.app-icon.get4x.hvr-wobble-horizontal
+      nav
+        ul.nav.navbar-nav.navbar-right
+          li.nav-item.active
+            a.nav-link(href='#')
+              | How it works 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') Why?
+          li.nav-item
+            a.nav-link(href='#') Help
+          li.nav-item
+            a.nav-link(href='#') My Account
+          // <li class="nav-item"><a href="#" class="nav-link button text-uppercase">Select plan</a></li>

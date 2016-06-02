@@ -1,109 +1,89 @@
-.footer
-	background-color: darken($color-midnight-blue,5%)
+footer
+	background-color: darken($color-white ,80%)
 	position: relative
 	z-index: 1
-	color: lighten($color-black, 50%)
-	+pad(3rem 0 0 0)
-	&:after 
-		content: ''
-		background-image: url('../assets/img/bg_footer.png')
-		background-size: cover
-		background-position: center center
-		+position(1, 0,0,'','')
-		height: 100%
-		width: 100%
-		z-index: -1
-		+opacity(.15)
-	.info 
-		text-align: center
+	color: darken($color-white ,50%)
+	+pad(0)
+	.container-fluid
 		@include media-breakpoint-up(md)
-			text-align: left
+			+pad(0)
+			.topfoot
+				display: table
+				width: 100%
+				+mar(0)
+	.info
+		background-color: darken($color-white ,85%)
+		+pad(4rem 2rem)
+		@include media-breakpoint-up(sm)
+			+pad(4rem 4em)
+		@include media-breakpoint-up(md)
+			float: none
+			display: table-cell
+			vertical-align: middle
 		p
-			+fz(1.3rem)
-			+lh(1.5rem)
-		.slogan
-			+fw(200)
-			+fz(2rem)
-			+lh(2rem)
-			span
-				+fw(400)
-				color: lighten($color-black, 60%)
-		.logo
-			max-height: 4rem
-			+lh(4rem)
-			display: inline-block
-			.biz4x
-				height: 4.2rem 
-				width: 96px
+			+mar(0,bottom)
+			+fz(.9rem)
+			+lh(1.3rem)
+		.app-icon
+			&.bn
 				&:before
 					background-color: $color-white
-		.social
-			@include media-breakpoint-down(md)
-				+mar(2rem,bottom)
-			.nav-link
-				+fz(1.5rem)
-				+link(lighten($color-black, 50%), $color-white, $color-white)
-				+mar(1rem, right)
-
-
-	.link
-		text-align: center
-		@include media-breakpoint-up(md)
-			text-align: left
-		.nav
-			.nav-link
-				+lh(2rem)
-				display: block
-				+link(lighten($color-black, 50%), $color-white, $color-white)
-			.nav-item
-				h4
-					color: $color-con
-					+fz(1.2rem)
-					text-transform: uppercase
-					@include media-breakpoint-up(md)
-						+mar(1.2rem, bottom)
-	.socialbtn
-		text-align: center
-		@include media-breakpoint-up(lg)
-			text-align: right
-		.social
-			.nav-item
-				@include media-breakpoint-down(sm)
-					display: block
-					+mar(1rem, bottom)
 				@include media-breakpoint-up(sm)
-					display: inline-block
-					+pad(.5rem, left)
-				.nav-link
-					+bg(darken($color-white, 30%), darken($color-con, 0%), darken($color-con, 0%))
-					+border-radius(3px)
-					height: 4rem
-					+pad(0 1rem 0 3rem)
-					position: relative
-					min-width: 160px
-					overflow: hidden
-					+link(darken($color-white, 60%),darken($color-white, 0%),darken($color-white, 0%))
-					i
-						+position(1, .5rem,1rem,'','')
-						+lh(3rem)
-						+fz(3rem)
-						&.small
-							+fz(2.2rem)
-					.text
+					min-height: 60px
+					min-width: 100px
+					width: 100px
+		.slogan
+			color: $color-white
+	.linkfooter
+		+pad(4rem 2rem)
+		background-color: darken($color-white ,80%)
+		@include media-breakpoint-up(sm)
+			+pad(4rem 4rem)
+		@include media-breakpoint-up(md)
+			float: none
+			display: table-cell
+			vertical-align: top
+		h4
+			color: $color-white
+			text-transform: uppercase
+			+fw(300)
+			letter-spacing: 1px
+			+mar(2rem,bottom)
+		.list-group
+			.list-group-item
+				+pad(0,left)
+				+pad(0,right)
+				+bg(none, none, none)
+				+border(0)
+				+fw(300)
+				+link(darken($color-white,50%),$color-white,$color-white)
+				&:hover, &.active
+					text-decoration: underline
+				@include media-breakpoint-up(md)
+					+pad(.5rem,top)
+					+pad(.5rem,bottom)
+		.socials
+			@include media-breakpoint-down(md)
+				+mar(2rem,top)
+			.list-inline
+				+mar(0)
+				.list-inline-item
+					+fz(.9rem)
+					+link(darken($color-white, 85%), $color-white, $color-white)
+					+mar(1rem, right)
+					a
 						display: block
-						text-align: left
-						+pad(.5rem 0 .5rem .5rem)
-						span 
-							display: block
-							+fz(.8rem)
-							+ span 
-								+fz(1.5rem)
-								+fw(bold)
-								+lh(1.5rem)
+						height: 2rem
+						width: 2rem
+						+lh(2rem)
+						+bg(darken($color-white,40%), $color-white, $color-white)
+						+link(darken($color-white,85%))
+						+border-radius(50%)
+						text-align: center
+					&:last-child
+						+mar(0)
 	.copyright
-		background-color: rgba(red($color-con),green($color-con),blue($color-con),.6)
-		text-align: center
-		+pad(2rem 0)
-		+mar(3rem, top)
-		color: $color-white
-
+		background-color: darken($color-white ,85%)
+		+pad(2rem)
+		a
+			+link($color-white, $color-con, $color-con)

@@ -1,0 +1,453 @@
+.info-page
+	header
+		position: fixed
+		width: 100%
+		z-index: 100
+		@include media-breakpoint-up(md)
+			&.active
+				.navbar
+					background: none
+					+box-shadow(0, 1px, 0px, rgba(255,255,255,.3))
+					#BNGlobalMenu 
+						.navbar-brand
+							i
+								&:before
+									background-color: $color-white
+						.nav.navbar-right 
+							.nav-item
+								.nav-link
+									color: rgba(255,255,255,.5)
+								&.active, &:hover
+									.nav-link
+										color: $color-white
+										&:before
+											background-color: $color-white
+											bottom: -0.65rem
+											top: initial
+	main
+		@include media-breakpoint-up(md)
+			+pad(0,top)
+	// SLIDERS
+	.home-sliders
+		position: relative
+		overflow: hidden
+		.owl-carousel
+			&:after 
+				+position(1,0,0,'','')
+				content: ''
+				width: 100%
+				height: 100%
+				background: rgba(0,0,0,.3)
+		.item
+			min-height: 400px
+			overflow: hidden
+			@include media-breakpoint-up(md)
+				min-height: 550px
+		.boxcontent
+			+position(1,0,0,'','')
+			z-index: 10
+			height: 100%
+			width: 100%
+			display: table
+			.boxitem
+				display: table-cell
+				vertical-align: middle
+				width: 100%
+				height: 400px
+				color: $color-white
+				text-align: center
+				+pad(2rem)
+				h1
+					+text-shadow
+					font-family: 'BN-Fonts'
+				h2
+					+text-shadow(1px, 1px, 1px, rgba(0, 0, 0, 0.4))
+					+fz(1.3rem)
+					+fw(200)
+					font-family: 'Raleway'
+				@include media-breakpoint-up(md)
+					height: 550px
+					h1
+						+fz(4rem)
+					h2
+						+fz(1.5rem)
+				.boxsearch
+					background: rgba(255,255,255,.8)
+					display: inline-block
+					+pad(10px)
+					+mar(15px,top)
+					text-align: left
+					max-width: 300px
+					+border(darken($color-white,60%), 1px, 1, '')
+					h3
+						+fz(.9rem)
+						color: $color-black
+						+fw(600)
+					.input-group
+						* 
+							+border-radius(0)
+						button
+							text-transform: uppercase
+					@include media-breakpoint-up(md)
+						max-width: 380px
+	// MAPS
+	.home-maps
+		background-color: darken($color-white, 0%)
+		overflow: hidden
+		+border($color-main, 3px, 1, top)
+		+border($color-main, 3px, 1, bottom)
+		position: relative
+		+pad(2rem, bottom)
+		.status
+			+position(1,'', 0, 2rem, '')
+			text-align: center
+			width: 100%
+			+fz(.8rem)
+			@include media-breakpoint-up(md)
+				+position(1,'', 0, 1rem, '')
+				+fw(bold)
+				+fz(1rem)
+		figure
+			position: relative
+			img 
+				width: 100%
+			.areas
+				.pulsating-circle
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translateX(-50%) translateY(-50%)
+					width: 10px
+					height: 10px
+					&:after
+						content: ''
+						position: absolute
+						left: 0
+						top: 0
+						display: block
+						width: 100%
+						height: 100%
+						background-color: $color-main
+						border: 2px solid $color-white
+						border-radius: 15px
+						+box-shadow(0, 0, 5px, rgba(red($color-main),green($color-main),blue($color-main),.3))
+						+animation(pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite)
+					&:before
+						content: ''
+						position: relative
+						display: block
+						width: 300%
+						height: 300%
+						box-sizing: border-box
+						margin-left: -100%
+						margin-top: -100%
+						border-radius: 45px
+						background-color: $color-main
+						+animation(pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite)
+				.item
+					position: absolute
+					width: 30px
+					height: 30px
+					display: none
+					&.mumbai
+						left: 61%
+						top: 43%
+						@include media-breakpoint-up(md)
+							left: 64%
+							top: 49%
+						@include media-breakpoint-up(lg)
+							left: 65%
+							top: 51%
+					&.hongkong
+						left: 71%
+						top: 41%
+						@include media-breakpoint-up(md)
+							left: 74%
+							top: 47%
+						@include media-breakpoint-up(lg)
+							left: 75%
+							top: 49%
+					&.thailand
+						left: 68%
+						top: 45%
+						@include media-breakpoint-up(md)
+							left: 71%
+							top: 51%
+						@include media-breakpoint-up(lg)
+							left: 72%
+							top: 53%
+					&.singapore
+						left: 68%
+						top: 51%
+						@include media-breakpoint-up(md)
+							left: 71%
+							top: 57%
+						@include media-breakpoint-up(lg)
+							left: 72%
+							top: 59%
+					.summary
+						+position(1,5px, '', '', 30px)
+						text-align: right
+						.name
+							background-color: $color-main
+							+box-shadowset(inset 0 0px 0px 1px rgba(red($color-white),green($color-white),blue($color-white),.3))
+							+border($color-main, 1px ,1, '')
+							+border-radius(20px)
+							+lh(1.5rem)
+							+fz(.9rem)
+							white-space: nowrap
+							color: $color-white
+							+pad(0 .75rem)
+							display: inline-block
+						.sum
+							background-color: $color-con
+							+box-shadowset(inset 0 0px 0px 1px rgba(red($color-white),green($color-white),blue($color-white),.3))
+							+border($color-con, 1px ,1, '')
+							+border-radius(20px)
+							+lh(1.2rem)
+							+fz(.8rem)
+							white-space: nowrap
+							color: $color-white
+							+pad(.15rem .5rem)
+							+mar(.15rem,top)
+							display: inline-block
+	// HIW
+	.home-howitworks
+		background-color: $color-white
+		background-image: url('../img/howitworks-bg.png')
+		background-position: center center
+		position: relative
+		min-height: 200px
+		+pad(5rem,top)
+		+animation(50s linear 0s normal none infinite animatebg)
+		> .title
+			background-color: $color-main
+			font-family: 'BN-Fonts'
+			+pad(0 1rem)
+			text-align: center
+			+position(1,-1.5rem,50%,'','')
+			margin-left: -25%
+			width: 50%
+			+box-shadowset(inset 0 0px 0px 1px rgba(red($color-white),green($color-white),blue($color-white),1))
+			+border($color-main, 1px ,1, '')
+			h2
+				color: $color-white 
+				+mar(0)
+				+fz(1.1rem)
+				+lh(2.6rem)
+				text-transform: uppercase
+		@include media-breakpoint-up(md)
+			+pad(10rem,top)
+			.title
+				+position(1,3rem,-3px,'','')
+				width: 300px
+				+mar(0,left)
+				h2
+					+fz(1.8rem)
+					+lh(3rem)
+					text-align: right
+		// Tabs 		
+		.nav
+			text-align: center
+			display: table
+			margin: 0 auto
+			font-family: 'BN-Fonts'
+			.nav-item
+				+ .nav-item
+					+mar(0)
+				.nav-link
+					+border-radius(0)
+					background-color: $color-white
+					color: $color-main
+					border: 1px solid $color-main
+					+lh(1.5rem)
+					text-transform: uppercase
+					i 
+						font-size: 1.5rem
+					&:hover
+						background-color: darken($color-white, 3%)
+						color: $color-main
+					&.active
+						background-color: $color-main
+						color: $color-white
+		.tab-content
+			// +mar(2rem 0)
+			+pad(2rem 1rem)
+			overflow: hidden
+			@include media-breakpoint-up(md)
+				+pad(3rem 3rem)
+		
+		// Box 
+		.boxhiw
+			position: relative
+			.owl-carousel
+				.owl-nav
+					@include media-breakpoint-up(lg)
+						margin-top: -40px
+					> div
+						+border-radius(0)
+						+pad(8px 12px)
+					.owl-prev
+						left: 0
+					.owl-next
+						right: 0
+				.owl-dots
+					.owl-dot
+						span
+							+border-radius(0)
+						&.active, &:hover
+							span
+								background-color: $color-main
+								+box-shadowset(inset 0 0px 0px 1px rgba(red($color-white),green($color-white),blue($color-white),1))
+								+border($color-main, 1px ,1, '')
+			.boxleft
+				.infotop
+					h4
+						color: $color-main
+						margin-top: 1.5rem
+						text-transform: uppercase
+				.info
+					h4
+						color: $color-main
+					p
+						+fz(.9rem)
+						strong
+							color: $color-main
+				p
+					strong
+						font-weight: 700
+						display: none
+				.item
+					padding: 10px 30px
+					overflow: hidden
+			.boxright
+				
+				.titlec
+					font-family: 'BN-Fonts'
+					font-size: 1.5rem
+					margin-bottom: 1rem
+					+text-shadow(1px, 1px, 3px, rgba(255,255,255,.5))
+					a
+						text-decoration: none
+						+fw(bold)
+						display: block
+						color: lighten($color-black, 20%)
+						text-transform: uppercase
+						&:hover, &.active
+							color: $color-main
+				p
+					font-size: .9rem
+					color: lighten($color-black, 30%)
+					// display: none
+				.content
+					padding: 0
+					p.goowl
+						color: darken($color-white,40%)
+						&.active
+							color: $color-black
+							strong
+								color: $color-main
+
+			@include media-breakpoint-up(lg)
+				.boxleft
+					width: 60%
+					float: left
+					height: 100%
+					
+				.boxright
+					width: 40%
+					float: right
+					height: 100%
+					padding: 10px 0 0 2rem
+					.content
+						padding: 0 0 0 2.5rem
+	// Testimonials
+	.home-testimonials
+		font-family: 'BN-Fonts'
+		min-height: 400px
+		background-color: $color-main
+		+pad(3rem 1rem)
+		text-align: center
+		@include media-breakpoint-up(md)
+			min-height: 350px
+			+pad(4rem 2rem)
+			h2
+				+fz(2.5rem)
+				letter-spacing: 1px
+		h2
+			color: $color-white
+		.desc
+			margin: 2rem auto
+			h3
+				+fz(1.3rem)
+				color: $color-white
+			p 
+				color: lighten($color-main, 20%)
+				+lh(1.3rem)
+			@include media-breakpoint-up(md)
+				max-width: 70%
+			.testimonials
+				+mar(4rem,top)
+				+pad(0 2rem)
+				.owl-carousel
+					.owl-nav
+						@include media-breakpoint-up(md)
+							position: relative
+						> div
+							+border-radius(0)
+							+pad(8px 12px)
+							background-color: lighten($color-main, 20%)
+							&:hover, &.active
+								background-color: $color-white
+								color: $color-main
+						.owl-prev
+							left: 0
+						.owl-next
+							right: 0
+					.owl-dots
+						.owl-dot
+							span
+								+border-radius(0)
+								background-color: lighten($color-main, 20%)
+							&.active, &:hover
+								span
+									background-color: $color-white
+					.item
+						.quote
+							position: relative
+							background-color: $color-white
+							color: $color-main
+							max-width: 550px
+							+mar(0 auto)
+							+pad(1rem)
+							@include media-breakpoint-up(md)
+								+pad(2rem 3rem)
+							&:after 
+								background-color: $color-white
+								content: ''
+								width: 30px
+								height: 30px
+								+position(1,'', 50%, -12px, '')
+								+transform(rotate(45deg))
+								+mar(-15px,left)
+						.info
+							+mar(3rem,top)
+							figure
+								overflow: hidden
+								display: inline-block
+								img
+									border: 2px solid $color-white
+									width: 100px
+									height: 100px
+									+border-radius(50%)
+								figcaption
+									.name
+										color: $color-white
+										+fz(1.3rem)
+										+mar(1rem,top)
+									.jobs
+										color: lighten($color-main, 20%)
+
+
+
+
