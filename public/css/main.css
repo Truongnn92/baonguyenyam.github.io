@@ -39522,7 +39522,7 @@ ion-col[offset-95] {
 
 .home-page .spinner-circle {
   position: absolute;
-  z-index: 9999;
+  z-index: 800;
   top: calc(50% - 25px);
   left: calc(50% - 25px);
   width: 50px;
@@ -39583,7 +39583,7 @@ ion-col[offset-95] {
 }
 
 .home-page .spinner-circle2 {
-  z-index: 9999;
+  z-index: 800;
   position: absolute;
   width: 100%;
   height: 100%;

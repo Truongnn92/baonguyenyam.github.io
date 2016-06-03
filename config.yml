@@ -7,7 +7,7 @@ config:
       - "bower_components/owl.carousel/dist/owl.carousel.min.js"
       - "bower_components/PACE/pace.js"
       - "bower_components/favico.js/favico.js"
-      - "bower_components/particles.js/particles.js"
+      # - "bower_components/particles.js/particles.js"
     css: 
       - "bower_components/animate.css/animate.css"
       - "bower_components/mdi/css/materialdesignicons.css"
