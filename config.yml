@@ -21,7 +21,7 @@ config:
     name: "BaoNguyen"
     link: "https://github.com/baonguyenyam"
   license: "MIT"
-  name: "MobileApp"
+  name: "Bao Nguyen Apps"
   version: "1.0"
   url: "./"
   source: "resources/assets"
