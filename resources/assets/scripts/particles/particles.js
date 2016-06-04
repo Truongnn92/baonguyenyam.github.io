@@ -103,7 +103,7 @@
 var canvasDiv = document.getElementById('particles-js');
 var options = {
     particleColor: '#888',
-    background: 'img/bg.jpg',
+    // background: 'img/bg.jpg',
     interactive: true,
     speed: 'medium',
     density: 'high'

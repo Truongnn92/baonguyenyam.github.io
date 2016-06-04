@@ -13,13 +13,13 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             // Styles
             gulp.watch([
                 path.join(url.source, url.styles.root, '**/*.{css,sass,scss,less,styl}')
-            ], ['compass']);
+            ], ['compass', 'cssmin']);
 
 
             // Scripts
             gulp.watch([
                 path.join(url.source, url.scripts.root, '**/*.{js,coffee}')
-            ], ['babel']);
+            ], ['babel', 'uglify']);
 
             // Scripts
             gulp.watch([

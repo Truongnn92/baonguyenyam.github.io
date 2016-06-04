@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var allAreas = $(".home-maps .areas").find(".item");
+    var allAreas = $(".areas").find(".item");
     toggleAreas(null, allAreas.first());
 });
 

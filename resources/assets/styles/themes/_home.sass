@@ -9,6 +9,79 @@
 	main, .home-site
 		width: 100%
 		height: 100%
+	.bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		+opacity(.15)
+	.navigation
+		color: #fff
+		position: absolute
+		right: 1rem
+		top: 1rem
+		background: $color-con2
+		width: 2rem
+		height: 2rem
+		line-height: 2rem
+		text-align: center
+		font-size: 1.4rem
+		z-index: 2000
+		i 
+			line-height: 2rem
+	.areas
+		z-index: 700
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 5rem
+		left: 0
+		color: $color-white
+		.item
+			display: none
+			text-align: center
+			position: relative
+			.cnt
+				position: relative
+				display: table 
+				margin: 0 auto
+				+fz(1.3rem)
+				@include media-breakpoint-up(md)
+					+fz(2rem)
+		.pulsating-circle
+			position: absolute
+			left: -1rem
+			top: 50%
+			transform: translateX(-50%) translateY(-50%)
+			width: 10px
+			height: 10px
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				display: block
+				width: 100%
+				height: 100%
+				background-color: $color-con1
+				border: 2px solid $color-white
+				border-radius: 15px
+				+box-shadow(0, 0, 5px, rgba(red($color-con1),green($color-con1),blue($color-con1),.3))
+				+animation(pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite)
+			&:before
+				content: ''
+				position: relative
+				display: block
+				width: 400%
+				height: 400%
+				box-sizing: border-box
+				margin-left: -150%
+				margin-top: -150%
+				border-radius: 65px
+				background-color: $color-con1
+				+animation(pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite)
+		
 	.typings
 		width: 100%
 		bottom: 0

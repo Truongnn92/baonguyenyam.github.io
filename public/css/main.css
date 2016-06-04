@@ -10,11 +10,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,latin-ext);
-@import url(//fonts.googleapis.com/css?family=Lato:400,100,300,700,900&subset=latin,latin-ext);
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext);
-@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext);
-@import url(//fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,800,900&subset=latin,latin-ext);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -36933,6 +36928,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   0% {
   }
   50% {
+    -ms-box-shadow: 0px 0px 30px #795d9c;
+    -o-box-shadow: 0px 0px 30px #795d9c;
     box-shadow: 0px 0px 30px #795d9c;
   }
   100% {
@@ -36943,6 +36940,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   0% {
   }
   50% {
+    -ms-box-shadow: 0px 0px 30px #795d9c;
+    -o-box-shadow: 0px 0px 30px #795d9c;
     box-shadow: 0px 0px 30px #795d9c;
   }
   100% {
@@ -36983,6 +36982,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    -ms-box-shadow: 0px 0px 1px #f2773f;
+    -o-box-shadow: 0px 0px 1px #f2773f;
     box-shadow: 0px 0px 1px #f2773f;
   }
 }
@@ -36999,6 +37000,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+    -ms-box-shadow: 0px 0px 1px #f2773f;
+    -o-box-shadow: 0px 0px 1px #f2773f;
     box-shadow: 0px 0px 1px #f2773f;
   }
 }
@@ -37007,6 +37010,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   0% {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+    -ms-box-shadow: 0px 0px 1px #ef4a5b;
+    -o-box-shadow: 0px 0px 1px #ef4a5b;
     box-shadow: 0px 0px 1px #ef4a5b;
   }
   50% {
@@ -37023,6 +37028,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   0% {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+    -ms-box-shadow: 0px 0px 1px #ef4a5b;
+    -o-box-shadow: 0px 0px 1px #ef4a5b;
     box-shadow: 0px 0px 1px #ef4a5b;
   }
   50% {
@@ -37041,6 +37048,13 @@ a.bg-danger:focus, a.bg-danger:hover {
     transform: scale(0.33);
   }
   80%, 100% {
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
     opacity: 0;
   }
 }
@@ -37051,6 +37065,13 @@ a.bg-danger:focus, a.bg-danger:hover {
     transform: scale(0.33);
   }
   80%, 100% {
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
     opacity: 0;
   }
 }
@@ -37105,24 +37126,66 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 @keyframes blink {
   0% {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
     opacity: 1;
   }
   50% {
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
     opacity: 0;
   }
   100% {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
     opacity: 1;
   }
 }
 
 @-webkit-keyframes blink {
   0% {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
     opacity: 1;
   }
   50% {
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
     opacity: 0;
   }
   100% {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
     opacity: 1;
   }
 }
@@ -39240,6 +39303,22 @@ ion-col[offset-95] {
   color: #007fb2;
 }
 
+.text-con1 {
+  color: #795d9c;
+}
+
+.text-con2 {
+  color: #f2773f;
+}
+
+.text-con3 {
+  color: #36b455;
+}
+
+.text-con4 {
+  color: #1abc9c;
+}
+
 .text-danger {
   color: #d85030;
 }
@@ -39532,6 +39611,112 @@ ion-col[offset-95] {
 .home-page main, .home-page .home-site {
   width: 100%;
   height: 100%;
+}
+
+.home-page .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: alpha(opacity=15);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+  -webkit-opacity: 0.15;
+  -khtml-opacity: 0.15;
+  -moz-opacity: 0.15;
+  -ms-opacity: 0.15;
+  -o-opacity: 0.15;
+  opacity: 0.15;
+}
+
+.home-page .navigation {
+  color: #fff;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: #f2773f;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  z-index: 2000;
+}
+
+.home-page .navigation i {
+  line-height: 2rem;
+}
+
+.home-page .areas {
+  z-index: 700;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5rem;
+  left: 0;
+  color: white;
+}
+
+.home-page .areas .item {
+  display: none;
+  text-align: center;
+  position: relative;
+}
+
+.home-page .areas .item .cnt {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .home-page .areas .item .cnt {
+    font-size: 2rem;
+  }
+}
+
+.home-page .areas .pulsating-circle {
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 10px;
+  height: 10px;
+}
+
+.home-page .areas .pulsating-circle:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #795d9c;
+  border: 2px solid white;
+  border-radius: 15px;
+  -ms-box-shadow: 0 0 5px rgba(121, 93, 156, 0.3);
+  -o-box-shadow: 0 0 5px rgba(121, 93, 156, 0.3);
+  box-shadow: 0 0 5px rgba(121, 93, 156, 0.3);
+  -webkit-animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+  animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+}
+
+.home-page .areas .pulsating-circle:before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 400%;
+  height: 400%;
+  box-sizing: border-box;
+  margin-left: -150%;
+  margin-top: -150%;
+  border-radius: 65px;
+  background-color: #795d9c;
+  -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 .home-page .typings {
@@ -41075,6 +41260,131 @@ footer .copyright a:hover {
 
 footer .copyright a:active, footer .copyright a:focus, footer .copyright a.active, footer .copyright a.activated {
   color: #007fb2;
+}
+
+.nav-pane {
+  z-index: 2000;
+  color: #1abc9c;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  position: fixed;
+  -webkit-transform: translateX(-350px);
+  transform: translateX(-350px);
+  top: 0;
+  height: 100vh;
+  width: 348px;
+  background: #EA5548;
+  border-right: 2px solid #e94d3f;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  box-shadow: 0px 3px 10px rgba(33, 33, 33, 0.5);
+}
+
+@media screen and (max-width: 620px) {
+  .nav-pane {
+    width: 298px;
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+  }
+}
+
+.nav-pane h1 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.nav-pane.open {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.toggle-nav {
+  z-index: 2000;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #f2773f;
+}
+
+.toggle-nav.open span.m, .toggle-nav.open span.n, .toggle-nav.open span.u {
+  opacity: 1;
+}
+
+.toggle-nav span.m, .toggle-nav span.n, .toggle-nav span.u {
+  font-size: 1.05rem;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  letter-spacing: 2px;
+}
+
+.toggle-nav span.e {
+  display: inline-block;
+  height: 12px;
+  width: 17px;
+  margin-left: 2px;
+}
+
+.toggle-nav span.e.btn-close {
+  margin-left: 0;
+}
+
+.toggle-nav span.e.btn-close span.bar:nth-child(1) {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 5px;
+}
+
+.toggle-nav span.e.btn-close span.bar:nth-child(2) {
+  opacity: 0;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.toggle-nav span.e.btn-close span.bar:nth-child(3) {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  bottom: 5px;
+}
+
+.toggle-nav span.e span.bar {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  position: relative;
+  display: block;
+  background: #36b455;
+  border-radius: 1px;
+  border-bottom: 1px solid #8ddda0;
+  width: 15px;
+  height: 2px;
+}
+
+.toggle-nav span.e span.bar:nth-child(2) {
+  margin: 3px 0;
+}
+
+.toggle-nav:hover span.m, .toggle-nav:hover span.n, .toggle-nav:hover span.u {
+  opacity: 1;
+  -webkit-transition: 250ms;
+  transition: 250ms;
 }
 
 /*# sourceMappingURL=main.css.map */
