@@ -41257,39 +41257,18 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
 }
 
 .nav-pane {
-  z-index: 1000;
+  z-index: 1010;
   color: #1abc9c;
   -webkit-transition: 250ms;
   transition: 250ms;
   position: fixed;
-  -webkit-transform: translateX(-350px);
-  transform: translateX(-350px);
+  -webkit-transform: translateX(-60px);
+  transform: translateX(-60px);
   top: 0;
-  height: 100vh;
-  width: 348px;
-  background: #EA5548;
-  border-right: 2px solid #e94d3f;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  box-shadow: 0px 3px 10px rgba(33, 33, 33, 0.5);
-}
-
-@media screen and (max-width: 620px) {
-  .nav-pane {
-    width: 298px;
-    -webkit-transform: translateX(-300px);
-    transform: translateX(-300px);
-  }
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background: #795d9c;
 }
 
 .nav-pane h1 {
@@ -41307,12 +41286,12 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
 }
 
 .toggle-nav {
-  z-index: 2000;
+  z-index: 1000;
   position: absolute;
   top: 1rem;
   right: 1rem;
   cursor: pointer;
-  color: #f2773f;
+  color: white;
 }
 
 .toggle-nav.open span.m, .toggle-nav.open span.n, .toggle-nav.open span.u {
@@ -41364,9 +41343,9 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
   transition: 250ms;
   position: relative;
   display: block;
-  background: #36b455;
+  background: white;
   border-radius: 1px;
-  border-bottom: 1px solid #8ddda0;
+  border-bottom: 1px solid white;
   width: 15px;
   height: 2px;
 }
