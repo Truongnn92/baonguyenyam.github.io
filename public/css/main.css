@@ -41386,4 +41386,109 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
   transition: 250ms;
 }
 
+.about-page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.about-page .bgset {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.about-page .bgset svg {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+}
+
+.about-page .bgcontent {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  min-height: 200px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 700;
+  overflow: hidden;
+}
+
+.about-page .bgcontent .bg {
+  background: url("../img/slider-02.png");
+  background-size: cover;
+  width: 100%;
+  min-height: 120px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 3px solid #795d9c;
+  position: relative;
+}
+
+.about-page .bgcontent .bg .avatar {
+  margin-bottom: -40px;
+  margin-left: -40px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #795d9c;
+}
+
+.about-page .bgcontent .cnt {
+  position: relative;
+}
+
+.about-page .bgcontent .cnt .textop {
+  padding: 80px 1rem 2rem 1rem;
+}
+
+.about-page .bgcontent .cnt .textop .nav {
+  margin-top: 3rem;
+}
+
+.about-page .bgcontent .cnt .textop .nav a {
+  font-size: 2rem;
+  color: #795d9c;
+}
+
+.about-page .bgcontent .cnt .textop .nav a:hover {
+  color: #ef4a5b;
+}
+
+@media (max-width: 991px) {
+  .about-page .bgcontent .cnt .textop h1 {
+    font-size: 1.3rem;
+  }
+  .about-page .bgcontent .cnt .textop .lead {
+    font-size: 1rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

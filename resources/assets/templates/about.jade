@@ -1,0 +1,54 @@
+extends ../variable/jade/_template.jade
+block body
+    body.about-page
+        main
+            .toggle-nav
+                span.m M
+                span.e
+                    span.bar
+                    span.bar
+                    span.bar
+                span.n N
+                span.u U
+            .nav-pane.slide-out
+                nav
+                    ul.nav
+                        li.nav-item
+                            a.nav-link(href="/")
+                                i.mdi.mdi-home
+                        li.nav-item
+                            a.nav-link(href="about.html")
+                                i.mdi.mdi-account-circle
+                        li.nav-item
+                            a.nav-link(href="gallery.html")
+                                i.mdi.mdi-image
+                        li.nav-item
+                            a.nav-link(href="coding.html")
+                                i.mdi.mdi-pound-box
+                        li.nav-item
+                            a.nav-link(href="portfolio.html")
+                                i.mdi.mdi-view-dashboard
+                        li.nav-item
+                            a.nav-link(href="adwards.html")
+                                i.mdi.mdi-trophy
+            .bgset
+            .bgcontent
+                .bg
+                    .avatar(bg-img="img/3.jpg")
+                .cnt
+                    .textop.text-center
+                        h1 Pham Nguyen Bao Nguyen
+                        .lead baonguyenyam@gmail.com
+                        hr
+                        ul.nav.nav-inline
+                            li.nav-item
+                                a.nav-link(href='#')
+                                    i.mdi.mdi-facebook-box
+                            li.nav-item
+                                a.nav-link(href='#')
+                                    i.mdi.mdi-github-box
+                            li.nav-item
+                                a.nav-link(href='#')
+                                    i.mdi.mdi-google-plus-box
+                      
+        include ../variable/jade/_script.jade
