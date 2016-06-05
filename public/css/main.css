@@ -41271,18 +41271,44 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
   background: #795d9c;
 }
 
-.nav-pane h1 {
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-
 .nav-pane.open {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   -webkit-transition: 250ms;
   transition: 250ms;
+}
+
+.nav-pane ul li {
+  border-bottom: 1px solid #6d538c;
+  position: relative;
+}
+
+.nav-pane ul li a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+}
+
+.nav-pane ul li a i {
+  font-size: 32px;
+  line-height: 60px;
+}
+
+.nav-pane ul li:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background: #866ba7;
+}
+
+.nav-pane ul li:hover a {
+  background: #6d538c;
 }
 
 .toggle-nav {

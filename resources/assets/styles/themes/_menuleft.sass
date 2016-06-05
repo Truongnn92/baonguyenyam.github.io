@@ -18,15 +18,34 @@
   //   width: 298px
   //   transform: translateX(300px)
 
-  h1
-    margin: 0
-    text-align: center
-    text-transform: uppercase
-    font-size: 1.5rem
-
   &.open
     transform: translateX(0)
     transition: 250ms
+  ul
+    li
+      a
+        display: block
+        width: 60px
+        height: 60px
+        text-align: center
+        line-height: 60px
+        color: $color-white
+        i
+          font-size: 32px
+          line-height: 60px
+      border-bottom: 1px solid darken($color-con1, 5%)
+      position: relative
+      &:after
+        content: ''
+        width: 100%
+        height: 1px
+        position: absolute
+        bottom: -2px
+        left: 0
+        background: lighten($color-con1, 5%)
+      &:hover
+        a
+          background: darken($color-con1, 5%)
 
 .toggle-nav
   z-index: 1000
