@@ -39615,6 +39615,12 @@ ion-col[offset-95] {
   width: 100%;
 }
 
+@media (max-width: 543px) {
+  .home-page .qrcode {
+    display: none;
+  }
+}
+
 .home-page .bg {
   position: absolute;
   width: 100%;
@@ -41513,8 +41519,11 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
 }
 
 .about-page .bgcontent .cnt .textop .nav a {
-  font-size: 2rem;
   color: #795d9c;
+}
+
+.about-page .bgcontent .cnt .textop .nav a .mdi {
+  font-size: 2rem;
 }
 
 .about-page .bgcontent .cnt .textop .nav a:hover {
