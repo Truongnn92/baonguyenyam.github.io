@@ -37530,6 +37530,19 @@ ion-col[offset-95] {
   height: 100%;
 }
 
+.app-icon.bn-sign {
+  position: relative;
+  display: inline-block;
+  min-height: 50px;
+  min-width: 100px;
+  width: 100px;
+}
+
+.app-icon.bn-sign svg {
+  width: 100%;
+  height: 100%;
+}
+
 .ribbon {
   width: 115px;
   height: 115px;
@@ -39588,6 +39601,20 @@ ion-col[offset-95] {
   height: 100%;
 }
 
+.home-page .qrcode {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 1200;
+  bottom: 2rem;
+  right: 2rem;
+  border: 2px solid #36b455;
+}
+
+.home-page .qrcode img {
+  width: 100%;
+}
+
 .home-page .bg {
   position: absolute;
   width: 100%;
@@ -41107,7 +41134,7 @@ footer .info .app-icon.bn:before {
 }
 
 footer .info .slogan {
-  color: white;
+  color: #866ba7;
 }
 
 footer .linkfooter {
@@ -41238,6 +41265,10 @@ footer .linkfooter .socials .list-inline .list-inline-item a:active, footer .lin
 
 footer .linkfooter .socials .list-inline .list-inline-item:last-child {
   margin: 0;
+}
+
+footer .linkfooter .socials .app-icon svg * {
+  stroke: white;
 }
 
 footer .copyright {
