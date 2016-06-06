@@ -6,19 +6,22 @@
 			min-height: #{$h} 
 			min-width: #{$w} 
 			width: #{$w} 
-			&:before
-				+position(1, 0,0,'','')
-				display: inline-block
-				padding: 0
-				vertical-align: inherit
-				content: " "
-				height: 100%
+			svg
 				width: 100%
-				mask-image: url(../assets/img/#{$name}.svg)
-				-webkit-mask-image: url(../assets/img/#{$name}.svg)
-				background-color: #{$bg}
-				-webkit-mask-size: cover
-				mask-size: cover
+				height: 100%
+			&:before
+				// +position(1, 0,0,'','')
+				// display: inline-block
+				// padding: 0
+				// vertical-align: inherit
+				// content: " "
+				// height: 100%
+				// width: 100%
+				// mask-image: url(../img/#{$name}.svg)
+				// -webkit-mask-image: url(../img/#{$name}.svg)
+				// background-color: #{$bg}
+				// -webkit-mask-size: cover
+				// mask-size: cover
 
 .icon-rotate-90
 	&:before
@@ -33,5 +36,5 @@
 		+transform(rotate(45deg))
 
 
-+app-icon(biz4x, $color-main, 52px, 32px)
-+app-icon(biz4x-icon, $color-main, 32px, 32px)
++app-icon(bn, $color-main, 52px, 32px)
++app-icon(bn-icon, $color-main, 32px, 32px)

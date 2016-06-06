@@ -11,6 +11,9 @@
 					#BNGlobalMenu 
 						.navbar-brand
 							i
+								svg
+									*
+										fill: $color-white
 								&:before
 									background-color: $color-white
 						.nav.navbar-right 
@@ -51,12 +54,17 @@
 			display: table
 			.boxitem
 				display: table-cell
-				vertical-align: middle
+				vertical-align: bottom
 				width: 100%
 				height: 400px
 				color: $color-white
 				text-align: center
-				+pad(2rem)
+				+pad(0)
+				aside
+					background: rgba(0,0,0,.5)
+					+pad(1rem)
+					h2
+						+mar(0)
 				h1
 					+text-shadow
 					font-family: 'BN-Fonts'
@@ -64,7 +72,7 @@
 					+text-shadow(1px, 1px, 1px, rgba(0, 0, 0, 0.4))
 					+fz(1.3rem)
 					+fw(200)
-					font-family: 'Raleway'
+					// font-family: 'Raleway'
 				@include media-breakpoint-up(md)
 					height: 550px
 					h1
@@ -193,18 +201,19 @@
 							+box-shadowset(inset 0 0px 0px 1px rgba(red($color-white),green($color-white),blue($color-white),.3))
 							+border($color-main, 1px ,1, '')
 							+border-radius(20px)
-							+lh(1.5rem)
+							// +lh(1.5rem)
 							+fz(.9rem)
 							white-space: nowrap
 							color: $color-white
-							+pad(0 .75rem)
+							+pad(.15rem .75rem)
 							display: inline-block
+							height: 1.5rem
 						.sum
 							background-color: $color-con
 							+box-shadowset(inset 0 0px 0px 1px rgba(red($color-white),green($color-white),blue($color-white),.3))
 							+border($color-con, 1px ,1, '')
 							+border-radius(20px)
-							+lh(1.2rem)
+							// +lh(1.2rem)
 							+fz(.8rem)
 							white-space: nowrap
 							color: $color-white
@@ -244,7 +253,8 @@
 				+mar(0,left)
 				h2
 					+fz(1.8rem)
-					+lh(3rem)
+					+lh(3.3rem)
+					height: 3rem
 					text-align: right
 		// Tabs 		
 		.nav
@@ -287,6 +297,10 @@
 					> div
 						+border-radius(0)
 						+pad(8px 12px)
+						i
+							line-height: 1.8rem
+							height: 0
+							font-size: 1.4rem
 					.owl-prev
 						left: 0
 					.owl-next
@@ -400,6 +414,10 @@
 							&:hover, &.active
 								background-color: $color-white
 								color: $color-main
+							i
+								line-height: 1.8rem
+								height: 0
+								font-size: 1.4rem
 						.owl-prev
 							left: 0
 						.owl-next
