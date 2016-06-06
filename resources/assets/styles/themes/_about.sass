@@ -49,6 +49,9 @@
 				height: 80px
 				+border-radius(50%)
 				border: 3px solid $color-con1
+				+transition(all .5s ease-in-out)
+				&:hover
+					+border-radius(0)
 		.cnt
 			position: relative
 			.textop
@@ -57,10 +60,10 @@
 					+mar(3rem,top)
 					a
 						color: $color-con1
-						.mdi
-							+fz(2rem)
 						&:hover
 							color: $color-main
+						.mdi
+							+fz(2rem)
 				@include media-breakpoint-down(md)
 					h1
 						+fz(1.3rem)

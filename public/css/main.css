@@ -39609,6 +39609,13 @@ ion-col[offset-95] {
   bottom: 2rem;
   right: 2rem;
   border: 2px solid #36b455;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.home-page .qrcode:hover {
+  width: 120px;
+  height: 120px;
 }
 
 .home-page .qrcode img {
@@ -41504,6 +41511,12 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
   height: 80px;
   border-radius: 50%;
   border: 3px solid #795d9c;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.about-page .bgcontent .bg .avatar:hover {
+  border-radius: 0;
 }
 
 .about-page .bgcontent .cnt {
@@ -41522,12 +41535,12 @@ footer .copyright a:active, footer .copyright a:focus, footer .copyright a.activ
   color: #795d9c;
 }
 
-.about-page .bgcontent .cnt .textop .nav a .mdi {
-  font-size: 2rem;
-}
-
 .about-page .bgcontent .cnt .textop .nav a:hover {
   color: #795d9c;
+}
+
+.about-page .bgcontent .cnt .textop .nav a .mdi {
+  font-size: 2rem;
 }
 
 @media (max-width: 991px) {
