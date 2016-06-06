@@ -1,3 +1,6 @@
+http://codepen.io/dejanstojanovic/pen/QjwLZp
+https://github.com/miromannino/Justified-Gallery
+
 Copyright (c) 2012-2016 GET4X Team
 
 # GET4X APP

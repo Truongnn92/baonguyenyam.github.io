@@ -9,6 +9,8 @@ config:
       - "bower_components/favico.js/favico.js"
       - "bower_components/typed.js/dist/typed.min.js"
       - "bower_components/trianglify/dist/trianglify.min.js"
+      - "bower_components/photoswipe/dist/photoswipe.min.js"
+      - "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"
       # - "bower_components/particles.js/particles.js"
     css: 
       - "bower_components/animate.css/animate.css"
@@ -16,6 +18,8 @@ config:
       - "bower_components/hover/css/hover.css"
       - "bower_components/owl.carousel/dist/assets/owl.carousel.min.css"
       - "bower_components/owl.carousel/dist/assets/owl.theme.default.css"
+      - "bower_components/photoswipe/dist/photoswipe.css"
+      # - "bower_components/photoswipe/dist/default-skin/default-skin.css"
   title: "Mobile App"
   author: 
     email: "baonguyenyam@gmail.com"
