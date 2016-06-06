@@ -1,5 +1,5 @@
 $(function() {
-    Pace.on("done", function(){
+    Pace.on("done", function() {
         $("body").fadeIn(1000);
     });
 });
