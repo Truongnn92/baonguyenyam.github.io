@@ -1,8 +1,10 @@
 extends ../variable/jade/_template.jade
 block body
 	body.gallery-page
+		include ../variable/jade/_header.jade
 		main
 			.gallery-body 
+				h1 My Projects
 				#freewall.my-gallery
 					.brick.hvr-glow.hvr-bob(style="width:400px")
 						figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
@@ -115,4 +117,5 @@ block body
 
 							.pswp__caption
 								.pswp__caption__center
+		include ../variable/jade/_footer.jade
 		include ../variable/jade/_script.jade

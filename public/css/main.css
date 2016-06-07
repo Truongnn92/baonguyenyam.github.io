@@ -42044,17 +42044,18 @@ a.pswp__share--download:hover {
   background: none;
 }
 
-.gallery-page {
-  background: white;
-}
-
 .gallery-page main {
-  background: white;
+  margin-top: 5rem;
 }
 
 .gallery-page .gallery-body {
   padding: 2rem;
-  background: white;
+}
+
+.gallery-page .gallery-body h1 {
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 2rem;
 }
 
 .gallery-page .my-gallery {
