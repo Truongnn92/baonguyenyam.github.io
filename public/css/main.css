@@ -40290,9 +40290,8 @@ ion-col[offset-95] {
   font-size: 0.9rem;
   white-space: nowrap;
   color: white;
-  padding: 0.15rem 0.75rem;
+  padding: 0 0.75rem;
   display: inline-block;
-  height: 1.5rem;
 }
 
 .info-page .home-maps figure .areas .item .summary .sum {
@@ -40305,8 +40304,7 @@ ion-col[offset-95] {
   font-size: 0.8rem;
   white-space: nowrap;
   color: white;
-  padding: 0.15rem 0.5rem;
-  margin-top: 0.15rem;
+  padding: 0 0.5rem;
   display: inline-block;
 }
 
@@ -40528,7 +40526,7 @@ ion-col[offset-95] {
     width: 40%;
     float: right;
     height: 100%;
-    padding: 10px 0 0 2rem;
+    padding: 0;
   }
   .info-page .home-howitworks .boxhiw .boxright .content {
     padding: 0 0 0 2.5rem;
