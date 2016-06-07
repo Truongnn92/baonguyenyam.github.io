@@ -208,21 +208,3 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
 
-
-$('.my-gallery').wookmark({
-    align: 'center',
-    autoResize: false,
-    comparator: null,
-    container: $('body'),
-    direction: undefined,
-    ignoreInactiveItems: true,
-    itemWidth: 100,
-    fillEmptySpace: false,
-    flexibleWidth: 0,
-    offset: 2,
-    onLayoutChanged: undefined,
-    outerOffset: 0,
-    possibleFilters: [],
-    resizeDelay: 50,
-    verticalOffset: undefined
-});

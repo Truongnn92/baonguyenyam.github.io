@@ -42044,4 +42044,19 @@ a.pswp__share--download:hover {
   background: none;
 }
 
+.gallery-page .my-gallery {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-page .my-gallery .brick figure {
+  margin: 0;
+}
+
+.gallery-page .my-gallery .brick figure img {
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */

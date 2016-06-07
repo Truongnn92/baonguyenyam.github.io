@@ -15724,785 +15724,1272 @@ for(t=[],r=0,n=e.length;n>r;r++)f=e[r],t.push(f.lab());return t}(),o=s[0],a=s[1]
 * http://photoswipe.com
 * Copyright (c) 2015 Dmitry Semenov; */
 !function(a,b){"function"==typeof define&&define.amd?define(b):"object"==typeof exports?module.exports=b():a.PhotoSwipeUI_Default=b()}(this,function(){"use strict";var a=function(a,b){var c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v=this,w=!1,x=!0,y=!0,z={barsSize:{top:44,bottom:"auto"},closeElClasses:["item","caption","zoom-wrap","ui","top-bar"],timeToIdle:4e3,timeToIdleOutside:1e3,loadingIndicatorDelay:1e3,addCaptionHTMLFn:function(a,b){return a.title?(b.children[0].innerHTML=a.title,!0):(b.children[0].innerHTML="",!1)},closeEl:!0,captionEl:!0,fullscreenEl:!0,zoomEl:!0,shareEl:!0,counterEl:!0,arrowEl:!0,preloaderEl:!0,tapToClose:!1,tapToToggleControls:!0,clickToCloseNonZoomable:!0,shareButtons:[{id:"facebook",label:"Share on Facebook",url:"https://www.facebook.com/sharer/sharer.php?u={{url}}"},{id:"twitter",label:"Tweet",url:"https://twitter.com/intent/tweet?text={{text}}&url={{url}}"},{id:"pinterest",label:"Pin it",url:"http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}"},{id:"download",label:"Download image",url:"{{raw_image_url}}",download:!0}],getImageURLForShare:function(){return a.currItem.src||""},getPageURLForShare:function(){return window.location.href},getTextForShare:function(){return a.currItem.title||""},indexIndicatorSep:" / ",fitControlsWidth:1200},A=function(a){if(r)return!0;a=a||window.event,q.timeToIdle&&q.mouseUsed&&!k&&K();for(var c,d,e=a.target||a.srcElement,f=e.getAttribute("class")||"",g=0;g<S.length;g++)c=S[g],c.onTap&&f.indexOf("pswp__"+c.name)>-1&&(c.onTap(),d=!0);if(d){a.stopPropagation&&a.stopPropagation(),r=!0;var h=b.features.isOldAndroid?600:30;s=setTimeout(function(){r=!1},h)}},B=function(){return!a.likelyTouchDevice||q.mouseUsed||screen.width>q.fitControlsWidth},C=function(a,c,d){b[(d?"add":"remove")+"Class"](a,"pswp__"+c)},D=function(){var a=1===q.getNumItemsFn();a!==p&&(C(d,"ui--one-slide",a),p=a)},E=function(){C(i,"share-modal--hidden",y)},F=function(){return y=!y,y?(b.removeClass(i,"pswp__share-modal--fade-in"),setTimeout(function(){y&&E()},300)):(E(),setTimeout(function(){y||b.addClass(i,"pswp__share-modal--fade-in")},30)),y||H(),!1},G=function(b){b=b||window.event;var c=b.target||b.srcElement;return a.shout("shareLinkClick",b,c),c.href?c.hasAttribute("download")?!0:(window.open(c.href,"pswp_share","scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,top=100,left="+(window.screen?Math.round(screen.width/2-275):100)),y||F(),!1):!1},H=function(){for(var a,b,c,d,e,f="",g=0;g<q.shareButtons.length;g++)a=q.shareButtons[g],c=q.getImageURLForShare(a),d=q.getPageURLForShare(a),e=q.getTextForShare(a),b=a.url.replace("{{url}}",encodeURIComponent(d)).replace("{{image_url}}",encodeURIComponent(c)).replace("{{raw_image_url}}",c).replace("{{text}}",encodeURIComponent(e)),f+='<a href="'+b+'" target="_blank" class="pswp__share--'+a.id+'"'+(a.download?"download":"")+">"+a.label+"</a>",q.parseShareButtonOut&&(f=q.parseShareButtonOut(a,f));i.children[0].innerHTML=f,i.children[0].onclick=G},I=function(a){for(var c=0;c<q.closeElClasses.length;c++)if(b.hasClass(a,"pswp__"+q.closeElClasses[c]))return!0},J=0,K=function(){clearTimeout(u),J=0,k&&v.setIdle(!1)},L=function(a){a=a?a:window.event;var b=a.relatedTarget||a.toElement;b&&"HTML"!==b.nodeName||(clearTimeout(u),u=setTimeout(function(){v.setIdle(!0)},q.timeToIdleOutside))},M=function(){q.fullscreenEl&&!b.features.isOldAndroid&&(c||(c=v.getFullscreenAPI()),c?(b.bind(document,c.eventK,v.updateFullscreen),v.updateFullscreen(),b.addClass(a.template,"pswp--supports-fs")):b.removeClass(a.template,"pswp--supports-fs"))},N=function(){q.preloaderEl&&(O(!0),l("beforeChange",function(){clearTimeout(o),o=setTimeout(function(){a.currItem&&a.currItem.loading?(!a.allowProgressiveImg()||a.currItem.img&&!a.currItem.img.naturalWidth)&&O(!1):O(!0)},q.loadingIndicatorDelay)}),l("imageLoadComplete",function(b,c){a.currItem===c&&O(!0)}))},O=function(a){n!==a&&(C(m,"preloader--active",!a),n=a)},P=function(a){var c=a.vGap;if(B()){var g=q.barsSize;if(q.captionEl&&"auto"===g.bottom)if(f||(f=b.createEl("pswp__caption pswp__caption--fake"),f.appendChild(b.createEl("pswp__caption__center")),d.insertBefore(f,e),b.addClass(d,"pswp__ui--fit")),q.addCaptionHTMLFn(a,f,!0)){var h=f.clientHeight;c.bottom=parseInt(h,10)||44}else c.bottom=g.top;else c.bottom="auto"===g.bottom?0:g.bottom;c.top=g.top}else c.top=c.bottom=0},Q=function(){q.timeToIdle&&l("mouseUsed",function(){b.bind(document,"mousemove",K),b.bind(document,"mouseout",L),t=setInterval(function(){J++,2===J&&v.setIdle(!0)},q.timeToIdle/2)})},R=function(){l("onVerticalDrag",function(a){x&&.95>a?v.hideControls():!x&&a>=.95&&v.showControls()});var a;l("onPinchClose",function(b){x&&.9>b?(v.hideControls(),a=!0):a&&!x&&b>.9&&v.showControls()}),l("zoomGestureEnded",function(){a=!1,a&&!x&&v.showControls()})},S=[{name:"caption",option:"captionEl",onInit:function(a){e=a}},{name:"share-modal",option:"shareEl",onInit:function(a){i=a},onTap:function(){F()}},{name:"button--share",option:"shareEl",onInit:function(a){h=a},onTap:function(){F()}},{name:"button--zoom",option:"zoomEl",onTap:a.toggleDesktopZoom},{name:"counter",option:"counterEl",onInit:function(a){g=a}},{name:"button--close",option:"closeEl",onTap:a.close},{name:"button--arrow--left",option:"arrowEl",onTap:a.prev},{name:"button--arrow--right",option:"arrowEl",onTap:a.next},{name:"button--fs",option:"fullscreenEl",onTap:function(){c.isFullscreen()?c.exit():c.enter()}},{name:"preloader",option:"preloaderEl",onInit:function(a){m=a}}],T=function(){var a,c,e,f=function(d){if(d)for(var f=d.length,g=0;f>g;g++){a=d[g],c=a.className;for(var h=0;h<S.length;h++)e=S[h],c.indexOf("pswp__"+e.name)>-1&&(q[e.option]?(b.removeClass(a,"pswp__element--disabled"),e.onInit&&e.onInit(a)):b.addClass(a,"pswp__element--disabled"))}};f(d.children);var g=b.getChildByClass(d,"pswp__top-bar");g&&f(g.children)};v.init=function(){b.extend(a.options,z,!0),q=a.options,d=b.getChildByClass(a.scrollWrap,"pswp__ui"),l=a.listen,R(),l("beforeChange",v.update),l("doubleTap",function(b){var c=a.currItem.initialZoomLevel;a.getZoomLevel()!==c?a.zoomTo(c,b,333):a.zoomTo(q.getDoubleTapZoom(!1,a.currItem),b,333)}),l("preventDragEvent",function(a,b,c){var d=a.target||a.srcElement;d&&d.getAttribute("class")&&a.type.indexOf("mouse")>-1&&(d.getAttribute("class").indexOf("__caption")>0||/(SMALL|STRONG|EM)/i.test(d.tagName))&&(c.prevent=!1)}),l("bindEvents",function(){b.bind(d,"pswpTap click",A),b.bind(a.scrollWrap,"pswpTap",v.onGlobalTap),a.likelyTouchDevice||b.bind(a.scrollWrap,"mouseover",v.onMouseOver)}),l("unbindEvents",function(){y||F(),t&&clearInterval(t),b.unbind(document,"mouseout",L),b.unbind(document,"mousemove",K),b.unbind(d,"pswpTap click",A),b.unbind(a.scrollWrap,"pswpTap",v.onGlobalTap),b.unbind(a.scrollWrap,"mouseover",v.onMouseOver),c&&(b.unbind(document,c.eventK,v.updateFullscreen),c.isFullscreen()&&(q.hideAnimationDuration=0,c.exit()),c=null)}),l("destroy",function(){q.captionEl&&(f&&d.removeChild(f),b.removeClass(e,"pswp__caption--empty")),i&&(i.children[0].onclick=null),b.removeClass(d,"pswp__ui--over-close"),b.addClass(d,"pswp__ui--hidden"),v.setIdle(!1)}),q.showAnimationDuration||b.removeClass(d,"pswp__ui--hidden"),l("initialZoomIn",function(){q.showAnimationDuration&&b.removeClass(d,"pswp__ui--hidden")}),l("initialZoomOut",function(){b.addClass(d,"pswp__ui--hidden")}),l("parseVerticalMargin",P),T(),q.shareEl&&h&&i&&(y=!0),D(),Q(),M(),N()},v.setIdle=function(a){k=a,C(d,"ui--idle",a)},v.update=function(){x&&a.currItem?(v.updateIndexIndicator(),q.captionEl&&(q.addCaptionHTMLFn(a.currItem,e),C(e,"caption--empty",!a.currItem.title)),w=!0):w=!1,y||F(),D()},v.updateFullscreen=function(d){d&&setTimeout(function(){a.setScrollOffset(0,b.getScrollY())},50),b[(c.isFullscreen()?"add":"remove")+"Class"](a.template,"pswp--fs")},v.updateIndexIndicator=function(){q.counterEl&&(g.innerHTML=a.getCurrentIndex()+1+q.indexIndicatorSep+q.getNumItemsFn())},v.onGlobalTap=function(c){c=c||window.event;var d=c.target||c.srcElement;if(!r)if(c.detail&&"mouse"===c.detail.pointerType){if(I(d))return void a.close();b.hasClass(d,"pswp__img")&&(1===a.getZoomLevel()&&a.getZoomLevel()<=a.currItem.fitRatio?q.clickToCloseNonZoomable&&a.close():a.toggleDesktopZoom(c.detail.releasePoint))}else if(q.tapToToggleControls&&(x?v.hideControls():v.showControls()),q.tapToClose&&(b.hasClass(d,"pswp__img")||I(d)))return void a.close()},v.onMouseOver=function(a){a=a||window.event;var b=a.target||a.srcElement;C(d,"ui--over-close",I(b))},v.hideControls=function(){b.addClass(d,"pswp__ui--hidden"),x=!1},v.showControls=function(){x=!0,w||v.update(),b.removeClass(d,"pswp__ui--hidden")},v.supportsFullscreen=function(){var a=document;return!!(a.exitFullscreen||a.mozCancelFullScreen||a.webkitExitFullscreen||a.msExitFullscreen)},v.getFullscreenAPI=function(){var b,c=document.documentElement,d="fullscreenchange";return c.requestFullscreen?b={enterK:"requestFullscreen",exitK:"exitFullscreen",elementK:"fullscreenElement",eventK:d}:c.mozRequestFullScreen?b={enterK:"mozRequestFullScreen",exitK:"mozCancelFullScreen",elementK:"mozFullScreenElement",eventK:"moz"+d}:c.webkitRequestFullscreen?b={enterK:"webkitRequestFullscreen",exitK:"webkitExitFullscreen",elementK:"webkitFullscreenElement",eventK:"webkit"+d}:c.msRequestFullscreen&&(b={enterK:"msRequestFullscreen",exitK:"msExitFullscreen",elementK:"msFullscreenElement",eventK:"MSFullscreenChange"}),b&&(b.enter=function(){return j=q.closeOnScroll,q.closeOnScroll=!1,"webkitRequestFullscreen"!==this.enterK?a.template[this.enterK]():void a.template[this.enterK](Element.ALLOW_KEYBOARD_INPUT)},b.exit=function(){return q.closeOnScroll=j,document[this.exitK]()},b.isFullscreen=function(){return document[this.elementK]}),b}};return a});
-/*!
-  Wookmark plugin
-  @name wookmark.js
-  @author Christoph Ono (chri@sto.ph or @gbks)
-  @author Sebastian Helzle (me@helzle.it or @sebobo)
-  @version 2.1.2
-  @date 05/05/2016
-  @category jQuery plugin
-  @copyright (c) 2009-2016 Christoph Ono (www.wookmark.com)
-  @license Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
-*/
-/*global define, window, jQuery*/
-/*jslint plusplus: true, bitwise: true */
-(function (factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['window', 'document'], factory);
-  } else {
-    factory(window, document);
-  }
-}(function (window, document) {
+// created by Minh Nguyen;
+// version 1.0.6;
 
-  // Wookmark default options
-  // ------------------------
-  var defaultOptions = {
-    align: 'center',
-    autoResize: true,
-    comparator: null,
-    direction: undefined,
-    ignoreInactiveItems: true,
-    inactiveClass: 'wookmark-inactive',
-    itemSelector: undefined,
-    itemWidth: 0,
-    fillEmptySpace: false,
-    flexibleWidth: 0,
-    offset: 5,
-    outerOffset: 0,
-    onLayoutChanged: undefined,
-    placeholderClass: 'wookmark-placeholder',
-    possibleFilters: [],
-    resizeDelay: 50,
-    verticalOffset: undefined
-  };
+(function($) {
 
-  // Helper functions
-  // ----------------
-
-  // Bind function to set the context for the Wookmark instance function
-  function __bind(fn, me) {
-    return function () {
-      return fn.apply(me, arguments);
-    };
-  }
-
-  // Function for executing css writes to dom on the next animation frame if supported
-  var executeNextFrame = window.requestAnimationFrame || function (callback) { callback(); };
-
-  // Update multiple css values on an object
-  function setCSS(el, properties) {
-    var key;
-    for (key in properties) {
-      if (properties.hasOwnProperty(key)) {
-        el.style[key] = properties[key];
-      }
-    }
-  }
-
-  // Update the css properties of multiple elements at the same time
-  // befor the browsers next animation frame.
-  // The parameter `data` has to be an array containing objects, each
-  // with the element and the desired css properties.
-  function bulkUpdateCSS(data, callback) {
-    executeNextFrame(function () {
-      var i, item;
-      for (i = 0; i < data.length; i++) {
-        item = data[i];
-        setCSS(item.el, item.css);
-      }
-      // Run optional callback
-      if (typeof callback === 'function') {
-        executeNextFrame(callback);
-      }
+    // for zeptojs;
+    $.isNumeric == null && ($.isNumeric = function(src) {
+        return src != null && src.constructor === Number;
     });
-  }
 
-  // Remove whitespace around filter names
-  function cleanFilterName(filterName) {
-    return filterName.replace(/^\s+|\s+$/g, '').toLowerCase();
-  }
+    $.isFunction == null && ($.isFunction = function(src) {
+        return src != null && src instanceof Function;
+    });
 
-  // Remove listener from an element (IE8 compatible)
-  function removeEventListener(el, eventName, handler) {
-    if (window.jQuery) {
-      $(el).off(eventName, handler);
-    } else if (el.removeEventListener) {
-      el.removeEventListener(eventName, handler);
-    } else {
-      el.detachEvent('on' + eventName, handler);
-    }
-  }
+    var $W = $(window);
+    var $D = $(document);
 
-  // Add listener to an element (IE8 compatible)
-  function addEventListener(el, eventName, handler) {
-    removeEventListener(el, eventName, handler);
+    var layoutManager = {
+        // default setting;
+        defaultConfig: {
+            animate: false,
+            cellW: 100, // function(container) {return 100;}
+            cellH: 100, // function(container) {return 100;}
+            delay: 0, // slowdown active block;
+            engine: 'giot', // 'giot' is a person name;
+            fixSize: null, // resize + adjust = fill gap;
+            //fixSize: 0, resize but keep ratio = no fill gap;
+            //fixSize: 1, no resize + no adjust = no fill gap;
+            gutterX: 15, // width spacing between blocks;
+            gutterY: 15, // height spacing between blocks;
+            keepOrder: false,
+            selector: '> div',
+            draggable: false,
+            cacheSize: true, // caches the original size of block;
+            rightToLeft: false,
+            bottomToTop: false,
+            onGapFound: function() {},
+            onComplete: function() {},
+            onResize: function() {},
+            onBlockDrag: function() {},
+            onBlockMove: function() {},
+            onBlockDrop: function() {},
+            onBlockReady: function() {},
+            onBlockFinish: function() {},
+            onBlockActive: function() {},
+            onBlockResize: function() {}
+        },
+        plugin: {},
+        totalGrid: 1,
+        transition: false,
+        loadBlock: function(item, setting) {
+            var runtime = setting.runtime;
+            var gutterX = runtime.gutterX;
+            var gutterY = runtime.gutterY;
+            var cellH = runtime.cellH;
+            var cellW = runtime.cellW;
+            var block = null;
+            var $item = $(item);
+            var active = $item.data("active");
+            var fixPos = $item.attr('data-position');
+            var fixSize = parseInt($item.attr('data-fixSize'));
+            var blockId = runtime.lastId++ + '-' + runtime.totalGrid;
 
-    if (window.jQuery) {
-      $(el).on(eventName, handler);
-    } else if (el.addEventListener) {
-      el.addEventListener(eventName, handler);
-    } else {
-      el.attachEvent('on' + eventName, function () {
-        handler.call(el);
-      });
-    }
-  }
+            //ignore dragging block;
+            if ($item.hasClass('fw-float')) return null;
+            $item.attr({id: blockId, 'data-delay': item.index});
 
-  // Checks if element `el` is not visible in the browser
-  function isHidden(el) {
-    return el.offsetParent === null;
-  }
-
-  // Returns the elements height without margin
-  function getHeight(el) {
-    return el.offsetHeight;
-  }
-
-  // Returns the elements width without margin
-  function getWidth(el) {
-    return el.offsetWidth;
-  }
-
-  // Return true if element has class
-  function hasClass(el, className) {
-    if (el.classList) {
-      return el.classList.contains(className);
-    }
-    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
-  }
-
-  // Add class to element (IE8+)
-  function addClass(el, className) {
-    if (el.classList) {
-      el.classList.add(className);
-    } else {
-      el.className += ' ' + className;
-    }
-  }
-
-  // Remove class from element (IE8+)
-  function removeClass(el, className) {
-    if (el.classList) {
-      el.classList.remove(className);
-    } else {
-      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    }
-  }
-
-  // Get value of specified data attribute
-  function getData(el, attr, isInt, prefix) {
-    if (prefix === undefined) {
-      prefix = 'wookmark-';
-    }
-    var val = el.getAttribute('data-' + prefix + attr);
-    if (isInt === true) {
-      return parseInt(val, 10);
-    }
-    return val;
-  }
-
-  // Set value of specified data attribute
-  function setData(el, attr, val, prefix) {
-    if (prefix === undefined) {
-      prefix = 'wookmark-';
-    }
-    el.setAttribute('data-' + prefix + attr, val);
-  }
-
-  // Remove duplicates from given array
-  function removeDuplicates(items) {
-    var temp = {}, result = [], x, i = items.length;
-    while (i--) {
-      x = getData(items[i], 'id', true);
-      if (!temp.hasOwnProperty(x)) {
-        temp[x] = 1;
-        result.push(items[i]);
-      }
-    }
-    return result;
-  }
-
-  // Get the computed style from an element (IE 8 compatible)
-  function getStyle(el, prop) {
-    return window.getComputedStyle !== undefined ? window.getComputedStyle(el, null).getPropertyValue(prop) : el.currentStyle[prop];
-  }
-
-
-  // IE 8 compatible indexOf
-  function indexOf(items, item) {
-    var len = items.length, i;
-    for (i = 0; i < len; i++) {
-      if (items[i] === item) {
-        return i;
-      }
-    }
-    return -1;
-  }
-
-  // Main wookmark plugin class
-  // --------------------------
-  function Wookmark(container, options) {
-    options = options || {};
-
-    if (typeof container === 'string') {
-      container = document.querySelector(container);
-    }
-
-    // Instance variables.
-    this.container = container;
-    this.columns = this.resizeTimer = null;
-    this.activeItemCount = 0;
-    this.placeholders = [];
-    this.itemHeightsInitialized = false;
-    this.itemHeightsDirty = false;
-    this.elementTag = 'div';
-
-    // Bind instance methods
-    this.initItems = __bind(this.initItems, this);
-    this.updateOptions = __bind(this.updateOptions, this);
-    this.onResize = __bind(this.onResize, this);
-    this.onRefresh = __bind(this.onRefresh, this);
-    this.getItemWidth = __bind(this.getItemWidth, this);
-    this.layout = __bind(this.layout, this);
-    this.layoutFull = __bind(this.layoutFull, this);
-    this.layoutColumns = __bind(this.layoutColumns, this);
-    this.filter = __bind(this.filter, this);
-    this.clear = __bind(this.clear, this);
-    this.getActiveItems = __bind(this.getActiveItems, this);
-    this.refreshPlaceholders = __bind(this.refreshPlaceholders, this);
-    this.sortElements = __bind(this.sortElements, this);
-    this.updateFilterClasses = __bind(this.updateFilterClasses, this);
-
-    // Initialize children of the container
-    this.initItems();
-
-    // Initial update and layout
-    this.container.style.display = 'block';
-    this.updateOptions(options);
-
-    // Collect filter classes after items have been initialized
-    this.updateFilterClasses();
-
-    // Listen to resize event of the browser if enabled
-    if (this.autoResize) {
-      addEventListener(window, 'resize', this.onResize);
-    }
-
-    // Listen to external refresh event
-    addEventListener(this.container, 'refreshWookmark', this.onRefresh);
-  }
-
-  // Get all valid children of the container object and store them
-  Wookmark.prototype.initItems = function () {
-    // By select all children of the container if no selector is specified
-    if (this.itemSelector === undefined) {
-      var items = [], child, children = this.container.children,
-          i = children.length;
-      while (i--) {
-        child = children[i];
-        // Skip comment nodes on IE8
-        if (child.nodeType !== 8) {
-          // Show item
-          child.style.display = '';
-          setData(child, 'id', i);
-          items.unshift(child);
-        }
-      }
-      this.items = items;
-    } else {
-      this.items = this.container.querySelectorAll(this.itemSelector);
-    }
-
-    if (this.items.length) {
-      this.elementTag = this.items[0].tagName;
-    }
-    this.itemHeightsDirty = true;
-  };
-
-  // Reload all filter classes from all items and cache them
-  Wookmark.prototype.updateFilterClasses = function () {
-    // Collect filter data
-    var i = this.items.length, j, filterClasses = {}, itemFilterClasses,
-      item, filterClass, possibleFilters = this.possibleFilters,
-      k = possibleFilters.length, possibleFilter;
-
-    while (i--) {
-      item = this.items[i];
-
-      // Read filter classes and globally store each filter class as object and the fitting items in the array
-      itemFilterClasses = JSON.parse(getData(item, 'filter-class', false, ''));
-      if (itemFilterClasses && typeof itemFilterClasses === 'object') {
-        j = itemFilterClasses.length;
-        while (j--) {
-          filterClass = cleanFilterName(itemFilterClasses[j]);
-          if (!filterClasses.hasOwnProperty(filterClass)) {
-            filterClasses[filterClass] = [];
-          }
-          filterClasses[filterClass].push(item);
-        }
-      }
-    }
-
-    while (k--) {
-      possibleFilter = cleanFilterName(possibleFilters[k]);
-      if (!filterClasses.hasOwnProperty(possibleFilter)) {
-        filterClasses[possibleFilter] = [];
-      }
-    }
-
-    this.filterClasses = filterClasses;
-  };
-
-  // Method for updating the plugins options
-  Wookmark.prototype.updateOptions = function (options) {
-    var key;
-    this.itemHeightsDirty = true;
-    options = options || {};
-
-    // Overwrite non existing instance variables with the ones from options or the defaults
-    for (key in defaultOptions) {
-      if (defaultOptions.hasOwnProperty(key)) {
-        if (options.hasOwnProperty(key)) {
-          this[key] = options[key];
-        } else if (!this.hasOwnProperty(key)) {
-          this[key] = defaultOptions[key];
-        }
-      }
-    }
-
-    // Vertical offset uses a fallback to offset
-    this.verticalOffset = this.verticalOffset || this.offset;
-
-    // Update layout so changes apply
-    this.layout(true);
-  };
-
-  // This timer ensures that layout is not continuously called as window is being dragged.
-  Wookmark.prototype.onResize = function () {
-    clearTimeout(this.resizeTimer);
-    this.itemHeightsDirty = this.flexibleWidth !== 0;
-    this.resizeTimer = setTimeout(this.layout, this.resizeDelay);
-  };
-
-  // Marks the items heights as dirty and does a relayout
-  Wookmark.prototype.onRefresh = function () {
-    this.itemHeightsDirty = true;
-    this.layout();
-  };
-
-  // Filters the active items with the given string filters.
-  // @param filters array of string
-  // @param mode 'or' or 'and'
-  Wookmark.prototype.filter = function (filters, mode, dryRun) {
-    var activeFilters = [], activeFiltersLength, activeItems = [],
-      i, j, k, filter;
-
-    filters = filters || [];
-    mode = mode || 'or';
-    dryRun = dryRun || false;
-
-    if (filters.length) {
-      // Collect active filters
-      for (i = 0; i < filters.length; i++) {
-        filter = cleanFilterName(filters[i]);
-        if (this.filterClasses.hasOwnProperty(filter)) {
-          activeFilters.push(this.filterClasses[filter]);
-        }
-      }
-
-      // Get items for active filters with the selected mode
-      i = activeFiltersLength = activeFilters.length;
-      if (mode === 'or' || activeFiltersLength === 1) {
-        // Set all items in all active filters active
-        while (i--) {
-          activeItems = activeItems.concat(activeFilters[i]);
-        }
-      } else if (mode === 'and') {
-        var shortestFilter = activeFilters[0], itemValid = true,
-          foundInFilter, currentItem, currentFilter;
-
-        // Find shortest filter class
-        while (i--) {
-          if (activeFilters[i].length < shortestFilter.length) {
-            shortestFilter = activeFilters[i];
-          }
-        }
-
-        // Iterate over shortest filter and find elements in other filter classes
-        shortestFilter = shortestFilter || [];
-        i = shortestFilter.length;
-        while (i--) {
-          currentItem = shortestFilter[i];
-          j = activeFiltersLength;
-          itemValid = true;
-
-          while (j-- && itemValid) {
-            currentFilter = activeFilters[j];
-            if (shortestFilter !== currentFilter) {
-              // Search for current item in each active filter class
-              foundInFilter = false;
-              k = currentFilter.length;
-              while (k-- && !foundInFilter) {
-                foundInFilter = currentFilter[k] === currentItem;
-              }
-              itemValid &= foundInFilter;
+            //remove animation for speed render;
+            if (setting.animate && this.transition) {
+                this.setTransition(item, "");
             }
-          }
 
-          if (itemValid) {
-            activeItems = activeItems.concat(shortestFilter[i]);
-          }
+            isNaN(fixSize) && (fixSize = null);
+            (fixSize == null) && (fixSize = setting.fixSize);
+            var makeRound = (!fixSize) ? "round" : "ceil";
+            // store original size;
+
+            $item.attr('data-height') == null && $item.attr('data-height', $item.height());
+            $item.attr('data-width') == null && $item.attr('data-width', $item.width());
+            var height = 1 * $item.attr('data-height');
+            var width = 1 * $item.attr('data-width');
+
+            if (!setting.cacheSize) {
+                item.style.width = "";
+                width = $item.width();
+
+                item.style.height = "";
+                height = $item.height();
+            }
+
+            var col = !width ? 0 : Math[makeRound]((width + gutterX) / cellW);
+            var row = !height ? 0 : Math[makeRound]((height + gutterY) / cellH);
+
+            // estimate size;
+            if (!fixSize && setting.cellH == 'auto') {
+                $item.width(cellW * col - gutterX);
+                item.style.height = "";
+                height = $item.height();
+                row = !height ? 0 : Math.round((height + gutterY) / cellH);
+            }
+
+            if (!fixSize && setting.cellW == 'auto') {
+                $item.height(cellH * row - gutterY);
+                item.style.width = "";
+                width = $item.width();
+                col = !width ? 0 : Math.round((width + gutterX) / cellW);
+            }
+
+            // for none resize block;
+            if ((fixSize != null) && (col > runtime.limitCol || row > runtime.limitRow)) {
+                block = null;
+            } else {
+                // get smallest width and smallest height of block;
+                // using for image runtime;
+                row && row < runtime.minHoB && (runtime.minHoB = row);
+                col && col < runtime.minWoB && (runtime.minWoB = col);
+
+                // get biggest width and biggest height of block;
+                row > runtime.maxHoB && (runtime.maxHoB = row);
+                col > runtime.maxWoB && (runtime.maxWoB = col);
+
+                width == 0 && (col = 0);
+                height == 0 && (row = 0);
+
+                block = {
+                    resize: false,
+                    id: blockId,
+                    width: col,
+                    height: row,
+                    fixSize: fixSize
+                };
+
+                // for fix position;
+                if (fixPos) {
+                    fixPos = fixPos.split("-");
+                    block.y = 1 * fixPos[0];
+                    block.x = 1 * fixPos[1];
+                    block.width = fixSize != null ? col : Math.min(col, runtime.limitCol - block.x);
+                    block.height = fixSize != null ? row : Math.min(row, runtime.limitRow - block.y);
+                    var holeId = block.y + "-" + block.x + "-" + block.width + "-" + block.height;
+                    if (active) {
+                        runtime.holes[holeId] = {
+                            id: block.id,
+                            top: block.y,
+                            left: block.x,
+                            width: block.width,
+                            height: block.height
+                        };
+                        this.setBlock(block, setting);
+                    } else {
+                        delete runtime.holes[holeId];
+                    }
+
+                }
+            }
+
+            // for css animation;
+            if ($item.attr("data-state") == null) {
+                $item.attr("data-state", "init");
+            } else {
+                $item.attr("data-state", "move");
+            }
+
+            setting.onBlockReady.call(item, block, setting);
+
+            return (fixPos && active) ? null : block;
+        },
+        setBlock: function(block, setting) {
+            var runtime = setting.runtime;
+            var gutterX = runtime.gutterX;
+            var gutterY = runtime.gutterY;
+            var height = block.height;
+            var width = block.width;
+            var cellH = runtime.cellH;
+            var cellW = runtime.cellW;
+            var x = block.x;
+            var y = block.y;
+
+            if (setting.rightToLeft) {
+                x = runtime.limitCol - x - width;
+            }
+            if (setting.bottomToTop) {
+                y = runtime.limitRow - y - height;
+            }
+
+            var realBlock = {
+                fixSize: block.fixSize,
+                resize: block.resize,
+                top: y * cellH,
+                left: x  * cellW,
+                width: cellW * width - gutterX,
+                height: cellH * height - gutterY
+            };
+
+            realBlock.top = 1 * realBlock.top.toFixed(2);
+            realBlock.left = 1 * realBlock.left.toFixed(2);
+            realBlock.width = 1 * realBlock.width.toFixed(2);
+            realBlock.height = 1 * realBlock.height.toFixed(2);
+
+            //runtime.length += 1;
+            block.id && (runtime.blocks[block.id] = realBlock);
+
+            // for append feature;
+            return realBlock;
+        },
+        showBlock: function(item, setting) {
+            var runtime = setting.runtime;
+            var method = setting.animate && !this.transition ? 'animate' : 'css';
+            var block = runtime.blocks[item.id];
+            var $item = $(item);
+            var self = this;
+            var start = $item.attr("data-state") != "move";
+            var trans = start ? "width 0.5s, height 0.5s" : "top 0.5s, left 0.5s, width 0.5s, height 0.5s, opacity 0.5s";
+
+            item.delay && clearTimeout(item.delay);
+            //ignore dragging block;
+            if ($item.hasClass('fw-float')) return;
+
+            // kill the old transition;
+            self.setTransition(item, "");
+            item.style.position = "absolute";
+            setting.onBlockActive.call(item, block, setting);
+
+            function action() {
+                // start to arrange;
+                start && $item.attr("data-state", "start");
+                // add animation by using css3 transition;
+                if (setting.animate && self.transition) {
+                    self.setTransition(item, trans);
+                }
+
+                // for hidden block;
+                if (!block) {
+                    //var position = $item.position(); <= make speed so slow;
+                    var height = parseInt(item.style.height) || 0;
+                    var width = parseInt(item.style.width) || 0;
+                    var left = parseInt(item.style.left) || 0;
+                    var top = parseInt(item.style.top) || 0;
+                    $item[method]({
+                        left: left + width / 2,
+                        top: top + height / 2,
+                        width: 0,
+                        height: 0,
+                        opacity: 0
+                    });
+                } else {
+                    if (block.fixSize) {
+                        block.height = 1 * $item.attr("data-height");
+                        block.width = 1 * $item.attr("data-width");
+                    }
+
+                    $item["css"]({
+                        opacity: 1,
+                        width: block.width,
+                        height: block.height
+                    });
+
+                    // for animating by javascript;
+                    $item[method]({
+                        top: block.top,
+                        left: block.left
+                    });
+
+                    if ($item.attr('data-nested') != null) {
+                        self.nestedGrid(item, setting);
+                    }
+                }
+
+                runtime.length -= 1;
+
+                setting.onBlockFinish.call(item, block, setting);
+
+                runtime.length == 0 && setting.onComplete.call(item, block, setting);
+            }
+
+            block && block.resize && setting.onBlockResize.call(item, block, setting);
+
+            setting.delay > 0 ? (item.delay = setTimeout(action, setting.delay * $item.attr("data-delay"))) : action();
+        },
+        nestedGrid: function(item, setting) {
+            var innerWall, $item = $(item), runtime = setting.runtime;
+            var gutterX = $item.attr("data-gutterX") || setting.gutterX;
+            var gutterY = $item.attr("data-gutterY") || setting.gutterY;
+            var method = $item.attr("data-method") || "fitZone";
+            var nested = $item.attr('data-nested') || "> div";
+            var cellH = $item.attr("data-cellH") || setting.cellH;
+            var cellW = $item.attr("data-cellW") || setting.cellW;
+            var block = runtime.blocks[item.id];
+
+            if (block) {
+                innerWall = new Freewall($item);
+                innerWall.reset({
+                    cellH: cellH,
+                    cellW: cellW,
+                    gutterX: 1 * gutterX,
+                    gutterY: 1 * gutterY,
+                    selector: nested,
+                    cacheSize: false
+                });
+
+                switch (method) {
+                    case "fitHeight":
+                        innerWall[method](block.height);
+                        break;
+                    case "fitWidth":
+                        innerWall[method](block.width);
+                        break;
+                    case "fitZone":
+                        innerWall[method](block.width, block.height);
+                        break;
+                }
+            }
+        },
+        adjustBlock: function(block, setting) {
+            var runtime = setting.runtime;
+            var gutterX = runtime.gutterX;
+            var gutterY = runtime.gutterY;
+            var $item = $("#" + block.id);
+            var cellH = runtime.cellH;
+            var cellW = runtime.cellW;
+
+            if (setting.cellH == 'auto') {
+                $item.width(block.width * cellW - gutterX);
+                $item[0].style.height = "";
+                block.height = Math.round(($item.height() + gutterY) / cellH);
+            }
+        },
+        adjustUnit: function(width, height, setting) {
+            var gutterX = setting.gutterX;
+            var gutterY = setting.gutterY;
+            var runtime = setting.runtime;
+            var cellW = setting.cellW;
+            var cellH = setting.cellH;
+
+            $.isFunction(cellW) && (cellW = cellW(width));
+            cellW = 1 * cellW;
+            !$.isNumeric(cellW) && (cellW = 1);
+
+            $.isFunction(cellH) && (cellH = cellH(height));
+            cellH = 1 * cellH;
+            !$.isNumeric(cellH) && (cellH = 1);
+
+            if ($.isNumeric(width)) {
+                // adjust cell width via container;
+                cellW < 1 && (cellW = cellW * width);
+
+                // estimate total columns;
+                var limitCol = Math.max(1, Math.floor(width / cellW));
+
+                // adjust unit size for fit width;
+                if (!$.isNumeric(gutterX)) {
+                    gutterX = (width - limitCol * cellW) / Math.max(1, (limitCol - 1));
+                    gutterX = Math.max(0, gutterX);
+                }
+
+                limitCol = Math.floor((width + gutterX) / cellW);
+                runtime.cellW = (width + gutterX) / Math.max(limitCol, 1);
+                runtime.cellS = runtime.cellW / cellW;
+                runtime.gutterX = gutterX;
+                runtime.limitCol = limitCol;
+            }
+
+            if ($.isNumeric(height)) {
+                // adjust cell height via container;
+                cellH < 1 && (cellH = cellH * height);
+
+                // estimate total rows;
+                var limitRow = Math.max(1, Math.floor(height / cellH));
+
+                // adjust size unit for fit height;
+                if (!$.isNumeric(gutterY)) {
+                    gutterY = (height - limitRow * cellH) / Math.max(1, (limitRow - 1));
+                    gutterY = Math.max(0, gutterY);
+                }
+
+                limitRow = Math.floor((height + gutterY) / cellH);
+                runtime.cellH = (height + gutterY) / Math.max(limitRow, 1);
+                runtime.cellS = runtime.cellH / cellH;
+                runtime.gutterY = gutterY;
+                runtime.limitRow = limitRow;
+            }
+
+            if (!$.isNumeric(width)) {
+                // adjust cell width via cell height;
+                cellW < 1 && (cellW = runtime.cellH);
+                runtime.cellW = cellW != 1 ? cellW * runtime.cellS : 1;
+                runtime.gutterX = gutterX;
+                runtime.limitCol = 666666;
+            }
+
+            if (!$.isNumeric(height)) {
+                // adjust cell height via cell width;
+                cellH < 1 && (cellH = runtime.cellW);
+                runtime.cellH = cellH != 1 ? cellH * runtime.cellS : 1;
+                runtime.gutterY = gutterY;
+                runtime.limitRow = 666666;
+            }
+
+            runtime.keepOrder = setting.keepOrder;
+        },
+        resetGrid: function(runtime) {
+            runtime.blocks = {};
+            runtime.length = 0;
+            runtime.cellH = 0;
+            runtime.cellW = 0;
+            runtime.lastId = 1;
+            runtime.matrix = {};
+            runtime.totalCol = 0;
+            runtime.totalRow = 0;
+        },
+        setDraggable: function(item, option) {
+            var isTouch = false;
+            var config = {
+                startX: 0, //start clientX;
+                startY: 0,
+                top: 0,
+                left: 0,
+                handle: null,
+                onDrop: function() {},
+                onDrag: function() {},
+                onStart: function() {}
+            };
+
+            $(item).each(function() {
+                var setting = $.extend({}, config, option);
+                var handle = setting.handle || this;
+                var ele = this;
+                var $E = $(ele);
+                var $H = $(handle);
+
+                var posStyle = $E.css("position");
+                posStyle != "absolute" && $E.css("position", "relative");
+
+
+                function mouseDown(evt) {
+                    evt.stopPropagation();
+                    evt = evt.originalEvent;
+
+                    if (evt.touches) {
+                        isTouch = true;
+                        evt = evt.changedTouches[0];
+                    }
+
+                    if (evt.button != 2 && evt.which != 3) {
+                        setting.onStart.call(ele, evt);
+
+                        setting.startX = evt.clientX;
+                        setting.startY = evt.clientY;
+                        setting.top = parseInt($E.css("top")) || 0;
+                        setting.left = parseInt($E.css("left")) || 0;
+
+                        $D.bind("mouseup touchend", mouseUp);
+                        $D.bind("mousemove touchmove", mouseMove);
+                    }
+
+                    return false;
+                };
+
+
+                function mouseMove(evt) {
+                    evt = evt.originalEvent;
+                    isTouch && (evt = evt.changedTouches[0]);
+
+                    $E.css({
+                        top: setting.top - (setting.startY - evt.clientY),
+                        left: setting.left - (setting.startX - evt.clientX)
+                    });
+
+                    setting.onDrag.call(ele, evt);
+                };
+
+                function mouseUp(evt) {
+                    evt = evt.originalEvent;
+                    isTouch && (evt = evt.changedTouches[0]);
+
+                    setting.onDrop.call(ele, evt);
+
+                    $D.unbind("mouseup touchend", mouseUp);
+                    $D.unbind("mousemove touchmove", mouseMove);
+                };
+
+                // ignore drag drop on text field;
+                $E.find("iframe, form, input, textarea, .ignore-drag")
+                .each(function() {
+                    $(this).on("touchstart mousedown", function(evt) {
+                        evt.stopPropagation();
+                    });
+                });
+
+                $D.unbind("mouseup touchend", mouseUp);
+                $D.unbind("mousemove touchmove", mouseMove);
+                $H.unbind("mousedown touchstart").bind("mousedown touchstart", mouseDown);
+
+            });
+        },
+        setTransition: function(item, trans) {
+            var style = item.style;
+            var $item = $(item);
+
+            // remove animation;
+            if (!this.transition && $item.stop) {
+                $item.stop();
+            } else if (style.webkitTransition != null) {
+                style.webkitTransition = trans;
+            } else if (style.MozTransition != null) {
+                style.MozTransition = trans;
+            } else if (style.msTransition != null) {
+                style.msTransition = trans;
+            } else if (style.OTransition != null) {
+                style.OTransition = trans;
+            } else {
+                style.transition = trans;
+            }
+        },
+        getFreeArea: function(t, l, runtime) {
+            var maxY = Math.min(t + runtime.maxHoB, runtime.limitRow);
+            var maxX = Math.min(l + runtime.maxWoB, runtime.limitCol);
+            var minX = maxX;
+            var minY = maxY;
+            var matrix = runtime.matrix;
+
+            // find limit zone by horizon;
+            for (var y = t; y < minY; ++y) {
+                for (var x = l; x < maxX; ++x) {
+                    if (matrix[y + '-' + x]) {
+                        (l < x && x < minX) && (minX = x);
+                    }
+                }
+            }
+
+            // find limit zone by vertical;
+            for (var y = t; y < maxY; ++y) {
+                for (var x = l; x < minX; ++x) {
+                    if (matrix[y + '-' + x]) {
+                        (t < y && y < minY) && (minY = y);
+                    }
+                }
+            }
+
+            return {
+                top: t,
+                left: l,
+                width: minX - l,
+                height: minY - t
+            };
+
+        },
+        setWallSize: function(runtime, container) {
+            var totalRow = runtime.totalRow;
+            var totalCol = runtime.totalCol;
+            var gutterY = runtime.gutterY;
+            var gutterX = runtime.gutterX;
+            var cellH = runtime.cellH;
+            var cellW = runtime.cellW;
+            var totalWidth = Math.max(0, cellW * totalCol - gutterX);
+            var totalHeight = Math.max(0, cellH * totalRow - gutterY);
+
+            container.attr({
+                'data-total-col': totalCol,
+                'data-total-row': totalRow,
+                'data-wall-width': Math.ceil(totalWidth),
+                'data-wall-height': Math.ceil(totalHeight)
+            });
+
+            if (runtime.limitCol < runtime.limitRow) {
+                // do not set height with nesting grid;
+                !container.attr("data-height") && container.height(Math.ceil(totalHeight));
+            }
         }
-      }
-
-      // Remove duplicates from active items
-      if (activeFiltersLength > 1) {
-        activeItems = removeDuplicates(activeItems);
-      }
-
-      // Hide inactive items
-      if (!dryRun) {
-        i = this.items.length;
-        while (i--) {
-          if (indexOf(activeItems, this.items[i]) === -1) {
-            addClass(this.items[i], this.inactiveClass);
-          }
-        }
-      }
-    } else {
-      // Show all items if no filter is selected
-      activeItems = this.items;
-    }
-
-    // Show active items
-    if (!dryRun) {
-      i = activeItems.length;
-      while (i--) {
-        removeClass(activeItems[i], this.inactiveClass);
-      }
-      // Unset columns and refresh grid for a full layout
-      this.columns = null;
-      this.layout();
-    }
-    return activeItems;
-  };
-
-  // Creates or updates existing placeholders to create columns of even height
-  Wookmark.prototype.refreshPlaceholders = function (columnWidth, sideOffset) {
-    var i,
-      containerHeight = getHeight(this.container),
-      columnsLength = this.columns.length,
-      column,
-      height,
-      innerOffset,
-      lastColumnItem,
-      placeholdersHtml = '',
-      placeholder,
-      top;
-
-    // Add more placeholders if necessary
-    if (this.placeholders.length < columnsLength) {
-      for (i = 0; i < columnsLength - this.placeholders.length; i++) {
-        placeholdersHtml += '<' + this.elementTag + ' class="' + this.placeholderClass + '"/>';
-      }
-      this.container.insertAdjacentHTML('beforeend', placeholdersHtml);
-      this.placeholders = this.container.querySelectorAll('.' + this.placeholderClass);
-    }
-
-    innerOffset = (this.offset + parseInt(getStyle(this.placeholders[0], 'border-left-width'), 10) * 2) || 0;
-    innerOffset += (parseInt(getStyle(this.placeholders[0], 'padding-left'), 10) * 2)  || 0;
-
-    // Update each placeholder
-    for (i = 0; i < this.placeholders.length; i++) {
-      placeholder = this.placeholders[i];
-      column = this.columns[i];
-
-      if (i >= columnsLength || column.length === 0) {
-        placeholder.style.display = 'none';
-      } else {
-        lastColumnItem = column[column.length - 1];
-        top = getData(lastColumnItem, 'top', true) + getData(lastColumnItem, 'height', true) + this.verticalOffset;
-        height = Math.max(0, containerHeight - top - innerOffset);
-
-        setCSS(placeholder, {
-          position: 'absolute',
-          display: height > 0 ? 'block' : 'none',
-          left: (i * columnWidth + sideOffset) + 'px',
-          top: top + 'px',
-          width: (columnWidth - innerOffset) + 'px',
-          height: height + 'px'
-        });
-      }
-    }
-  };
-
-  // Method the get active items which are not disabled and visible
-  Wookmark.prototype.getActiveItems = function () {
-    var inactiveClass = this.inactiveClass,
-      i,
-      result = [],
-      item,
-      items = this.items;
-
-    if (this.ignoreInactiveItems) {
-      for (i = 0; i < items.length; i++) {
-        item = items[i];
-        if (!hasClass(item, inactiveClass)) {
-          result.push(item);
-        }
-      }
-    } else {
-      return items;
-    }
-    return result;
-  };
-
-  // Method to get the standard item width
-  Wookmark.prototype.getItemWidth = function () {
-    var itemWidth = this.itemWidth,
-      innerWidth = getWidth(this.container) - 2 * this.outerOffset,
-      flexibleWidth = this.flexibleWidth;
-
-    if (typeof itemWidth === 'function') {
-      itemWidth = this.itemWidth();
-    }
-
-    if (this.items.length > 0 && (itemWidth === undefined || (itemWidth === 0 && !this.flexibleWidth))) {
-      itemWidth = getWidth(this.items[0]);
-    } else if (typeof itemWidth === 'string' && itemWidth.indexOf('%') >= 0) {
-      itemWidth = parseFloat(itemWidth) / 100 * innerWidth;
-    }
-
-    // Calculate flexible item width if option is set
-    if (flexibleWidth) {
-      if (typeof flexibleWidth === 'function') {
-        flexibleWidth = flexibleWidth();
-      }
-
-      if (typeof flexibleWidth === 'string' && flexibleWidth.indexOf('%') >= 0) {
-        flexibleWidth = parseFloat(flexibleWidth) / 100 * innerWidth;
-      }
-
-      // Find highest column count
-      var paddedInnerWidth = (innerWidth + this.offset),
-        flexibleColumns = Math.floor(0.5 + paddedInnerWidth / (flexibleWidth + this.offset)),
-        fixedColumns = Math.floor(paddedInnerWidth / (itemWidth + this.offset)),
-        columns = Math.max(flexibleColumns, fixedColumns),
-        columnWidth = Math.min(flexibleWidth, Math.floor((innerWidth - (columns - 1) * this.offset) / columns));
-
-      itemWidth = Math.max(itemWidth, columnWidth);
-    }
-
-    return itemWidth;
-  };
-
-  // Main layout method.
-  Wookmark.prototype.layout = function (force, callback) {
-    // Do nothing if container isn't visible
-    if (!force && isHidden(this.container)) { return; }
-
-    // Calculate basic layout parameters.
-    var calculatedItemWidth = this.getItemWidth(),
-      columnWidth = calculatedItemWidth + this.offset,
-      containerWidth = getWidth(this.container),
-      innerWidth = containerWidth - 2 * this.outerOffset,
-      columns = Math.floor((innerWidth + this.offset) / columnWidth),
-      offset,
-      maxHeight = 0,
-      activeItems = this.getActiveItems(),
-      activeItemsLength = activeItems.length,
-      item;
-
-    // Cache item heights
-    if (force || this.itemHeightsDirty || !this.itemHeightsInitialized) {
-      for (var i = 0; i < activeItemsLength; i++) {
-        item = activeItems[i];
-
-        if (this.flexibleWidth) {
-          // Stretch items to fill calculated width
-          item.style.width = calculatedItemWidth + 'px';
-        }
-        setData(item, 'height', item.offsetHeight);
-      }
-      this.itemHeightsDirty = false;
-      this.itemHeightsInitialized = true;
-    }
-
-    // Use less columns if there are to few items
-    columns = Math.max(1, Math.min(columns, activeItemsLength));
-
-    // Calculate the offset based on the alignment of columns to the parent container
-    offset = this.outerOffset;
-    if (this.align === 'center') {
-      offset += Math.floor(0.5 + (innerWidth - (columns * columnWidth - this.offset)) >> 1);
-    }
-
-    // Get direction for positioning
-    this.direction = this.direction || (this.align === 'right' ? 'right' : 'left');
-
-    // If container and column count hasn't changed, we can only update the columns.
-    if (!force && this.columns !== null && this.columns.length === columns && this.activeItemCount === activeItemsLength) {
-      maxHeight = this.layoutColumns(columnWidth, offset);
-    } else {
-      maxHeight = this.layoutFull(columnWidth, columns, offset);
-    }
-    this.activeItemCount = activeItemsLength;
-
-    // Set container height to height of the grid.
-    this.container.style.height = maxHeight + 'px';
-
-    // Update placeholders
-    if (this.fillEmptySpace) {
-      this.refreshPlaceholders(columnWidth, offset);
-    }
-
-    if (this.onLayoutChanged !== undefined && typeof this.onLayoutChanged === 'function') {
-      this.onLayoutChanged();
-    }
-
-    // Run optional callback
-    if (typeof callback === 'function') {
-      callback();
-    }
-  };
-
-  // Sort elements with configurable comparator
-  Wookmark.prototype.sortElements = function (elements) {
-    return typeof this.comparator === 'function' ? elements.sort(this.comparator) : elements;
-  };
-
-  // Perform a full layout update.
-  Wookmark.prototype.layoutFull = function (columnWidth, columns, offset) {
-    var item, k = 0, i = 0, activeItems, activeItemCount, shortest = null, shortestIndex = null,
-        sideOffset, heights = [], itemBulkCSS = [], leftAligned = this.align === 'left', self = this;
-
-    this.columns = [];
-
-    // Sort elements before layouting
-    activeItems = this.sortElements(this.getActiveItems());
-    activeItemCount = activeItems.length;
-
-    // Prepare arrays to store height of columns and items.
-    while (heights.length < columns) {
-      heights.push(this.outerOffset);
-      this.columns.push([]);
-    }
-
-    // Loop over items.
-    while (i < activeItemCount) {
-      item = activeItems[i];
-
-      // Find the shortest column.
-      shortest = heights[0];
-      shortestIndex = 0;
-      for (k = 0; k < columns; k++) {
-        if (heights[k] < shortest) {
-          shortest = heights[k];
-          shortestIndex = k;
-        }
-      }
-      setData(item, 'top', shortest);
-
-      // stick to left side if alignment is left and this is the first column
-      sideOffset = offset;
-      if (shortestIndex > 0 || !leftAligned) {
-        sideOffset += shortestIndex * columnWidth;
-      }
-
-      // Position the item.
-      itemBulkCSS[i] = {
-        el: item,
-        css: {
-          position: 'absolute',
-          top: shortest + 'px'
-        }
-      };
-      itemBulkCSS[i].css[this.direction] = sideOffset + 'px';
-
-      // Update column height and store item in shortest column
-      heights[shortestIndex] += getData(item, 'height', true) + this.verticalOffset;
-      this.columns[shortestIndex].push(item);
-      i++;
-    }
-
-    // Update all css in the next frame and mark container as initalised
-    bulkUpdateCSS(itemBulkCSS, function () {
-      // Initialisation done
-      if (!hasClass(self.container, 'wookmark-initialised')) {
-        addClass(self.container, 'wookmark-initialised');
-      }
-    });
-
-    // Return longest column
-    return Math.max.apply(Math, heights);
-  };
-
-  // This layout method only updates the vertical position of the
-  // existing column assignments.
-  Wookmark.prototype.layoutColumns = function (columnWidth, offset) {
-    var heights = [], itemBulkCSS = [], k = 0, j = 0,
-      i = this.columns.length, currentHeight,
-      column, item, sideOffset;
-
-    while (i--) {
-      currentHeight = this.outerOffset;
-      heights.push(currentHeight);
-      column = this.columns[i];
-      sideOffset = i * columnWidth + offset;
-
-      for (k = 0; k < column.length; k++, j++) {
-        item = column[k];
-        setData(item, 'top', currentHeight);
-        itemBulkCSS[j] = {
-          el: item,
-          css: {
-            top: currentHeight + 'px'
-          }
-        };
-        itemBulkCSS[j].css[this.direction] = sideOffset + 'px';
-
-        currentHeight += getData(item, 'height', true) + this.verticalOffset;
-      }
-      heights[i] = currentHeight;
-    }
-
-    bulkUpdateCSS(itemBulkCSS);
-
-    // Return longest column
-    return Math.max.apply(Math, heights);
-  };
-
-  // Clear event listeners and time outs and the instance itself
-  Wookmark.prototype.clear = function () {
-    clearTimeout(this.resizeTimer);
-    var i = this.placeholders.length;
-    while (i--) {
-      this.container.removeChild(this.placeholders[i]);
-    }
-    removeEventListener(window, 'resize', this.onResize);
-    removeEventListener(this.container, 'refreshWookmark', this.onRefresh);
-  };
-
-  // Register as jQuery plugin if jQuery is loaded
-  if (window.jQuery !== undefined) {
-    jQuery.fn.wookmark = function (options) {
-      var i = this.length;
-
-      // Use first element if container is an jQuery object
-      if (options !== undefined && options.container instanceof jQuery) {
-        options.container = options.container[0];
-      }
-
-      // Call plugin multiple times if there are multiple elements selected
-      if (i > 1) {
-        while (i--) {
-          $(this).eq(i).wookmark(options);
-        }
-      } else if (i === 1) {
-        // Create a wookmark instance or update an existing one
-        if (!this.wookmarkInstance) {
-          this.wookmarkInstance = new Wookmark(this[0], options || {});
-        } else {
-          this.wookmarkInstance.updateOptions(options || {});
-        }
-      }
-      return this;
     };
-  }
 
-  window.Wookmark = Wookmark;
-  return Wookmark;
-}));
+
+
+    var engine = {
+        // Giot just a person name;
+        giot: function(items, setting) {
+            var runtime = setting.runtime,
+                row = runtime.limitRow,
+                col = runtime.limitCol,
+                x = 0,
+                y = 0,
+                maxX = runtime.totalCol,
+                maxY = runtime.totalRow,
+                wall = {},
+                holes = runtime.holes,
+                block = null,
+                matrix = runtime.matrix,
+                bigLoop = Math.max(col, row),
+                freeArea = null,
+                misBlock = null,
+                fitWidth = col < row ? 1 : 0,
+                lastBlock = null,
+                smallLoop = Math.min(col, row);
+
+            // fill area with top, left, width, height;
+            function fillMatrix(id, t, l, w, h) {
+                for (var y = t; y < t + h;) {
+                    for (var x = l; x < l + w;) {
+                        matrix[y + '-' + x] = id;
+                        ++x > maxX && (maxX = x);
+                    }
+                    ++y > maxY && (maxY = y);
+                }
+            }
+
+            // set holes on the wall;
+            for (var i in holes) {
+                if (holes.hasOwnProperty(i)) {
+                    fillMatrix(holes[i]["id"] || true, holes[i]['top'], holes[i]['left'], holes[i]['width'], holes[i]['height']);
+                }
+            }
+
+
+            for (var b = 0; b < bigLoop; ++b) {
+                if (!items.length) break;
+                fitWidth ? (y = b) : (x = b);
+                lastBlock = null;
+
+                for (var s = 0; s < smallLoop; ++s) {
+                    if (!items.length) break;
+                    block = null;
+                    fitWidth ? (x = s) : (y = s);
+                    if (runtime.matrix[y + '-' + x]) continue;
+                    freeArea = layoutManager.getFreeArea(y, x, runtime);
+
+                    // trying resize last block to fit free area;
+                    if (setting.fixSize == null) {
+                        // resize near block to fill gap;
+                        if (lastBlock && !fitWidth && runtime.minHoB > freeArea.height) {
+                            lastBlock.height += freeArea.height;
+                            lastBlock.resize = true;
+                            fillMatrix(lastBlock.id, lastBlock.y, lastBlock.x, lastBlock.width, lastBlock.height);
+                            layoutManager.setBlock(lastBlock, setting);
+                            continue;
+                        } else if (lastBlock && fitWidth && runtime.minWoB > freeArea.width) {
+                            lastBlock.width += freeArea.width;
+                            lastBlock.resize = true;
+                            fillMatrix(lastBlock.id, lastBlock.y, lastBlock.x, lastBlock.width, lastBlock.height);
+                            layoutManager.setBlock(lastBlock, setting);
+                            continue;
+                        }
+                    }
+
+                    // get the next block to keep order;
+                    if (runtime.keepOrder) {
+                        block = items.shift();
+                        block.resize = true;
+                    } else {
+                        // find a suitable block to fit gap;
+                        for (var i = 0; i < items.length; ++i) {
+                            if (items[i].height > freeArea.height) continue;
+                            if (items[i].width > freeArea.width) continue;
+                            block = items.splice(i, 1)[0];
+                            break;
+                        }
+
+                        // trying resize the other block to fit gap;
+                        if (block == null && setting.fixSize == null) {
+                            // get other block fill to gap;
+                            for (var i = 0; i < items.length; ++i) {
+                                if (items[i]['fixSize'] != null) continue;
+                                block = items.splice(i, 1)[0];
+                                block.resize = true;
+                                break;
+                            }
+
+                        }
+                    }
+
+
+                    if (block != null) {
+                        // resize block with free area;
+                        if (block.resize) {
+                            if (fitWidth) {
+                                block.width = freeArea.width;
+                                if (setting.cellH == 'auto') {
+                                    layoutManager.adjustBlock(block, setting);
+                                }
+                                // for fitZone;
+                                block.height = Math.min(block.height, freeArea.height);
+                            } else {
+                                block.height = freeArea.height;
+                                // for fitZone;
+                                block.width = Math.min(block.width, freeArea.width);
+                            }
+                        }
+
+                        wall[block.id] = {
+                            id: block.id,
+                            x: x,
+                            y: y,
+                            width: block.width,
+                            height: block.height,
+                            resize: block.resize,
+                            fixSize: block.fixSize
+                        };
+
+                        // keep success block for next round;
+                        lastBlock = wall[block.id];
+
+                        fillMatrix(lastBlock.id, lastBlock.y, lastBlock.x, lastBlock.width, lastBlock.height);
+                        layoutManager.setBlock(lastBlock, setting);
+                    } else {
+                        // get expect area;
+                        var misBlock = {
+                            x: x,
+                            y: y,
+                            fixSize: 0
+                        };
+                        if (fitWidth) {
+                            misBlock.width = freeArea.width;
+                            misBlock.height = 0;
+                            var lastX = x - 1;
+                            var lastY = y;
+
+                            while (matrix[lastY + '-' + lastX]) {
+                                matrix[lastY + '-' + x] = true;
+                                misBlock.height += 1;
+                                lastY += 1;
+                            }
+                        } else {
+                            misBlock.height = freeArea.height;
+                            misBlock.width = 0;
+                            var lastY = y - 1;
+                            var lastX = x;
+
+                            while (matrix[lastY + '-' + lastX]) {
+                                matrix[y + '-' + lastX] = true;
+                                misBlock.width += 1;
+                                lastX += 1;
+                            }
+                        }
+                        setting.onGapFound(layoutManager.setBlock(misBlock, setting), setting);
+                    }
+                }
+
+            }
+
+            runtime.matrix = matrix;
+            runtime.totalRow = maxY;
+            runtime.totalCol = maxX;
+        }
+    };
+
+
+
+    function Freewall(selector) {
+
+        var container = $(selector);
+        if (container.css('position') == 'static') {
+            container.css('position', 'relative');
+        }
+        var MAX = Number.MAX_VALUE;
+        var klass = this;
+        // increase the instance index;
+        layoutManager.totalGrid += 1;
+
+        var setting = $.extend({}, layoutManager.defaultConfig);
+        var runtime = {
+            arguments: null,
+            blocks: {}, // store all items;
+            events: {}, // store custome events;
+            matrix: {},
+            holes: {}, // forbidden zone;
+
+            cellW: 0,
+            cellH: 0, // unit adjust;
+            cellS: 1, // unit scale;
+
+            filter: '', // filter selector;
+            lastId: 0,
+            length: 0,
+
+            maxWoB: 0, // max width of block;
+            maxHoB: 0,
+            minWoB: MAX,
+            minHoB: MAX, // min height of block;
+
+            running: 0, // flag to check layout arranging;
+
+            gutterX: 15,
+            gutterY: 15,
+
+            totalCol: 0,
+            totalRow: 0,
+
+            limitCol: 666666, // maximum column;
+            limitRow: 666666,
+
+            sortFunc: null,
+            keepOrder: false
+        };
+        setting.runtime = runtime;
+        runtime.totalGrid = layoutManager.totalGrid;
+
+        // check browser support transition;
+        var bodyStyle = document.body.style;
+        if (!layoutManager.transition) {
+            (bodyStyle.webkitTransition != null ||
+            bodyStyle.MozTransition != null ||
+            bodyStyle.msTransition != null ||
+            bodyStyle.OTransition != null ||
+            bodyStyle.transition != null) &&
+            (layoutManager.transition = true);
+        }
+
+
+        function setDraggable(item) {
+
+            var gutterX = runtime.gutterX;
+            var gutterY = runtime.gutterY;
+            var cellH = runtime.cellH;
+            var cellW = runtime.cellW;
+            var $item = $(item);
+            var handle = $item.find($item.attr("data-handle"));
+            layoutManager.setDraggable(item, {
+                handle: handle[0],
+                onStart: function(event) {
+                    if (setting.animate && layoutManager.transition) {
+                        layoutManager.setTransition(this, "");
+                    }
+                    $item.css('z-index', 9999).addClass('fw-float');
+
+                    setting.onBlockDrag.call(item, event);
+                },
+                onDrag: function(event, tracker) {
+                    var position = $item.position();
+                    var top = Math.round(position.top / cellH);
+                    var left = Math.round(position.left / cellW);
+                    var width = Math.round($item.width() / cellW);
+                    var height = Math.round($item.height() / cellH);
+                    top = Math.min(Math.max(0, top), runtime.limitRow - height);
+                    left = Math.min(Math.max(0, left), runtime.limitCol - width);
+                    klass.setHoles({top: top, left: left, width: width, height: height});
+                    klass.refresh();
+
+                    setting.onBlockMove.call(item, event);
+                },
+                onDrop: function(event) {
+                    var position = $item.position();
+                    var top = Math.round(position.top / cellH);
+                    var left = Math.round(position.left / cellW);
+                    var width = Math.round($item.width() / cellW);
+                    var height = Math.round($item.height() / cellH);
+                    top = Math.min(Math.max(0, top), runtime.limitRow - height);
+                    left = Math.min(Math.max(0, left), runtime.limitCol - width);
+
+                    $item.removeClass('fw-float');
+                    $item.css({
+                        zIndex: "auto",
+                        top: top * cellH,
+                        left: left * cellW
+                    });
+
+                    //check old drag element;
+                    var x, y, key, oldDropId;
+                    for (y = 0; y < height; ++y) {
+                        for (x = 0; x < width; ++x) {
+                            key = (y + top) + "-" + (x + left);
+                            oldDropId = runtime.matrix[key];
+                            if (oldDropId && oldDropId != true) {
+                                $("#" + oldDropId).removeAttr("data-position");
+                            }
+                        }
+                    }
+
+                    runtime.holes = {};
+
+                    $item.attr({
+                        "data-width": $item.width(),
+                        "data-height": $item.height(),
+                        "data-position": top + "-" + left
+                    });
+
+                    klass.refresh();
+
+                    setting.onBlockDrop.call(item, event);
+                }
+            });
+        }
+
+
+        $.extend(klass, {
+
+            addCustomEvent: function(name, func) {
+                var events = runtime.events;
+                name = name.toLowerCase();
+                !events[name] && (events[name] = []);
+                func.eid = events[name].length;
+                events[name].push(func);
+                return this;
+            },
+
+            appendBlock: function(items) {
+                var allBlock = $(items).appendTo(container);
+                var block = null;
+                var activeBlock = [];
+
+                if (runtime.arguments) {
+
+                    if ($.isFunction(runtime.sortFunc)) {
+                        allBlock.sort(runtime.sortFunc);
+                    }
+
+                    allBlock.each(function(index, item) {
+                        item.index = ++index;
+                        block = layoutManager.loadBlock(item, setting);
+                        block && activeBlock.push(block);
+                    });
+
+                    engine[setting.engine](activeBlock, setting);
+
+                    layoutManager.setWallSize(runtime, container);
+
+                    runtime.length = allBlock.length;
+
+                    allBlock.each(function(index, item) {
+                        layoutManager.showBlock(item, setting);
+                        if (setting.draggable || item.getAttribute('data-draggable')) {
+                            setDraggable(item);
+                        }
+                    });
+                }
+            },
+            /*
+            add one or more blank area (hole) on layout;
+            example:
+
+                wall.appendHoles({
+                    top: 10,
+                    left: 36,
+                    width: 2,
+                    height: 6
+                });
+
+                wall.appendHoles([
+                    {
+                        top: 16,
+                        left: 16,
+                        width: 8,
+                        height: 2
+                    },
+                    {
+                        top: 10,
+                        left: 36,
+                        width: 2,
+                        height: 6
+                    }
+                ]);
+
+            */
+            appendHoles: function(holes) {
+                var newHoles = [].concat(holes), h = {}, i;
+                for (i = 0; i < newHoles.length; ++i) {
+                    h = newHoles[i];
+                    runtime.holes[h.top + "-" + h.left + "-" + h.width + "-" + h.height] = h;
+                }
+                return this;
+            },
+
+            container: container,
+
+            destroy: function() {
+                var allBlock = container.find(setting.selector).removeAttr('id'),
+                    block = null,
+                    activeBlock = [];
+
+                allBlock.each(function(index, item) {
+                    $item = $(item);
+                    var width = 1 * $item.attr('data-width') || "";
+                    var height = 1 * $item.attr('data-height') || "";
+                    $item.width(width).height(height).css({
+                        position: 'static'
+                    });
+                });
+            },
+
+            fillHoles: function(holes) {
+                if (arguments.length == 0) {
+                    runtime.holes = {};
+                } else {
+                    var newHoles = [].concat(holes), h = {}, i;
+                    for (i = 0; i < newHoles.length; ++i) {
+                        h = newHoles[i];
+                        delete runtime.holes[h.top + "-" + h.left + "-" + h.width + "-" + h.height];
+                    }
+                }
+                return this;
+            },
+
+            filter: function(filter) {
+                runtime.filter = filter;
+                if (runtime.arguments) {
+                    this.refresh();
+                }
+                return this;
+            },
+
+            fireEvent: function(name, object, setting) {
+                var events = runtime.events;
+                name = name.toLowerCase();
+                if (events[name] && events[name].length) {
+                    for (var i = 0; i < events[name].length; ++i) {
+                        events[name][i].call(this, object, setting);
+                    }
+                }
+                return this;
+            },
+
+            fitHeight: function(height) {
+
+                var height = height ? height : container.height() || $W.height();
+
+                this.fitZone('auto', height);
+
+                runtime.arguments = arguments;
+            },
+
+            fitWidth: function(width) {
+
+                var width = width ? width : container.width() || $W.width();
+
+                this.fitZone(width, 'auto');
+
+                runtime.arguments = arguments;
+            },
+
+            fitZone: function(width, height) {
+                var allBlock = container.find(setting.selector).removeAttr('id'),
+                    block = null,
+                    activeBlock = [];
+
+                height = height ? height : container.height() || $W.height();
+                width = width ? width : container.width() || $W.width();
+
+                runtime.arguments = arguments;
+
+                layoutManager.resetGrid(runtime);
+
+                layoutManager.adjustUnit(width, height, setting);
+
+                if (runtime.filter) {
+                    allBlock.data('active', 0);
+                    allBlock.filter(runtime.filter).data('active', 1);
+                } else {
+                    allBlock.data('active', 1);
+                }
+
+                if ($.isFunction(runtime.sortFunc)) {
+                    allBlock.sort(runtime.sortFunc);
+                }
+
+                allBlock.each(function(index, item) {
+                    var $item = $(item);
+                    item.index = ++index;
+                    block = layoutManager.loadBlock(item, setting);
+                    block && $item.data("active") && activeBlock.push(block);
+                });
+
+                klass.fireEvent('onGridReady', container, setting);
+
+                engine[setting.engine](activeBlock, setting);
+
+                layoutManager.setWallSize(runtime, container);
+
+                klass.fireEvent('onGridArrange', container, setting);
+
+                runtime.length = allBlock.length;
+
+                allBlock.each(function(index, item) {
+                    layoutManager.showBlock(item, setting);
+                    if (setting.draggable || item.getAttribute('data-draggable')) {
+                        setDraggable(item);
+                    }
+                });
+            },
+
+            /*
+            set block with special position, the top and left are multiple of unit width/height;
+            example:
+
+                wall.fixPos({
+                    top: 0,
+                    left: 0,
+                    block: $('.free')
+                });
+            */
+            fixPos: function(option) {
+                $(option.block).attr({'data-position': option.top + "-" + option.left});
+                return this;
+            },
+
+            /*
+            set block with special size, the width and height are multiple of unit width/height;
+            example:
+
+                wall.fixSize({
+                    height: 5,
+                    width: 2,
+                    block: $('.free')
+                });
+            */
+            fixSize: function(option) {
+                option.height != null && $(option.block).attr({'data-height': option.height});
+                option.width != null && $(option.block).attr({'data-width': option.width});
+                return this;
+            },
+
+            prepend: function(items) {
+                container.prepend(items);
+                if (runtime.arguments) {
+                    this.refresh();
+                }
+                return this;
+            },
+
+            refresh: function() {
+                var params = arguments.length ? arguments : runtime.arguments;
+                var oldArg = runtime.arguments;
+                var method = oldArg ? oldArg.callee : this.fitWidth;
+                method.apply(this, Array.prototype.slice.call(params, 0));
+                return this;
+            },
+
+            /*
+            custom layout setting;
+            example:
+
+                wall.reset({
+                    selector: '.brick',
+                    animate: true,
+                    cellW: 160,
+                    cellH: 160,
+                    delay: 50,
+                    onResize: function() {
+                        wall.fitWidth();
+                    }
+                });
+            */
+            reset: function(option) {
+                $.extend(setting, option);
+                return this;
+            },
+
+            /*
+            create one or more blank area (hole) on layout;
+            example:
+
+                wall.setHoles({
+                    top: 2,
+                    left: 2,
+                    width: 2,
+                    height: 2
+                });
+            */
+
+            setHoles: function(holes) {
+                var newHoles = [].concat(holes), h = {}, i;
+                runtime.holes = {};
+                for (i = 0; i < newHoles.length; ++i) {
+                    h = newHoles[i];
+                    runtime.holes[h.top + "-" + h.left + "-" + h.width + "-" + h.height] = h;
+                }
+                return this;
+            },
+            /*
+            sort items by using array sort function;
+            example:
+
+                wall.sortBy(function(itemA, itemB) {
+                    return $(itemA).width() - $(itemB).width();
+                });
+            */
+            sortBy: function(func) {
+                runtime.sortFunc = func;
+                if (runtime.arguments) {
+                    this.refresh();
+                }
+                return this;
+            },
+
+            unFilter: function() {
+                delete runtime.filter;
+                this.refresh();
+                return this;
+            }
+        });
+
+        container.attr('data-min-width', Math.floor($W.width() / 80) * 80);
+        // execute plugins;
+        for (var i in layoutManager.plugin) {
+            if (layoutManager.plugin.hasOwnProperty(i)) {
+                layoutManager.plugin[i].call(klass, setting, container);
+            }
+        }
+
+        // setup resize event;
+        $W.resize(function() {
+            if (runtime.running) return;
+            runtime.running = 1;
+            setTimeout(function() {
+                runtime.running = 0;
+                setting.onResize.call(klass, container);
+            }, 122);
+            container.attr('data-min-width', Math.floor($W.width() / 80) * 80);
+        });
+    };
+
+    /*
+    add default setting;
+    example:
+
+        Freewall.addConfig({
+            offsetLeft: 0
+        });
+    */
+    Freewall.addConfig = function(newConfig) {
+        // add default setting;
+        $.extend(layoutManager.defaultConfig, newConfig);
+    };
+
+
+    /*
+    support create new arrange algorithm;
+    example:
+
+        Freewall.createEngine({
+            slice: function(items, setting) {
+                // slice engine;
+            }
+        });
+    */
+    Freewall.createEngine = function(engineData) {
+        // create new engine;
+        $.extend(engine, engineData);
+    };
+
+    /*
+    support create new plugin;
+    example:
+
+        Freewall.createPlugin({
+            centering: function(setting, container) {
+                console.log(this);
+                console.log(setting);
+            }
+        })l
+    */
+    Freewall.createPlugin = function(pluginData) {
+        // register new plugin;
+        $.extend(layoutManager.plugin, pluginData);
+    };
+
+    /*
+    support access helper function;
+    example:
+
+        Freewall.getMethod('setBlock')(block, setting);
+    */
+    Freewall.getMethod = function(method) {
+        // get helper method;
+        return layoutManager[method];
+    };
+
+    window.Freewall = window.freewall = Freewall;
+
+})(window.Zepto || window.jQuery);
 
 //# sourceMappingURL=vendors.js.map
