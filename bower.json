@@ -18,7 +18,8 @@
     "jquery-lazy": "^1.7.0",
     "wookmark": "wookmark-jquery#^2.1.2",
     "imagesloaded": "^4.1.0",
-    "freewall": "^1.0.6"
+    "freewall": "^1.0.6",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7"
   },
   "devDependencies": {}
 }

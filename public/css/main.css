@@ -42044,6 +42044,19 @@ a.pswp__share--download:hover {
   background: none;
 }
 
+.gallery-page {
+  background: white;
+}
+
+.gallery-page main {
+  background: white;
+}
+
+.gallery-page .gallery-body {
+  padding: 2rem;
+  background: white;
+}
+
 .gallery-page .my-gallery {
   margin: 0;
   padding: 0;

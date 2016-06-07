@@ -55,71 +55,6 @@ $('.bgset').html(pattern.svg());
 //     $('.bgset2').fadeOut(500).html(pattern.svg()).fadeIn(500);
 
 // }, 3000);
-$(function () {
-    Pace.on("done", function () {
-        $("body").fadeIn(1000);
-    });
-});
-
-$(function () {
-
-    $('[bg-img]').each(function () {
-        var bgimg = $(this).attr('bg-img');
-        $(this).css({
-            "background-image": "url(" + bgimg + ")",
-            "background-position": "center center",
-            "background-size": "cover"
-        });
-    });
-
-    $('[bg-img-responsive]').each(function () {
-        var bgimg = $(this).attr('bg-img-responsive');
-        var bgimgsm = $(this).attr('bg-img-responsive-sm');
-        if ($(window).width() < 992) {
-            $(this).css({
-                "background-image": "url(" + bgimgsm + ")",
-                "background-position": "center center",
-                "background-size": "cover"
-            });
-        } else {
-            $(this).css({
-                "background-image": "url(" + bgimg + ")",
-                "background-position": "center center",
-                "background-size": "cover"
-            });
-        }
-    });
-
-    $('[img-src-responsive]').each(function () {
-        var bgimg = $(this).attr('img-src-responsive');
-        var bgimgsm = $(this).attr('img-src-responsive-sm');
-        if ($(window).width() < 992) {
-            $(this).attr({
-                "src": "" + bgimgsm + ""
-            });
-        } else {
-            $(this).css({
-                "src": "" + bgimg + ""
-            });
-        }
-    });
-});
-$(document).ready(function () {
-
-    if ($(this).scrollTop() > 56) {
-        $(".info-page header").removeClass('active');
-    } else {
-        $(".info-page header").addClass('active');
-    }
-});
-
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 56) {
-        $(".info-page header").removeClass('active');
-    } else {
-        $(".info-page header").addClass('active');
-    }
-});
 var initPhotoSwipeFromDOM = function initPhotoSwipeFromDOM(gallerySelector) {
 
     // parse slide data (url, title, size ...) from DOM elements
@@ -452,12 +387,70 @@ $(document).ready(function () {
     }
 });
 
+$(function () {
+    Pace.on("done", function () {
+        $("body").fadeIn(1000);
+    });
+});
+
+$(function () {
+
+    $('[bg-img]').each(function () {
+        var bgimg = $(this).attr('bg-img');
+        $(this).css({
+            "background-image": "url(" + bgimg + ")",
+            "background-position": "center center",
+            "background-size": "cover"
+        });
+    });
+
+    $('[bg-img-responsive]').each(function () {
+        var bgimg = $(this).attr('bg-img-responsive');
+        var bgimgsm = $(this).attr('bg-img-responsive-sm');
+        if ($(window).width() < 992) {
+            $(this).css({
+                "background-image": "url(" + bgimgsm + ")",
+                "background-position": "center center",
+                "background-size": "cover"
+            });
+        } else {
+            $(this).css({
+                "background-image": "url(" + bgimg + ")",
+                "background-position": "center center",
+                "background-size": "cover"
+            });
+        }
+    });
+
+    $('[img-src-responsive]').each(function () {
+        var bgimg = $(this).attr('img-src-responsive');
+        var bgimgsm = $(this).attr('img-src-responsive-sm');
+        if ($(window).width() < 992) {
+            $(this).attr({
+                "src": "" + bgimgsm + ""
+            });
+        } else {
+            $(this).css({
+                "src": "" + bgimg + ""
+            });
+        }
+    });
+});
 $(document).ready(function () {
 
-    var favicon = new Favico({
-        animation: 'slide'
-    });
-    favicon.badge(9);
+    if ($(this).scrollTop() > 56) {
+        $(".info-page header").removeClass('active');
+    } else {
+        $(".info-page header").addClass('active');
+    }
+});
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 56) {
+        $(".info-page header").removeClass('active');
+    } else {
+        $(".info-page header").addClass('active');
+    }
 });
 $(document).ready(function () {
 
@@ -477,6 +470,13 @@ $(document).ready(function () {
             $('.devmode-show').toggleClass('active');
         });
     }
+});
+$(document).ready(function () {
+
+    var favicon = new Favico({
+        animation: 'slide'
+    });
+    favicon.badge(9);
 });
 $(document).ready(function () {
     var allAreas = $(".areas").find(".item");
