@@ -12,7 +12,7 @@ config:
       - "bower_components/photoswipe/dist/photoswipe.min.js"
       - "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"
       - "bower_components/freewall/freewall.js"
-      # - "bower_components/imagesloaded/imagesloaded.js"
+      - "bower_components/jquery.scrollbar/jquery.scrollbar.js"
       # - "bower_components/particles.js/particles.js"
     css: 
       - "bower_components/animate.css/animate.css"
@@ -21,6 +21,7 @@ config:
       - "bower_components/owl.carousel/dist/assets/owl.carousel.min.css"
       - "bower_components/owl.carousel/dist/assets/owl.theme.default.css"
       - "bower_components/photoswipe/dist/photoswipe.css"
+      - "bower_components/jquery.scrollbar/jquery.scrollbar.css"
   title: "Mobile App"
   author: 
     email: "baonguyenyam@gmail.com"

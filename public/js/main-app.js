@@ -11,12 +11,29 @@ var BNSIGN = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C
 $(document).ready(function () {
 
     // Welcome title App
-    console.log('%cBaoNguyen', 'font-size:50px;color:#fff;text-shadow:0 1px 0#ccc,0 2px 0 #c9c9c9 ,0 3px 0 #bbb ,0 4px 0 #b9b9b9 ,0 5px 0 #aaa ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);');
-    console.log('%c BN APP ' + '%c - Bao Nguyen App ', 'border-radius: 2px; padding: 3px; background: #795d9c; color: #FFF', 'color: #795d9c');
+    console.log('%cBAONGUYEN', 'font-size:50px;color:#fff;text-shadow:0 1px 0#ccc,0 2px 0 #c9c9c9 ,0 3px 0 #bbb ,0 4px 0 #b9b9b9 ,0 5px 0 #aaa ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);');
+    console.log('%c BN APP ' + '%c - Mobile: 0.96.96.89.89.3 ', 'border-radius: 2px; padding: 3px; background: #795d9c; color: #FFF', 'color: #795d9c');
 
     $('[bn-icon]').html(BNICON);
     $('[bn-sign]').html(BNSIGN);
     $('[bn-qr]').html(BNQR);
+
+    $('.scrollbar-dynamic, .scrollbar-inner').scrollbar({
+        onScroll: function onScroll(y, x) {
+            if (y.scroll > 50) {
+                $(".info-page header").removeClass('active');
+            } else {
+                $(".info-page header").addClass('active');
+            }
+        },
+        onInit: function onInit(y, x) {
+            if (y.scroll > 50) {
+                $(".info-page header").removeClass('active');
+            } else {
+                $(".info-page header").addClass('active');
+            }
+        }
+    });
 });
 
 // LOAD ////////////////////////////////////////////
@@ -438,19 +455,20 @@ $(function () {
 });
 $(document).ready(function () {
 
-    if ($(this).scrollTop() > 56) {
-        $(".info-page header").removeClass('active');
-    } else {
-        $(".info-page header").addClass('active');
-    }
+    // if ($(this).scrollTop() > 56) {
+    //     $(".info-page header").removeClass('active');
+    // } else {
+    //     $(".info-page header").addClass('active');
+    // }
 });
 
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 56) {
-        $(".info-page header").removeClass('active');
-    } else {
-        $(".info-page header").addClass('active');
-    }
+
+    // if ($('.scroll-bar').scrollTop() > 56) {
+    //     $(".info-page header").removeClass('active');
+    // } else {
+    //     $(".info-page header").addClass('active');
+    // }
 });
 $(document).ready(function () {
 
@@ -478,6 +496,32 @@ $(document).ready(function () {
     });
     favicon.badge(9);
 });
+$(document).ready(function () {
+    var allAreas = $(".areas").find(".item");
+    toggleAreas(null, allAreas.first());
+});
+
+function toggleAreas(from, to) {
+    function next() {
+        var nextTo;
+        if (to.is(":last-child")) {
+            nextTo = to.closest(".areas").find(".item").first();
+        } else {
+            nextTo = to.next();
+        }
+        to.fadeIn(500, function () {
+            setTimeout(function () {
+                toggleAreas(to, nextTo);
+            }, 2000);
+        });
+    }
+
+    if (from) {
+        from.fadeOut(500, next);
+    } else {
+        next();
+    }
+}
 (function ($) {
 
     $(document).ready(function () {
@@ -511,32 +555,6 @@ $(document).ready(function () {
         }
     });
 })(jQuery);
-$(document).ready(function () {
-    var allAreas = $(".areas").find(".item");
-    toggleAreas(null, allAreas.first());
-});
-
-function toggleAreas(from, to) {
-    function next() {
-        var nextTo;
-        if (to.is(":last-child")) {
-            nextTo = to.closest(".areas").find(".item").first();
-        } else {
-            nextTo = to.next();
-        }
-        to.fadeIn(500, function () {
-            setTimeout(function () {
-                toggleAreas(to, nextTo);
-            }, 2000);
-        });
-    }
-
-    if (from) {
-        from.fadeOut(500, next);
-    } else {
-        next();
-    }
-}
 // particlesJS.load('particles-js', './particles.json', function() {
 //     // console.log('callback - particles.js config loaded');
 // });
@@ -640,16 +658,17 @@ function toggleAreas(from, to) {
 });
 
 // Initialisation
-
-var canvasDiv = document.getElementById('particles-js');
-var options = {
-    particleColor: '#888',
-    // background: 'img/bg.jpg',
-    interactive: true,
-    speed: 'medium',
-    density: 'high'
-};
-var particleCanvas = new ParticleNetwork(canvasDiv, options);
+if ($('#particles-js').length) {
+    var canvasDiv = document.getElementById('particles-js');
+    var options = {
+        particleColor: '#888',
+        // background: 'img/bg.jpg',
+        interactive: true,
+        speed: 'medium',
+        density: 'high'
+    };
+    var particleCanvas = new ParticleNetwork(canvasDiv, options);
+}
 $(function () {
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var dayOfWeekIndex = new Date().getDay();

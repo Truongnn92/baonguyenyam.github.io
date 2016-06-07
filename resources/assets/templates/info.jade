@@ -1,240 +1,241 @@
 extends ../variable/jade/_template.jade
 block body
 	body.info-page
-		include ../variable/jade/_header.jade
-		main
-			// Sliders
-			section.home-sliders
-				.boxcontent
-					article.boxitem
-						aside
-							h1 BAO NGUYEN
-							h2 Web Design & Web Developer
-						//- .boxsearch
-						//-   h3 Compare cash exchange rates in
-						//-   .row
-						//-     .col-xs-12
-						//-       .input-group
-						//-         input.form-control.input-white(type='text', placeholder='Enter your location')
-						//-         span.input-group-btn
-						//-           button.btn.btn-main(type='button') Go
-				.owl-carousel.owl-theme
-					.item(bg-img-responsive='img/slider-01.png', bg-img-responsive-sm='img/sm-slider-01.png')
-					.item(bg-img-responsive='img/slider-02.png', bg-img-responsive-sm='img/sm-slider-02.png')
-					.item(bg-img-responsive='img/slider-03.png', bg-img-responsive-sm='img/sm-slider-03.png')
-					.item(bg-img-responsive='img/slider-04.png', bg-img-responsive-sm='img/sm-slider-04.png')
-					.item(bg-img-responsive='img/slider-05.png', bg-img-responsive-sm='img/sm-slider-05.png')
-					.item(bg-img-responsive='img/slider-06.png', bg-img-responsive-sm='img/sm-slider-06.png')
-			// Maps
-			section.home-maps
-				figure
-					img(src='img/map-bg.png', img-src-responsive='img/map-bg.png', img-src-responsive-sm='img/sm-map-bg.png', alt='')
-					figcaption
-						.areas
-							.item.mumbai
-								.pulsating-circle
-								.summary
-									.name Mumbai
-									//- .sum 987 Money Changes
-							.item.hongkong
-								.pulsating-circle
-								.summary
-									.name Hong Kong
-									//- .sum 987 Money Changes
-							.item.thailand
-								.pulsating-circle
-								.summary
-									.name Thailand
-									//- .sum 987 Money Changes
-							.item.singapore
-								.pulsating-circle
-								.summary
-									.name Singapore
-									//- .sum 987 Money Changes
-				.status Now Avaliable in 7 cities covering 100+ currencies.
-			// How it works
-			section.home-howitworks
-				.title
-					h2 How it works
-				// Nav tabs
-				ul.nav.nav-pills(role='tablist')
-					li.nav-item
-						a.nav-link(data-toggle='tab', href='#hiwapp', role='tab')
-							i.mdi.mdi-cellphone
-							|  Apps
-					li.nav-item
-						a.nav-link.active(data-toggle='tab', href='#hiwpc', role='tab')
-							i.mdi.mdi-laptop-windows
-							|  Desktop
-				// Tab panes
-				.tab-content
-					#hiwapp.tab-pane(role='tabpanel')
-						.boxhiw.clearfix
-							.boxright
-								.content.hidden-md-down
-									p.titlec
-										a.goowl.active(href='javascript:void(0);', slider='1')
-											i.mdi.mdi-numeric-1-box
-											| 								Step 1
-									p.goowl.active(slider='1')
-										| Choose the city in which you would like to research currency rates, from the drop down menu at the top of the site beside the get4x logo.
-									p.goowl.active(slider='1')
-										| Select the currency that you have and enter the amount and type of currency you would like to search rates for.
-									p.titlec
-										a.goowl(href='javascript:void(0);', slider='2')
-											i.mdi.mdi-numeric-2-box
-											| 								Step 2
-									p.goowl(slider='2')
-										| Refer to the map to view the money changer rates and location. You can also sort through your choices by the top 5 money changers that offer the best rates for the currency you wish to exchange.
-									p.goowl(slider='2')
-										| Click on the rate that you want. Log in to view the contact details of the money changer, and contact them to secure the rate and availability of currency.
-									p.titlec
-										a.goowl(href='javascript:void(0);', slider='3')
-											i.mdi.mdi-numeric-3-box
-											| 								Step 3
-									p.goowl(slider='3') Proceed to the money changer outlet to exchange your currency.
-							.boxleft
-								.owl-carousel.owl-theme
-									.item
-										img(src='img/iPhone.png', alt='')
-										.hidden-lg-up
-											.infotop
-												h4
-													i.mdi.mdi-numeric-1-box
-													|  Step 1
-											.info
-												p
-													| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
-												p
-													| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
-									.item
-										img.shadow(src='img/iPhone.png', alt='')
-										.hidden-lg-up
-											.infotop
-												h4
-													i.mdi.mdi-numeric-2-box
-													|  Step 2
-											.info
-												p
-													| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
-												p
-													| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
-									.item
-										img.shadow(src='img/iPhone.png', alt='')
-										.hidden-lg-up
-											.infotop
-												h4
-													i.mdi.mdi-numeric-3-box
-													|  Step 3
-											.info
-												p
-													| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
-												p
-													| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
-					#hiwpc.tab-pane.active(role='tabpanel')
-						.boxhiw.clearfix
-							.boxright
-								.content.hidden-md-down
-									p.titlec
-										a.goowl.active(href='javascript:void(0);', slider='1')
-											i.mdi.mdi-numeric-1-box
-											| 								Step 1
-									p.goowl.active(slider='1')
-										| Choose the city in which you would like to research currency rates, from the drop down menu at the top of the site beside the get4x logo.
-									p.goowl.active(slider='1')
-										| Select the currency that you have and enter the amount and type of currency you would like to search rates for.
-									p.titlec
-										a.goowl(href='javascript:void(0);', slider='2')
-											i.mdi.mdi-numeric-2-box
-											| 								Step 2
-									p.goowl(slider='2')
-										| Refer to the map to view the money changer rates and location. You can also sort through your choices by the top 5 money changers that offer the best rates for the currency you wish to exchange.
-									p.goowl(slider='2')
-										| Click on the rate that you want. Log in to view the contact details of the money changer, and contact them to secure the rate and availability of currency.
-									p.titlec
-										a.goowl(href='javascript:void(0);', slider='3')
-											i.mdi.mdi-numeric-3-box
-											| 								Step 3
-									p.goowl(slider='3') Proceed to the money changer outlet to exchange your currency.
-							.boxleft
-								.owl-carousel.owl-theme
-									.item
-										img(src='img/MacBookPro.png', alt='')
-										.hidden-lg-up
-											.infotop
-												h4
-													i.mdi.mdi-numeric-1-box
-													|  Step 1
-											.info
-												p
-													| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
-												p
-													| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
-									.item
-										img.shadow(src='img/MacBookPro.png', alt='')
-										.hidden-lg-up
-											.infotop
-												h4
-													i.mdi.mdi-numeric-2-box
-													|  Step 2
-											.info
-												p
-													| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
-												p
-													| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
-									.item
-										img.shadow(src='img/MacBookPro.png', alt='')
-										.hidden-lg-up
-											.infotop
-												h4
-													i.mdi.mdi-numeric-3-box
-													|  Step 3
-											.info
-												p
-													| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
-												p
-													| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
-			// Testimonials
-			section.home-testimonials
-				h2 Testimonials
-				.desc
-					h3 Get4x. A Must-Have For Global Travellers.
-					p
-						| Just as any traveler requires foreign currency, any smart saver wishing to strech their local dollar further needs Get4x. Discovered a rate you like? Contact licensed money changers through your mobile and lock in a favourable exchange rate.
-					.testimonials
-						.owl-carousel.owl-theme
-							.item
-								.quote
-									| Best rates across asia! I'm using this app for work as I travel across asia. Finally I'm not wasting money anymore!
-								.info
-									figure
-										img(src='img/1.jpg', alt='')
-										figcaption
-											.name
-												| Jay Sinclair
-											.jobs CEO ABC Company
-							.item
-								.quote
-									| Best rates across asia! I'm using this app for work as I travel across asia. Finally I'm not wasting money anymore!
-								.info
-									figure
-										img(src='img/3.jpg', alt='')
-										figcaption
-											.name
-												| Jay Sinclair
-											.jobs CEO ABC Company
-							.item
-								.quote
-									| Best rates across asia! I'm using this app for work as I travel across asia. Finally I'm not wasting money anymore!
-								.info
-									figure
-										img(src='img/4.png', alt='')
-										figcaption
-											.name
-												| Jay Sinclair
-											.jobs CEO ABC Company
+		.scrollbar-dynamic.wrapper
+			include ../variable/jade/_header.jade
+			main
+				// Sliders
+				section.home-sliders
+					.boxcontent
+						article.boxitem
+							aside
+								h1 BAO NGUYEN
+								h2 Web Design & Web Developer
+							//- .boxsearch
+							//-   h3 Compare cash exchange rates in
+							//-   .row
+							//-     .col-xs-12
+							//-       .input-group
+							//-         input.form-control.input-white(type='text', placeholder='Enter your location')
+							//-         span.input-group-btn
+							//-           button.btn.btn-main(type='button') Go
+					.owl-carousel.owl-theme
+						.item(bg-img-responsive='img/slider-01.png', bg-img-responsive-sm='img/sm-slider-01.png')
+						.item(bg-img-responsive='img/slider-02.png', bg-img-responsive-sm='img/sm-slider-02.png')
+						.item(bg-img-responsive='img/slider-03.png', bg-img-responsive-sm='img/sm-slider-03.png')
+						.item(bg-img-responsive='img/slider-04.png', bg-img-responsive-sm='img/sm-slider-04.png')
+						.item(bg-img-responsive='img/slider-05.png', bg-img-responsive-sm='img/sm-slider-05.png')
+						.item(bg-img-responsive='img/slider-06.png', bg-img-responsive-sm='img/sm-slider-06.png')
+				// Maps
+				section.home-maps
+					figure
+						img(src='img/map-bg.png', img-src-responsive='img/map-bg.png', img-src-responsive-sm='img/sm-map-bg.png', alt='')
+						figcaption
+							.areas
+								.item.mumbai
+									.pulsating-circle
+									.summary
+										.name Mumbai
+										//- .sum 987 Money Changes
+								.item.hongkong
+									.pulsating-circle
+									.summary
+										.name Hong Kong
+										//- .sum 987 Money Changes
+								.item.thailand
+									.pulsating-circle
+									.summary
+										.name Thailand
+										//- .sum 987 Money Changes
+								.item.singapore
+									.pulsating-circle
+									.summary
+										.name Singapore
+										//- .sum 987 Money Changes
+					.status Now Avaliable in 7 cities covering 100+ currencies.
+				// How it works
+				section.home-howitworks
+					.title
+						h2 How it works
+					// Nav tabs
+					ul.nav.nav-pills(role='tablist')
+						li.nav-item
+							a.nav-link(data-toggle='tab', href='#hiwapp', role='tab')
+								i.mdi.mdi-cellphone
+								|  Apps
+						li.nav-item
+							a.nav-link.active(data-toggle='tab', href='#hiwpc', role='tab')
+								i.mdi.mdi-laptop-windows
+								|  Desktop
+					// Tab panes
+					.tab-content
+						#hiwapp.tab-pane(role='tabpanel')
+							.boxhiw.clearfix
+								.boxright
+									.content.hidden-md-down
+										p.titlec
+											a.goowl.active(href='javascript:void(0);', slider='1')
+												i.mdi.mdi-numeric-1-box
+												| 								Step 1
+										p.goowl.active(slider='1')
+											| Choose the city in which you would like to research currency rates, from the drop down menu at the top of the site beside the get4x logo.
+										p.goowl.active(slider='1')
+											| Select the currency that you have and enter the amount and type of currency you would like to search rates for.
+										p.titlec
+											a.goowl(href='javascript:void(0);', slider='2')
+												i.mdi.mdi-numeric-2-box
+												| 								Step 2
+										p.goowl(slider='2')
+											| Refer to the map to view the money changer rates and location. You can also sort through your choices by the top 5 money changers that offer the best rates for the currency you wish to exchange.
+										p.goowl(slider='2')
+											| Click on the rate that you want. Log in to view the contact details of the money changer, and contact them to secure the rate and availability of currency.
+										p.titlec
+											a.goowl(href='javascript:void(0);', slider='3')
+												i.mdi.mdi-numeric-3-box
+												| 								Step 3
+										p.goowl(slider='3') Proceed to the money changer outlet to exchange your currency.
+								.boxleft
+									.owl-carousel.owl-theme
+										.item
+											img(src='img/iPhone.png', alt='')
+											.hidden-lg-up
+												.infotop
+													h4
+														i.mdi.mdi-numeric-1-box
+														|  Step 1
+												.info
+													p
+														| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
+													p
+														| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
+										.item
+											img.shadow(src='img/iPhone.png', alt='')
+											.hidden-lg-up
+												.infotop
+													h4
+														i.mdi.mdi-numeric-2-box
+														|  Step 2
+												.info
+													p
+														| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
+													p
+														| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
+										.item
+											img.shadow(src='img/iPhone.png', alt='')
+											.hidden-lg-up
+												.infotop
+													h4
+														i.mdi.mdi-numeric-3-box
+														|  Step 3
+												.info
+													p
+														| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
+													p
+														| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
+						#hiwpc.tab-pane.active(role='tabpanel')
+							.boxhiw.clearfix
+								.boxright
+									.content.hidden-md-down
+										p.titlec
+											a.goowl.active(href='javascript:void(0);', slider='1')
+												i.mdi.mdi-numeric-1-box
+												| 								Step 1
+										p.goowl.active(slider='1')
+											| Choose the city in which you would like to research currency rates, from the drop down menu at the top of the site beside the get4x logo.
+										p.goowl.active(slider='1')
+											| Select the currency that you have and enter the amount and type of currency you would like to search rates for.
+										p.titlec
+											a.goowl(href='javascript:void(0);', slider='2')
+												i.mdi.mdi-numeric-2-box
+												| 								Step 2
+										p.goowl(slider='2')
+											| Refer to the map to view the money changer rates and location. You can also sort through your choices by the top 5 money changers that offer the best rates for the currency you wish to exchange.
+										p.goowl(slider='2')
+											| Click on the rate that you want. Log in to view the contact details of the money changer, and contact them to secure the rate and availability of currency.
+										p.titlec
+											a.goowl(href='javascript:void(0);', slider='3')
+												i.mdi.mdi-numeric-3-box
+												| 								Step 3
+										p.goowl(slider='3') Proceed to the money changer outlet to exchange your currency.
+								.boxleft
+									.owl-carousel.owl-theme
+										.item
+											img(src='img/MacBookPro.png', alt='')
+											.hidden-lg-up
+												.infotop
+													h4
+														i.mdi.mdi-numeric-1-box
+														|  Step 1
+												.info
+													p
+														| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
+													p
+														| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
+										.item
+											img.shadow(src='img/MacBookPro.png', alt='')
+											.hidden-lg-up
+												.infotop
+													h4
+														i.mdi.mdi-numeric-2-box
+														|  Step 2
+												.info
+													p
+														| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
+													p
+														| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
+										.item
+											img.shadow(src='img/MacBookPro.png', alt='')
+											.hidden-lg-up
+												.infotop
+													h4
+														i.mdi.mdi-numeric-3-box
+														|  Step 3
+												.info
+													p
+														| Indicate the currency that you have at the top of the screen, and enter the amount and currency that you are searching for.
+													p
+														| Indicate your preferred city, by clicking on “Around Current location”. get4x is available in Bangkok, Hong Kong, Mumbai and Singapore.
+				// Testimonials
+				section.home-testimonials
+					h2 Testimonials
+					.desc
+						h3 Get4x. A Must-Have For Global Travellers.
+						p
+							| Just as any traveler requires foreign currency, any smart saver wishing to strech their local dollar further needs Get4x. Discovered a rate you like? Contact licensed money changers through your mobile and lock in a favourable exchange rate.
+						.testimonials
+							.owl-carousel.owl-theme
+								.item
+									.quote
+										| Best rates across asia! I'm using this app for work as I travel across asia. Finally I'm not wasting money anymore!
+									.info
+										figure
+											img(src='img/1.jpg', alt='')
+											figcaption
+												.name
+													| Jay Sinclair
+												.jobs CEO ABC Company
+								.item
+									.quote
+										| Best rates across asia! I'm using this app for work as I travel across asia. Finally I'm not wasting money anymore!
+									.info
+										figure
+											img(src='img/3.jpg', alt='')
+											figcaption
+												.name
+													| Jay Sinclair
+												.jobs CEO ABC Company
+								.item
+									.quote
+										| Best rates across asia! I'm using this app for work as I travel across asia. Finally I'm not wasting money anymore!
+									.info
+										figure
+											img(src='img/4.png', alt='')
+											figcaption
+												.name
+													| Jay Sinclair
+												.jobs CEO ABC Company
 
 
 
-		include ../variable/jade/_footer.jade
+			include ../variable/jade/_footer.jade
 		include ../variable/jade/_script.jade
