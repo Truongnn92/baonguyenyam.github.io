@@ -14,24 +14,19 @@
         $('[bn-sign]').html(BNSIGN);
         $('[bn-qr]').html(BNQR);
 
-        $('.scrollbar-dynamic, .scrollbar-inner').scrollbar({
-            onScroll: function(y, x) {
-                if (y.scroll > 50) {
-                    $(".info-page header").removeClass('active');
-                } else {
-                    $(".info-page header").addClass('active');
-                }
-            },
-            onInit: function(y, x) {
-                if (y.scroll > 50) {
-                    $(".info-page header").removeClass('active');
-                } else {
-                    $(".info-page header").addClass('active');
-                }
-            }
-        });
+        $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar();
 
     });
+
+    // Fixed Header 
+	$(document).on('ps-y-reach-start', function () {
+	  $( ".page-info header" ).addClass('active');
+	});
+	$(document).on('ps-scroll-down', function () {
+	  $( ".page-info header" ).removeClass('active');
+	});
+
+
 
     // LOAD ////////////////////////////////////////////
     $(window).load(function() {

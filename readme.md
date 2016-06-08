@@ -1,5 +1,4 @@
-http://codepen.io/dejanstojanovic/pen/QjwLZp
-https://github.com/miromannino/Justified-Gallery
+http://codepen.io/ettrics/pen/WvoRQo
 
 Copyright (c) 2012-2016 GET4X Team
 

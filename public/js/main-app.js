@@ -18,7 +18,7 @@ $(document).ready(function () {
     $('[bn-sign]').html(BNSIGN);
     $('[bn-qr]').html(BNQR);
 
-    $('.scrollbar-dynamic, .scrollbar-inner').scrollbar({
+    $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar({
         onScroll: function onScroll(y, x) {
             if (y.scroll > 50) {
                 $(".info-page header").removeClass('active');
