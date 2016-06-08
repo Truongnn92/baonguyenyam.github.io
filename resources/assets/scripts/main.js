@@ -14,18 +14,9 @@
         $('[bn-sign]').html(BNSIGN);
         $('[bn-qr]').html(BNQR);
 
-        $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar();
+
 
     });
-
-    // Fixed Header 
-	$(document).on('ps-y-reach-start', function () {
-	  $( ".page-info header" ).addClass('active');
-	});
-	$(document).on('ps-scroll-down', function () {
-	  $( ".page-info header" ).removeClass('active');
-	});
-
 
 
     // LOAD ////////////////////////////////////////////

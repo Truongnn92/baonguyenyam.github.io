@@ -1,0 +1,81 @@
+extends ../variable/jade/_template.jade
+//- http://codepen.io/yusufbkr/pen/eNrqmV
+//- http://codepen.io/Si1kIfY/pen/BkDeF
+//- http://codepen.io/vinsongrant/pen/eZyvNm
+block body
+  main
+    section.container
+      .div
+        p.text #
+        p.include include
+        p.text2  <iostream>
+        br
+        p.include2 using
+        p.text  namespace std;
+        br
+        p.int int
+        p.main  main
+        p.text ( )
+        br
+        p.text {
+        br
+        .div2
+          p.text cout 
+          p.text2 Hello, world!
+          p.text endl;
+        p.text }
+        hr
+      .sublime
+        header.sublime__title Sublimey Text
+        ul.sublime-tabs
+          li.sublime-tabs__tab
+            a.sublime-tabs__link(href='#_bn/index', data-type='html', data-project='index') index.html
+          li.sublime-tabs__tab
+            a.sublime-tabs__link(href='#_bn/mainjs', data-type='js', data-project='mainjs') main.js
+          li.sublime-tabs__tab
+            a.sublime-tabs__link(href='#_bn/maincss', data-type='css', data-project='maincss') main.css
+          li.sublime-tabs__tab.sublime-tabs__tab--soon
+            a.sublime-tabs__link(href='#', data-type='canvas', data-project='') sublime.css
+        button.sublime__button.sublime__button--full.js-sublime-maximise(tabindex='-1') go fullscreen
+        button.sublime__button.sublime__button--maxi.js-sublime-toggle(tabindex='-1') maximise
+        button.sublime__button.sublime__button--exit.js-sublime-minimise(tabindex='-1') exit
+        .sublime-project(data-project-name='index')
+          h4.sublime-project__title HTML Example
+          pre.sublime-project__code.prettyprint.lang-html.linenums.
+            \n<ul>
+               <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+               <li>Aliquam tincidunt mauris eu risus.</li>
+               <li>Vestibulum auctor dapibus neque.</li>
+            </ul>\t       
+        .sublime-project(data-project-name='mainjs')
+          h4.sublime-project__title Javascript File
+          pre.sublime-project__code.prettyprint.lang-js.linenums.
+            \nfunction Class(){
+                this.method = function(){alert('simple method')};
+            }
+            // some random JS
+            var object = new Class();
+            object.method();​
+        .sublime-project(data-project-name='maincss')
+          h4.sublime-project__title CSS File
+          pre.sublime-project__code.prettyprint.lang-css.linenums.
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            font-family: "Source Code Pro", Consolas, "Courier New", monospace;
+            font-size: 1em;
+            font-weight: 400;
+            z-index: 40;
+            background: 
+                linear-gradient( 
+                    to top , 
+                    rgba(255,255,255,0.8), 
+                    rgba(255,255,255,0.6) 
+                );
+            box-shadow: 
+                inset 0 -1px 1px rgba(255,255,255,1), 
+                inset 0 -3px 3px rgba(255,255,255,0.7), 
+                0 0 20px rgba(0,0,0,0.2);
+      footer.sublime__footer HTML
+  include ../variable/jade/_script.jade

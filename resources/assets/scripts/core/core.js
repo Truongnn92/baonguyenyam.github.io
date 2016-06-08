@@ -5,6 +5,7 @@ $(function() {
 });
 
 
+
 $(function() {
 
     $('[bg-img]').each(function() {

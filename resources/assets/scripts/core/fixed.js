@@ -1,18 +1,17 @@
-$(document).ready(function() {
+// var owl = $('.owl-carousel');
+// owl.on('initialized.owl.carousel', function(event) {
+// })
 
-    // if ($(this).scrollTop() > 56) {
-    //     $(".info-page header").removeClass('active');
-    // } else {
-    //     $(".info-page header").addClass('active');
-    // }
+
+$(document).ready(function() {
+    $(".info-page header, .gallery-page header").addClass('active');
+    $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar();
 });
 
 
-$(window).scroll(function() {
-
-    // if ($('.scroll-bar').scrollTop() > 56) {
-    //     $(".info-page header").removeClass('active');
-    // } else {
-    //     $(".info-page header").addClass('active');
-    // }
+$(document).on('ps-y-reach-start', function() {
+    $(".info-page header, .gallery-page header").addClass('active');
+});
+$(document).on('ps-scroll-down', function() {
+    $(".info-page header, .gallery-page header").removeClass('active');
 });
