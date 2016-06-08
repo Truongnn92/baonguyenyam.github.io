@@ -2,9 +2,40 @@
 	// background: $color-white
 	height: 100%
 	overflow: auto
+	header
+		position: fixed
+		width: 100%
+		z-index: 100
+		@include media-breakpoint-up(md)
+			&.active
+				.navbar
+					background: none
+					+box-shadow(0, 1px, 0px, rgba(255,255,255,.3))
+					#BNGlobalMenu 
+						.navbar-brand
+							i
+								svg
+									*
+										fill: $color-white
+								&:before
+									background-color: $color-white
+						.nav.navbar-right 
+							.nav-item
+								.nav-link
+									color: rgba(255,255,255,.5)
+								&.active, &:hover
+									.nav-link
+										color: $color-white
+										&:before
+											background-color: $color-white
+											bottom: -0.65rem
+											top: initial
 	main
 		+mar(5rem,top)
 		max-height: 100%
+		@include media-breakpoint-up(md)
+			// +pad(0,top)
+	// main
 		// background: $color-white
 	.gallery-body 
 		+pad(2rem)

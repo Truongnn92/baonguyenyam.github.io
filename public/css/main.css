@@ -42093,6 +42093,38 @@ a.pswp__share--download:hover {
   overflow: auto;
 }
 
+.gallery-page header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .gallery-page header.active .navbar {
+    background: none;
+    -ms-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.3);
+    -o-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 0px rgba(255, 255, 255, 0.3);
+  }
+  .gallery-page header.active .navbar #BNGlobalMenu .navbar-brand i svg * {
+    fill: white;
+  }
+  .gallery-page header.active .navbar #BNGlobalMenu .navbar-brand i:before {
+    background-color: white;
+  }
+  .gallery-page header.active .navbar #BNGlobalMenu .nav.navbar-right .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .gallery-page header.active .navbar #BNGlobalMenu .nav.navbar-right .nav-item.active .nav-link, .gallery-page header.active .navbar #BNGlobalMenu .nav.navbar-right .nav-item:hover .nav-link {
+    color: white;
+  }
+  .gallery-page header.active .navbar #BNGlobalMenu .nav.navbar-right .nav-item.active .nav-link:before, .gallery-page header.active .navbar #BNGlobalMenu .nav.navbar-right .nav-item:hover .nav-link:before {
+    background-color: white;
+    bottom: -0.65rem;
+    top: initial;
+  }
+}
+
 .gallery-page main {
   margin-top: 5rem;
   max-height: 100%;
