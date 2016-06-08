@@ -59,11 +59,11 @@ gulp.task('product', function(cb) {
         'uglify',
         'cssmin',
         'header',
-        'bundler',
-        'htmlmin',
+        // 'bundler',
+        // 'htmlmin',
         // 'imagemin',
-        'replace',
-        'delmin',
+        // 'replace',
+        // 'delmin',
         'browserSync',
         cb
     );
