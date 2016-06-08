@@ -64,6 +64,7 @@ gulp.task('product', function(cb) {
         // 'imagemin',
         // 'replace',
         // 'delmin',
+        'rev',
         'browserSync',
         cb
     );
