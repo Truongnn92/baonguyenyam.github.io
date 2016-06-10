@@ -30,9 +30,9 @@ $(function() {
     });
 
 
-// make conversation
+    // make conversation
     $(".text-replace").typed({
-        strings: ["<span>print(Hello!)</span>.^500 \nlearnAbout(OSX, iOS, watchOS, tvOS).^1000 \nlet sessions = 100."],
+        strings: ["<span class='main'>print</span><span class='text3'>('Hello, I am Bao Nguyen!')</span> ^500 <br><span class='main'>learnAbout</span><span class='text3'>('Js,Sass,Jade,TypeScript,Ps,Ai')</span> ^500 <br><span class='include'>let</span> sessions <span class='text3'>=</span> <span class='main2'>100</span> ^500 <br><span class='include'>let</span> skillsEngineers <span class='text3'>=</span> <span class='main2'>'90%'</span> ^500 <br><span class='include'>let</span> labs <span class='text3'>=</span> <span class='text2'>handsOn</span> ^500 <br><span class='include'>let</span> scholarships <span class='text3'>=</span> <span class='text2'>available</span> ^500 <br><span class='include'>let</span> date <span class='text3'>=</span> <span class='main'>'Aug 16-08-83'</span> ^500 <br><span class='include'>let</span> location <span class='text3'>=</span> <span class='text2'>\"GoCong - Tien Giang\"</span> ^500 <br><span class='include'>let</span> Companies <span class='text3'>></span> <span class='text2'>6</span><br><br><a href='about.html'>readMore();</a><br>..."],
         typeSpeed: 20,
         backDelay: 500,
         loop: false,

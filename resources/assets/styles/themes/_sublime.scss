@@ -107,6 +107,7 @@ $code: "Source Code Pro",
 "Consolas",
 monospace;
 .sublime {
+        z-index: 2000;
     min-height: 270px;
     min-width: 200px;
     max-width: 3200px;
@@ -133,7 +134,7 @@ monospace;
         min-width: none;
         max-height: none;
         min-height: none;
-        z-index: 50;
+        z-index: 2050;
         transition: all 0.6s ease;
         .sublime-project {
             position: absolute;
@@ -227,6 +228,10 @@ monospace;
         }
         &.active {
             z-index: 2;
+            a{
+
+            color: #fff;
+            }
             background: url(../img/sublime-tab-x.png);
             &:before {
                 background: url(../img/sublime-tab-l.png);

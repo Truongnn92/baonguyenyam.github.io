@@ -41,7 +41,7 @@ $$$$$$$  |$$ |  $$ | $$$$$$  |$$ | \$$ |\$$$$$$  |\$$$$$$  |    $$ |    $$$$$$$$
     <!-- inject:css-->
     <!-- endinject-->
   </head>
-  <body bg-img="../img/bg.jpg" class="coding-page">
+  <body bg-img="img/bg.jpg" class="coding-page">
     <div class="scrollbar-dynamic wrapper">
       <main>
         <header class="pos-f-t">
@@ -67,23 +67,11 @@ $$$$$$$  |$$ |  $$ | $$$$$$  |$$ | \$$ |\$$$$$$  |\$$$$$$  |    $$ |    $$$$$$$$
         </header>
         <section class="container-fluid mrt-2r mrb-2r">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-lg-4 mrb-2r">
               <h1>Coding</h1>
-              <div class="hero-content">
-                <div class="text-replace">
-                  print("Hello, WWDC!").
-                  learnAbout(OSX, iOS, watchOS, tvOS).
-                  let sessions = 100.
-                  let appleEngineers = 1000.
-                  let labs = handsOn.
-                  let scholarships = available.
-                  let date = "June 13–17".
-                  let location = sanFrancisco.
-                  let WWDC16= gameChanging.
-                </div><a href="about.html" class="backing-link">learnMore()</a>
-              </div>
+              <div class="hero-content"><span class="text-replace"></span></div>
             </div>
-            <div class="col-sm-12">
+            <div class="col-lg-8">
               <div class="sublime">
                 <div class="sublime__title">BaoNguyen Text</div>
                 <ul class="sublime-tabs">
@@ -185,7 +173,7 @@ import runSequence from 'run-sequence';
 const fs = require('fs');
 const yaml = require("js-yaml");
 const load = yaml.load(fs.readFileSync("./config.yml"));
-// import load from './get4x.yaml';
+// import load from './BN.yaml';
 
 // Global 
 const plugins = gulpLoadPlugins();
@@ -276,9 +264,9 @@ html(dir='ltr', lang='en')
                 <div data-project-name="sh" class="sublime-project">
                   <pre class="sublime-project__code prettyprint lang-sh linenums">#!/bin/bash
 printf "\033[1;36m=====================================\033[0m\n"
-printf "\033[1;36mWelcome to the GET4X-App. This is the products of Asian Mobile Ventures\033[0m\n"
+printf "\033[1;36mWelcome to the BN-App. This is the products of Asian Mobile Ventures\033[0m\n"
 printf "\033[1;36mCopyright 2016\033[0m\n"
-printf "\033[1;36mBuild by GET4X Team\033[0m\n"
+printf "\033[1;36mBuild by BN Team\033[0m\n"
 printf "\033[1;36m=====================================\033[0m\n"
 printf "\033[0;33mAre You ready to install?!?\033[0m\n"
 read -p "Press enter to continue..." nothing

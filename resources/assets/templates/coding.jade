@@ -1,34 +1,17 @@
 extends ../variable/jade/_template.jade
-//- http://codepen.io/yusufbkr/pen/eNrqmV
-//- http://codepen.io/vinsongrant/pen/eZyvNm
-//- 
-//- http://codepen.io/enxaneta/pen/adLPwv
-//- http://codepen.io/justd/pen/yydezN?editors=1010
-
-//- http://codepen.io/mominriyadh/pen/raevyb
 block body
-	body.coding-page(bg-img="../img/bg.jpg")
+	body.coding-page(bg-img="img/bg.jpg")
 		.scrollbar-dynamic.wrapper
 			main
 				include ../variable/jade/_header.jade
 				section.container-fluid.mrt-2r.mrb-2r
 					.row
-						.col-sm-12
+						.col-lg-4.mrb-2r
 							h1 Coding
 							.hero-content
-								.text-replace
-									| print("Hello, WWDC!").
-									| learnAbout(OSX, iOS, watchOS, tvOS).
-									| let sessions = 100.
-									| let appleEngineers = 1000.
-									| let labs = handsOn.
-									| let scholarships = available.
-									| let date = "June 13–17".
-									| let location = sanFrancisco.
-									| let WWDC16= gameChanging.
-								a.backing-link(href='about.html') learnMore()
-
-						.col-sm-12
+								span.text-replace
+									
+						.col-lg-8
 							.sublime
 								.sublime__title BaoNguyen Text
 								ul.sublime-tabs
@@ -138,7 +121,7 @@ block body
 										const fs = require('fs');
 										const yaml = require("js-yaml");
 										const load = yaml.load(fs.readFileSync("./config.yml"));
-										// import load from './get4x.yaml';
+										// import load from './BN.yaml';
 
 										// Global 
 										const plugins = gulpLoadPlugins();
@@ -233,9 +216,9 @@ block body
 									pre.sublime-project__code.prettyprint.lang-sh.linenums.
 										#!/bin/bash
 										printf "\033[1;36m=====================================\033[0m\n"
-										printf "\033[1;36mWelcome to the GET4X-App. This is the products of Asian Mobile Ventures\033[0m\n"
+										printf "\033[1;36mWelcome to the BN-App. This is the products of Asian Mobile Ventures\033[0m\n"
 										printf "\033[1;36mCopyright 2016\033[0m\n"
-										printf "\033[1;36mBuild by GET4X Team\033[0m\n"
+										printf "\033[1;36mBuild by BN Team\033[0m\n"
 										printf "\033[1;36m=====================================\033[0m\n"
 										printf "\033[0;33mAre You ready to install?!?\033[0m\n"
 										read -p "Press enter to continue..." nothing

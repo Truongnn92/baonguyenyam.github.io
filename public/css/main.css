@@ -42628,9 +42628,47 @@ a.pswp__share--download:hover {
   }
 }
 
+.coding-page main a {
+  color: white;
+}
+
 .coding-page main .text-replace {
   white-space: pre;
   line-height: 1.25em;
+  color: #87ceeb;
+}
+
+.coding-page main .text-replace .include {
+  color: #F92672;
+}
+
+.coding-page main .text-replace .include2 {
+  color: #F92672;
+}
+
+.coding-page main .text-replace .text {
+  color: #66D9EF;
+}
+
+.coding-page main .text-replace .main {
+  color: #A6E22A;
+}
+
+.coding-page main .text-replace .main2 {
+  color: #b784f7;
+}
+
+.coding-page main .text-replace .text2 {
+  color: #E6DB74;
+}
+
+.coding-page main .text-replace .text3 {
+  color: #fff;
+}
+
+.coding-page main .typed-cursor {
+  padding-left: 2px;
+  color: #fff;
 }
 
 #editor {
@@ -42642,6 +42680,7 @@ a.pswp__share--download:hover {
 }
 
 .sublime {
+  z-index: 2000;
   min-height: 270px;
   min-width: 200px;
   max-width: 3200px;
@@ -42670,7 +42709,7 @@ a.pswp__share--download:hover {
   min-width: none;
   max-height: none;
   min-height: none;
-  z-index: 50;
+  z-index: 2050;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
@@ -42777,6 +42816,10 @@ a.pswp__share--download:hover {
 .sublime-tabs__tab.active {
   z-index: 2;
   background: url(../img/sublime-tab-x.png);
+}
+
+.sublime-tabs__tab.active a {
+  color: #fff;
 }
 
 .sublime-tabs__tab.active:before {
