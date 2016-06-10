@@ -36,86 +36,288 @@ $$$$$$$  |$$ |  $$ | $$$$$$  |$$ | \$$ |\$$$$$$  |\$$$$$$  |    $$ |    $$$$$$$$
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" type="text/css" href="css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- inject:css-->
     <!-- endinject-->
   </head>
   <main>
-    <section class="container">
-      <div class="div">
-        <p class="text">#</p>
-        <p class="include">include</p>
-        <p class="text2"> <iostream></iostream></p><br>
-        <p class="include2">using</p>
-        <p class="text"> namespace std;</p><br>
-        <p class="int">int</p>
-        <p class="main"> main</p>
-        <p class="text">( )</p><br>
-        <p class="text">{</p><br>
-        <div class="div2">
-          <p class="text">cout </p>
-          <p class="text2">Hello, world!</p>
-          <p class="text">endl;</p>
-        </div>
-        <p class="text">}</p>
-        <hr>
-      </div>
-      <div class="sublime">
-        <header class="sublime__title">Sublimey Text</header>
-        <ul class="sublime-tabs">
-          <li class="sublime-tabs__tab"><a href="#_bn/index" data-type="html" data-project="index" class="sublime-tabs__link">index.html</a></li>
-          <li class="sublime-tabs__tab"><a href="#_bn/mainjs" data-type="js" data-project="mainjs" class="sublime-tabs__link">main.js</a></li>
-          <li class="sublime-tabs__tab"><a href="#_bn/maincss" data-type="css" data-project="maincss" class="sublime-tabs__link">main.css</a></li>
-          <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#" data-type="canvas" data-project="" class="sublime-tabs__link">sublime.css</a></li>
-        </ul>
-        <button tabindex="-1" class="sublime__button sublime__button--full js-sublime-maximise">go fullscreen</button>
-        <button tabindex="-1" class="sublime__button sublime__button--maxi js-sublime-toggle">maximise</button>
-        <button tabindex="-1" class="sublime__button sublime__button--exit js-sublime-minimise">exit</button>
-        <div data-project-name="index" class="sublime-project">
-          <h4 class="sublime-project__title">HTML Example</h4>
-          <pre class="sublime-project__code prettyprint lang-html linenums">\n<ul>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-   <li>Vestibulum auctor dapibus neque.</li>
-</ul>\t       </pre>
-        </div>
-        <div data-project-name="mainjs" class="sublime-project">
-          <h4 class="sublime-project__title">Javascript File</h4>
-          <pre class="sublime-project__code prettyprint lang-js linenums">\nfunction Class(){
-    this.method = function(){alert('simple method')};
-}
-// some random JS
-var object = new Class();
-object.method();​</pre>
-        </div>
-        <div data-project-name="maincss" class="sublime-project">
-          <h4 class="sublime-project__title">CSS File</h4>
-          <pre class="sublime-project__code prettyprint lang-css linenums">position: fixed;
-top: 0;
-right: 0;
-width: 100%;
-font-family: "Source Code Pro", Consolas, "Courier New", monospace;
-font-size: 1em;
-font-weight: 400;
-z-index: 40;
-background: 
-    linear-gradient( 
-        to top , 
-        rgba(255,255,255,0.8), 
-        rgba(255,255,255,0.6) 
-    );
-box-shadow: 
-    inset 0 -1px 1px rgba(255,255,255,1), 
-    inset 0 -3px 3px rgba(255,255,255,0.7), 
-    0 0 20px rgba(0,0,0,0.2);</pre>
+    <section class="container mrt-2r mrb-2r">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Coding</h1>
         </div>
       </div>
-      <footer class="sublime__footer">HTML</footer>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="div">
+            <p class="text">#</p>
+            <p class="include">include</p>
+            <p class="text2"> <iostream></iostream></p><br>
+            <p class="include2">using</p>
+            <p class="text"> namespace std;</p><br>
+            <p class="int">int</p>
+            <p class="main"> main</p>
+            <p class="text">( )</p><br>
+            <p class="text">{</p><br>
+            <div class="div2">
+              <p class="text">cout </p>
+              <p class="text2">Hello, world!</p>
+              <p class="text">endl;</p>
+            </div>
+            <p class="text">}</p>
+            <hr>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="sublime">
+            <header class="sublime__title">Sublimey Text</header>
+            <ul class="sublime-tabs">
+              <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#_bn/index" data-type="typescripts" data-project="index" class="sublime-tabs__link">app.ts</a></li>
+              <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#_bn/mainjs" data-type="babel/js" data-project="mainjs" class="sublime-tabs__link">gulpfile.babel.js</a></li>
+              <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#_bn/maincss" data-type="sass/scss" data-project="maincss" class="sublime-tabs__link">main.sass</a></li>
+              <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#_bn/template" data-type="jade/pug" data-project="template" class="sublime-tabs__link">index.pug</a></li>
+              <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#_bn/yml" data-type="yml" data-project="yml" class="sublime-tabs__link">config.yml</a></li>
+              <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#_bn/sh" data-type="sh" data-project="sh" class="sublime-tabs__link">install.sh</a></li>
+            </ul>
+            <button tabindex="-1" class="sublime__button sublime__button--full js-sublime-maximise">go fullscreen</button>
+            <button tabindex="-1" class="sublime__button sublime__button--maxi js-sublime-toggle">maximise</button>
+            <button tabindex="-1" class="sublime__button sublime__button--exit js-sublime-minimise">exit</button>
+            <div data-project-name="index" class="sublime-project">
+              <pre class="sublime-project__code prettyprint lang-typescripts linenums">import {provide, Component, ViewEncapsulation, Input} from '@angular/core';
+import {
+  FORM_PROVIDERS,
+  FORM_DIRECTIVES,
+  CORE_DIRECTIVES
+} from '@angular/common';
+import {
+  ROUTER_DIRECTIVES
+} from '@angular/router';
+import {RouteConfig, Router} from '@angular/router-deprecated';
+import {Http} from '@angular/http';
+import {TranslateService, TranslatePipe, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
+import {Home} from './components/home';
+import {AppState} from './directives/app.state';
+import {NotificationControl} from './directives/notification';
+import {RouterActive} from './router-active';
+import {ApiService} from './services/api/api.service';
+import routes from './routes';
+@Component({
+  selector: 'app',
+  pipes: [TranslatePipe],
+  providers: [
+    provide(TranslateLoader, {
+      useFactory: (http: Http) => new TranslateStaticLoader(http, '/i18n', '.json'),
+      deps: [Http]
+    }),
+    TranslateService,
+    ApiService,
+    NotificationControl
+  ],
+  directives: [
+    RouterActive
+  ],
+  encapsulation: ViewEncapsulation.None,
+  styles: [
+    require('styles/main.sass')
+  ],
+  template: require('./app.pug')()
+})
+
+@RouteConfig(routes)
+export class App {  
+  public NAV_isCollapsed: boolean = false;
+  public NAV_isGlobalCollapsed: boolean = false;
+  public status: Object = {
+    isFirstOpen: true,
+    isFirstDisabled: false
+  };
+
+  constructor(
+    public apiService: ApiService, public appState: AppState, public translate: TranslateService, public router: Router, public notificationControl : NotificationControl) {
+    // Load lang
+    var userLang = navigator.language.split('-')[0]; // use navigator lang if available
+    userLang = /(fr|en)/gi.test(userLang) ? userLang : 'en';
+    translate.getTranslation(userLang);
+    // custom notification
+    notificationControl.showNotification('Notification Title', 'BODY HERE', null, null);
+  }
+
+  ngOnInit() {
+    // Welcome title App 
+    console.log('%cBIZ4X', 'font-size:100px;color:#2196f3;text-shadow:0 1px 0 #1472BD,0 2px 0 #1472BD ,0 3px 0 #1472BD ,0 4px 0 #1472BD ,0 5px 0 #1472BD ,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);');
+    console.log('%c BIZ4X APP ' + '%c - Load Done ', 'border-radius: 2px; padding: 3px; background: #2196f3; color: #FFF', 'color: #2196f3');
+    console.log('Initial App State', this.appState.state);
+  }
+
+  isActive(instruction: any[]): boolean {
+    return this.router.isRouteActive(this.router.generate(instruction));
+  }
+
+}    </pre>
+            </div>
+            <div data-project-name="mainjs" class="sublime-project">
+              <pre class="sublime-project__code prettyprint lang-js linenums">import path from 'path';
+import gulp from 'gulp';
+import gulpLoadPlugins from 'gulp-load-plugins';
+import browserSyncLib from 'browser-sync';
+// import minimist from 'minimist';
+import wrench from 'wrench';
+// import wiredep from 'wiredep';
+import yargs from 'yargs';
+// import gulpif from 'gulp-if';
+import runSequence from 'run-sequence';
+
+const fs = require('fs');
+const yaml = require("js-yaml");
+const load = yaml.load(fs.readFileSync("./config.yml"));
+// import load from './get4x.yaml';
+
+// Global 
+const plugins = gulpLoadPlugins();
+// Create a new browserSync
+let browserSync = browserSyncLib.create();
+// let browserSync = '';
+// Call Config 
+let config = load.config;
+// let setgulp = minimist(process.argv.slice(2));
+let setgulp = yargs.argv;
+// console.log(setgulp.production);
+let target = setgulp.production ? config.dest : config.tmp;
+
+// Load Gulp tasks folder
+wrench.readdirSyncRecursive('./resources/assets/task/gulp').filter((file) => {
+    return (/\.(js)$/i).test(file);
+}).map(function(file) {
+    require('./resources/assets/task/gulp/' + file)(gulp, setgulp, plugins, config, target, browserSync);
+});
+
+// Default task
+gulp.task('default', ['clean'], () => {
+    gulp.start('test');
+});</pre>
+            </div>
+            <div data-project-name="maincss" class="sublime-project">
+              <pre class="sublime-project__code prettyprint lang-sass linenums">@import variables/function
+@import variables/core
+@import variables/flex
+
+@function str-replace($string, $search, $replace: '')
+  $index: str-index($string, $search)
+  @if $index
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace)
+  @return $string
+/// Background Size
+/// @param {Size} $width [100%] - Width
+/// @param {Size} $width [$width] - Height
+/// @require {mixin} css3-prefix
+=background-size($width: 100%, $height: $width)
+  @if type-of($width) == "number" and $height != null
+    +css3-prefix("background-size", $width $height)
+  @else
+    +css3-prefix("background-size", $width)</pre>
+            </div>
+            <div data-project-name="template" class="sublime-project">
+              <pre class="sublime-project__code prettyprint lang-latek linenums">doctype html
+//
+   
+  $$$$$$$\   $$$$$$\   $$$$$$\  $$\   $$\  $$$$$$\  $$\   $$\ $$\     $$\ $$$$$$$$\ $$\   $$\ 
+  $$  __$$\ $$  __$$\ $$  __$$\ $$$\  $$ |$$  __$$\ $$ |  $$ |\$$\   $$  |$$  _____|$$$\  $$ |
+  $$ |  $$ |$$ /  $$ |$$ /  $$ |$$$$\ $$ |$$ /  \__|$$ |  $$ | \$$\ $$  / $$ |      $$$$\ $$ |
+  $$$$$$$\ |$$$$$$$$ |$$ |  $$ |$$ $$\$$ |$$ |$$$$\ $$ |  $$ |  \$$$$  /  $$$$$\    $$ $$\$$ |
+  $$  __$$\ $$  __$$ |$$ |  $$ |$$ \$$$$ |$$ |\_$$ |$$ |  $$ |   \$$  /   $$  __|   $$ \$$$$ |
+  $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |\$$$ |$$ |  $$ |$$ |  $$ |    $$ |    $$ |      $$ |\$$$ |
+  $$$$$$$  |$$ |  $$ | $$$$$$  |$$ | \$$ |\$$$$$$  |\$$$$$$  |    $$ |    $$$$$$$$\ $$ | \$$ |
+  \_______/ \__|  \__| \______/ \__|  \__| \______/  \______/     \__|    \________|\__|  \__|
+  
+html(dir='ltr', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='msapplication-tap-highlight', content='no')
+    title BN Web
+    include _favicon.jade
+    include _css.jade
+    include _seo.jade
+  block body
+    include _js.jade</pre>
+            </div>
+            <div data-project-name="yml" class="sublime-project">
+              <pre class="sublime-project__code prettyprint lang-latek linenums">config: 
+  title: "Mobile App"
+  author: 
+    email: "baonguyenyam@gmail.com"
+    name: "BaoNguyen"
+    link: "https://github.com/baonguyenyam"
+  license: "MIT"
+  name: "Bao Nguyen Apps"
+  version: "1.0"
+  ignore: 
+    copy: "{styles,styles/**,task,task/**,variable,variable/**,services,services/**,shims,shims/**,scripts,scripts/**,docs,docs/**,components,components/**/*.{sass,scss,jade,js},providers,providers/**,config,config/**,**/*.jade,**/*.js,**/*.ts}"
+  host: "127.0.0.1"
+  port: "8888"
+</pre>
+            </div>
+            <div data-project-name="sh" class="sublime-project">
+              <pre class="sublime-project__code prettyprint lang-sh linenums">#!/bin/bash
+printf "\033[1;36m=====================================\033[0m\n"
+printf "\033[1;36mWelcome to the GET4X-App. This is the products of Asian Mobile Ventures\033[0m\n"
+printf "\033[1;36mCopyright 2016\033[0m\n"
+printf "\033[1;36mBuild by GET4X Team\033[0m\n"
+printf "\033[1;36m=====================================\033[0m\n"
+printf "\033[0;33mAre You ready to install?!?\033[0m\n"
+read -p "Press enter to continue..." nothing
+file="install.lock"
+if [ -f "$file" ]
+then
+  printf "\033[1;31mApp is ready in your system. To Re-Install, please remove the 'install.lock' file and run again! Thanks.\033[0m\n"
+else
+  printf "\033[0;33mInstall Global Modules...\033[0m\n"
+  npm i pug-cli express gulp gulp-cli bower -g
+  printf "\033[0;33mUpdate Bower Components...\033[0m\n"
+  bower update
+    printf "\033[0;33mInstall Node Modules...\033[0m\n"
+    npm install --only=dev
+    npm install
+  printf "\033[0;33mInstall Composer Modules...\033[0m\n"
+    composer update
+  (
+     printf 'v0.0.1\n'
+  ) > install.lock
+  printf "\033[1;32m-----------------------------\033[0m\n"
+    printf "\033[1;32mCongrats! Install Finished.\033[0m\n"
+fi
+
+choice=""
+
+while [ "$choice" != "q" ]
+do
+        echo
+        echo "Please choice a selection!"
+        echo "1) Run App"
+        echo "2) Exit Install"
+        echo "q) Quit"
+        echo
+        read choice
+        case $choice in
+            '1') gulp;;
+            '2') exit 0;;
+            'q') ;;
+            *)   printf "\033[0;33mMenu item is not available, try again!\033[0m\n";;
+        esac
+done
+exit 0
+</pre>
+            </div>
+            <footer class="sublime__footer">HTML</footer>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <script src="js/vendors.min.js"></script>
-  <script src="js/main-app.min.js"></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main-app.js"></script>
   <!-- inject:js-->
   <!-- endinject-->
 </html>

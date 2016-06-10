@@ -1,9 +1,3 @@
-/**
- * Bao Nguyen Apps
- * @version v1.0
- * @link https://github.com/baonguyenyam
- * @license MIT
- */
 /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -41139,6 +41133,10 @@ footer .info p {
   line-height: 1.3rem;
 }
 
+footer .info p a {
+  display: block;
+}
+
 footer .info .app-icon.bn:before {
   background-color: white;
 }
@@ -42229,7 +42227,7 @@ hr {
   padding: 0;
   overflow: hidden;
   background-color: #303030;
-  background-image: url(http://files.simey.me/sublime/sublime-bg-icons.png), url(http://files.simey.me/sublime/sublime-bg-expand.png), url(http://files.simey.me/sublime/sublime-bg-top.png), url(http://files.simey.me/sublime/sublime-bg-bottom.png);
+  background-image: url(../img/sublime-bg-icons.png), url(../img/sublime-bg-expand.png), url(../img/sublime-bg-top.png), url(../img/sublime-bg-bottom.png);
   background-repeat: no-repeat, no-repeat, repeat-x, repeat-x;
   background-position: top left, top right, top center, bottom center;
   border-radius: 4px;
@@ -42302,12 +42300,15 @@ hr {
 }
 
 .sublime__footer {
+  background: none;
   color: #ccc;
   font-weight: 300;
   text-align: right;
   position: absolute;
-  bottom: 1px;
+  text-transform: uppercase;
+  bottom: -2px;
   right: 20px;
+  line-height: 22px;
   width: 150px;
 }
 
@@ -42315,7 +42316,7 @@ hr {
   padding: 0;
   margin: 0;
   width: 100%;
-  background: url(http://files.simey.me/sublime/sublime-tabs-bg.png);
+  background: url(../img/sublime-tabs-bg.png);
   overflow: hidden;
 }
 
@@ -42327,7 +42328,7 @@ hr {
   margin: 6px 0 0 20px;
   z-index: 1;
   padding-right: 20px;
-  background: url(http://files.simey.me/sublime/sublime-tab-x-dark.png);
+  background: url(../img/sublime-tab-x-dark.png);
   background-repeat: repeat-x;
 }
 
@@ -42342,35 +42343,36 @@ hr {
 .sublime-tabs__tab:before {
   width: 20px;
   left: -20px;
-  background: url(http://files.simey.me/sublime/sublime-tab-l-dark.png);
+  background: url(../img/sublime-tab-l-dark.png);
 }
 
 .sublime-tabs__tab:after {
   width: 20px;
   right: -20px;
-  background: url(http://files.simey.me/sublime/sublime-tab-r-dark.png);
+  background: url(../img/sublime-tab-r-dark.png);
 }
 
 .sublime-tabs__tab.active {
   z-index: 2;
-  background: url(http://files.simey.me/sublime/sublime-tab-x.png);
+  background: url(../img/sublime-tab-x.png);
 }
 
 .sublime-tabs__tab.active:before {
-  background: url(http://files.simey.me/sublime/sublime-tab-l.png);
+  background: url(../img/sublime-tab-l.png);
 }
 
 .sublime-tabs__tab.active:after {
-  background: url(http://files.simey.me/sublime/sublime-tab-r.png);
+  background: url(../img/sublime-tab-r.png);
 }
 
 .sublime-tabs__link, .sublime-tabs__link:visited {
   font-size: 12px;
-  color: #ddd;
-  text-decoration: none;
+  color: #9E9E9E;
+  text-decoration: none !important;
   display: inline-block;
   position: relative;
   line-height: 20px;
+  text-decoration: none;
 }
 
 .sublime-tabs__link:hover, .sublime-tabs__link:visited:hover {
@@ -42417,7 +42419,7 @@ hr {
 
 .sublime-project__code {
   background: transparent !important;
-  padding: 0.5em 0 2em 0em;
+  padding: 0.5em 0 0 0em;
 }
 
 .sublime-project__code--indent {
@@ -42497,19 +42499,34 @@ pre .dec {
 
 /* decimal         - lightgreen */
 /* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
+.sublime ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
   color: #AEAEAE;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.sublime--fullscreen ol.linenums {
+  max-height: 100%;
+  overflow: auto;
 }
 
 /* IE indents via margin-left */
-li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
   list-style-type: none;
 }
 
 /* Alternate shading for lines */
-pre, code {
+pre,
+code {
   font-family: "Source Code Pro", "Consolas", "Courier New", monospace;
 }
 
