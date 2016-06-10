@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "pro": "gulp --production",
+        "pro": "gulp build --production",
         "dev": "gulp watch",
         "check": "npm outdated",
         "get4x": "node main.js",

@@ -62,9 +62,9 @@ gulp.task('product', function(cb) {
         // 'bundler',
         // 'imagemin',
         // 'replace',
-        // 'delmin',
         'rev',
         'htmlmin',
+        'delmin',
         'browserSync',
         cb
     );
