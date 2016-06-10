@@ -60,11 +60,11 @@ gulp.task('product', function(cb) {
         'cssmin',
         'header',
         // 'bundler',
-        // 'htmlmin',
         // 'imagemin',
         // 'replace',
         // 'delmin',
         'rev',
+        'htmlmin',
         'browserSync',
         cb
     );
@@ -85,9 +85,10 @@ gulp.task('test', function(cb) {
         'uglify',
         'cssmin',
         // 'header',
-        // 'htmlmin',
         // 'csscomb',
         // 'bundler',
+        'htmlmin',
+        'rev',
         'browserSync',
         'watch',
         cb

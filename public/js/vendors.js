@@ -17632,5 +17632,3 @@ module.exports = function (element) {
 };
 
 },{"../lib/dom":3,"../lib/helper":6,"./instances":18,"./update-geometry":19,"./update-scroll":20}]},{},[1]);
-
-//# sourceMappingURL=vendors.js.map

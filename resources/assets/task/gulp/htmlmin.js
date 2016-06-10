@@ -17,8 +17,16 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
     gulp.task('htmlmin', () => {
 
-        gulp.src(path.join(target, 'index.html'))
-            .pipe(gulpif(setgulp.production, minifyHtml({ collapseWhitespace: true, conservativeCollapse: true, collapseInlineTagWhitespace: true })))
+        gulp.src(path.join(target, '**/*.html'))
+            // .pipe(minifyHtml({
+            //     collapseWhitespace: true,
+            //     collapseInlineTagWhitespace: true
+            // }))
+            .pipe(gulpif(setgulp.production, minifyHtml({
+                collapseWhitespace: true,
+                conservativeCollapse: true,
+                collapseInlineTagWhitespace: true
+            })))
             // .pipe(htmlReplace({
             // 'css': {
             //   src: 'main.css',
