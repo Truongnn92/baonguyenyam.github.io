@@ -1,0 +1,62 @@
+extends ../variable/jade/_template.jade
+block body
+  body.portfolio-page
+    include ../variable/jade/_nav.jade
+    canvas#canv
+    .scrollbar-dynamic.wrapper
+      main
+        h2 My Skills
+        .container-fluid.mrt-4r
+          .row
+            .col-md-4
+              img(src="img/usf-bull-bw.png", alt="")
+            .col-md-8.mrt-3r
+              .skillbar.clearfix(data-percent='90%')
+                .skillbar-title(style='background: #d35400;')
+                  span HTML5
+                .skillbar-bar(style='background: #e67e22;')
+                .skill-bar-percent 90%
+              // End Skill Bar
+              .skillbar.clearfix(data-percent='90%')
+                .skillbar-title(style='background: #2980b9;')
+                  span CSS3
+                .skillbar-bar(style='background: #3498db;')
+                .skill-bar-percent 90%
+              // End Skill Bar
+              .skillbar.clearfix(data-percent='80%')
+                .skillbar-title(style='background: #2c3e50;')
+                  span jQuery
+                .skillbar-bar(style='background: #2c3e50;')
+                .skill-bar-percent 80%
+              // End Skill Bar
+              .skillbar.clearfix(data-percent='40%')
+                .skillbar-title(style='background: #46465e;')
+                  span PHP
+                .skillbar-bar(style='background: #5a68a5;')
+                .skill-bar-percent 40%
+              // End Skill Bar
+              .skillbar.clearfix(data-percent='75%')
+                .skillbar-title(style='background: #333333;')
+                  span Angular
+                .skillbar-bar(style='background: #525252;')
+                .skill-bar-percent 75%
+              // End Skill Bar
+              .skillbar.clearfix(data-percent='80%')
+                .skillbar-title(style='background: #27ae60;')
+                  span Template
+                .skillbar-bar(style='background: #2ecc71;')
+                .skill-bar-percent 80%
+              // End Skill Bar
+              .skillbar.clearfix(data-percent='90%')
+                .skillbar-title(style='background: #009688;')
+                  span Photoshop
+                .skillbar-bar(style='background: #00BCD4;')
+                .skill-bar-percent 90%
+              // End Skill Bar
+              .skillbar.clearfix(data-percent='80%')
+                .skillbar-title(style='background: #6839a2;')
+                  span illustrator
+                .skillbar-bar(style='background: #795d9c;')
+                .skill-bar-percent 80%
+              // End Skill Bar
+  include ../variable/jade/_script.jade

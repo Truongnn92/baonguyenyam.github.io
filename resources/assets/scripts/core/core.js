@@ -1,8 +1,8 @@
-$(function() {
-    Pace.on("done", function() {
-        $("body").fadeIn(1000);
-    });
-});
+// $(function() {
+//     Pace.on("done", function() {
+//         $("body").fadeIn(1000);
+//     });
+// });
 
 
 

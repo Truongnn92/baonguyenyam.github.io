@@ -5,7 +5,7 @@ config:
       - "bower_components/tether/dist/js/tether.min.js"
       - "bower_components/bootstrap/dist/js/bootstrap.js"
       - "bower_components/owl.carousel/dist/owl.carousel.min.js"
-      - "bower_components/PACE/pace.js"
+      # - "bower_components/PACE/pace.js"
       - "bower_components/favico.js/favico.js"
       - "bower_components/typed.js/dist/typed.min.js"
       - "bower_components/trianglify/dist/trianglify.min.js"
