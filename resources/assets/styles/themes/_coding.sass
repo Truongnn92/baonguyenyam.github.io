@@ -1,4 +1,4 @@
-.gallery-page
+.coding-page
 	// background: $color-white
 	height: 100%
 	overflow: auto
@@ -31,30 +31,13 @@
 											bottom: -0.65rem
 											top: initial
 	main
-		+mar(5rem,top)
+		+mar(7rem,top)
 		max-height: 100%
+		color: $color-con3
 		@include media-breakpoint-up(md)
-			// +pad(0,top)
-	// main
-		// background: $color-white
-	.gallery-body 
-		+pad(2rem)
-		h1
-			text-transform: uppercase
-			color: $color-white
-			+mar(2rem,bottom)
-		// background: $color-white
-	.my-gallery
-		+mar(0)
-		+pad(0)
-		.brick
-			// border: 1px solid darken($color-white,15%)
-			// padding: 3px
-			figure
-				+mar(0)
-				img
-					margin: 0
-					display: block
-					width: 100%
-
-		
+			+pad(0 4rem)
+		.text-replace
+			white-space: pre
+			line-height: 1.25em
+			
+	

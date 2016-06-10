@@ -353,16 +353,28 @@ $(function () {
 // })
 
 $(document).ready(function () {
-    $(".info-page header, .gallery-page header").addClass('active');
+    $(".info-page header, .gallery-page header, .coding-page header").addClass('active');
     $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar();
 });
 
 $(document).on('ps-y-reach-start', function () {
-    $(".info-page header, .gallery-page header").addClass('active');
+    $(".info-page header, .gallery-page header, .coding-page header").addClass('active');
 });
 $(document).on('ps-scroll-down', function () {
-    $(".info-page header, .gallery-page header").removeClass('active');
+    $(".info-page header, .gallery-page header, .coding-page header").removeClass('active');
 });
+
+$(function () {
+
+    $('[data-typing]').each(function () {
+        var dttyping = $(this).attr('data-typing');
+        $(this).typed({
+            strings: [dttyping],
+            typeSpeed: 0
+        });
+    });
+});
+
 $(document).ready(function () {
 
     if ($('.devmode').length) {
@@ -894,6 +906,11 @@ $(document).ready(function () {
     }
 });
 
+// var editor = ace.edit("editor");
+//    editor.setTheme("ace/theme/monokai");
+//    editor.getSession().setMode("ace/mode/javascript");
+//    document.getElementById('editor').style.fontSize='16px';
+
 var app = app || {};
 
 app.sublime = function () {
@@ -1021,6 +1038,16 @@ $(function () {
         typeSpeed: 20,
         backDelay: 500,
         loop: false,
+        loopCount: false
+    });
+
+    // make conversation
+    $(".text-replace").typed({
+        strings: ["<span>print(Hello!)</span>.^500 \nlearnAbout(OSX, iOS, watchOS, tvOS).^1000 \nlet sessions = 100."],
+        typeSpeed: 20,
+        backDelay: 500,
+        loop: false,
+        contentType: 'html',
         loopCount: false
     });
 });
