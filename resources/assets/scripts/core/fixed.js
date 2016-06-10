@@ -4,14 +4,26 @@
 
 
 $(document).ready(function() {
-    $(".info-page header, .gallery-page header").addClass('active');
+    $(".info-page header, .gallery-page header, .coding-page header").addClass('active');
     $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar();
 });
 
 
 $(document).on('ps-y-reach-start', function() {
-    $(".info-page header, .gallery-page header").addClass('active');
+    $(".info-page header, .gallery-page header, .coding-page header").addClass('active');
 });
 $(document).on('ps-scroll-down', function() {
-    $(".info-page header, .gallery-page header").removeClass('active');
+    $(".info-page header, .gallery-page header, .coding-page header").removeClass('active');
+});
+
+$(function() {
+
+    $('[data-typing]').each(function() {
+        var dttyping = $(this).attr('data-typing');
+        $(this).typed({
+            strings: [dttyping],
+            typeSpeed: 0
+        });
+    });
+
 });

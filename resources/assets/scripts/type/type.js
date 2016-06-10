@@ -28,4 +28,16 @@ $(function() {
         loop: false,
         loopCount: false,
     });
+
+
+// make conversation
+    $(".text-replace").typed({
+        strings: ["<span>print(Hello!)</span>.^500 \nlearnAbout(OSX, iOS, watchOS, tvOS).^1000 \nlet sessions = 100."],
+        typeSpeed: 20,
+        backDelay: 500,
+        loop: false,
+        contentType: 'html',
+        loopCount: false,
+    });
+
 });
