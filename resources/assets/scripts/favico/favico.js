@@ -1,8 +1,8 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    var favicon=new Favico({
-    animation:'slide'
-    });
-    favicon.badge(9);
+//     var favicon=new Favico({
+//     animation:'slide'
+//     });
+//     favicon.badge(9);
 
-});
+// });
