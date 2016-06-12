@@ -13,9 +13,9 @@
         $('[bn-icon]').html(BNICON);
         $('[bn-sign]').html(BNSIGN);
         $('[bn-qr]').html(BNQR);
-
-
-
+        if ($('#gmap_canvas').length) {
+            $('#gmap_canvas').kgmaps();
+        }
     });
 
 

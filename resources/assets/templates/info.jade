@@ -333,7 +333,31 @@ block body
 													| Jay Sinclair
 												.jobs CEO ABC Company
 
+				section#gmap_canvas.gmap.map.mrt30
+					.Lat 10.359352
+					.Lng 106.673089
+					.MarginLat -0.0050
+					.MarginLng 0
+					.imgMap img/logo_map.png
+					address 211A Ngô Tùng Châu, Gò Công, Tiền Giang, Việt Nam
+					.infoWindow
+						h3 Bao Nguyen 
+						p
+							strong Tại Tiền Giang :
+							br
+							|  211A Ngô Tùng Châu, KP.3, P.1, Gò Công
+							br
+							|  Email: baonguyenyam@gmail.com
+							br
+							|  Tel : 
+							a(href='tel:+84969689893', onclick="_gaq.push(['_trackEvent', 'Mobile', 'Click to Call'])") 0.9696.8989.3
+					.mapStyle 1
+					.mapZoom 15
+					.scrollwheel false
+					.draggable true
+					.disableDefaultUI true
 
 
 			include ../variable/jade/_footer.jade
+		script(src='//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false')
 		include ../variable/jade/_script.jade

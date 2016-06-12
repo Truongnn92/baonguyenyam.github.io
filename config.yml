@@ -13,6 +13,7 @@ config:
       - "bower_components/photoswipe/dist/photoswipe-ui-default.min.js"
       - "bower_components/freewall/freewall.js"
       - "bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.js"
+      - "bower_components/kmaps/kmaps.js"
       # - "bower_components/particles.js/particles.js"
     css: 
       - "bower_components/animate.css/animate.css"
