@@ -34,10 +34,10 @@
 })(jQuery);
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    $('body').on('click', function() {
-        $('.toggle-nav, .nav-pane').removeClass('open');
-    });
+//     $('body').on('click', function() {
+//         $('.toggle-nav, .nav-pane').removeClass('open');
+//     });
 
-});
+// });
