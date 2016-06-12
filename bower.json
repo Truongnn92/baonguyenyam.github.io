@@ -22,7 +22,9 @@
     "jquery_lazyload": "jquery.lazyload#^1.9.7",
     "jquery.scrollbar": "^0.2.10",
     "ace": "^1.2.3",
-    "kmaps": "*"
+    "kmaps": "*",
+    "lightgallery": "^1.2.19",
+    "jquery-mousewheel": "^3.1.13"
   },
   "devDependencies": {}
 }

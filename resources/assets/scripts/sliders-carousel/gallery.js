@@ -208,3 +208,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
 
+$(document).ready(function() {
+    $(".lightgallery").lightGallery();
+});
