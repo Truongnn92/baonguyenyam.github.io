@@ -46,9 +46,9 @@
 				margin-left: -30px
 				margin-top: 10px
 				background-color: #333333
-	img 
-		max-width: 90%
-		+mar(2rem 0)
+		img 
+			max-width: 90%
+			+mar(2rem 0)
 	.skillbar
 		position: relative
 		display: block
@@ -103,3 +103,83 @@
 		height: 26px
 		line-height: 26px
 		color: #000
+	.bn-timeline 
+		background: #000
+		+border-radius(3px)
+		margin: 0 auto 
+		display: inline-block
+		+pad(.25rem .5rem)
+		color: $color-white
+		+mar(3rem,top)
+	.timeline-both-side
+		float: left
+		width: 100%
+		position: relative
+		box-sizing: border-box
+		+mar(0 auto 3rem auto)
+		+pad(30px 0)
+		&:before
+			background-color: #ccc
+			bottom: 0
+			content: " "
+			left: 50%
+			position: absolute
+			top: 0
+			width: 1px
+		&:after
+			border-radius: 50%
+			bottom: -18px
+			content: ""
+			height: 18px
+			left: 50%
+			margin-left: -9px
+			position: absolute
+			width: 18px
+			border: 2px solid #ccc
+			background: #fff
+		li
+			position: relative
+			float: left
+			width: 100%
+			list-style-type: none
+			text-align: right
+			&.opposite-side
+				text-align: left
+			.border-line
+				background-color: #ccc
+				font-size: 1.4em
+				height: 1px
+				left: 50%
+				margin-left: -8%
+				position: absolute
+				text-align: center
+				top: 50%
+				width: 8%
+				z-index: 100
+			&.opposite-side .border-line
+				left: auto
+				right: 50%
+				margin-left: 0
+				margin-right: -8%
+			.border-line:before
+				background-color: #ccc
+				content: ""
+				height: 7px
+				position: absolute
+				right: -4px
+				top: -3px
+				width: 7px
+			&.opposite-side .border-line:before
+				left: -4px
+				right: auto
+			.timeline-description
+				border-radius: 2px
+				background-color: #f1f1f1
+				border: 1px solid #ccc
+				float: left
+				font-size: 13px
+				padding: 10px
+				position: relative
+				width: 42%
+			&.opposite-side .timeline-description
+				float: right
