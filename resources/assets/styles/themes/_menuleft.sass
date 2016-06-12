@@ -18,12 +18,14 @@
   // @media screen and (max-width: 620px)
   //   width: 298px
   //   transform: translateX(300px)
+  
 
   &.open
     transform: translateX(0)
     transition: 250ms
   ul
     li
+      position: relative
       a
         display: block
         width: 60px
@@ -47,6 +49,40 @@
       &:hover
         a
           background: darken($color-con1, 5%)
+      .name
+        visibility: hidden
+        position: absolute
+        left: 100%
+        top: 50%
+        white-space: nowrap
+        background: #000
+        padding: .25rem .5rem
+        border-radius: 2px
+        +transform(translateY(-50%))
+        color: #fff
+        margin-left: 30px
+        visibility: 
+        +opacity(0)
+        +transition(all .5s)
+        &:before 
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+          border-color: rgba(0, 0, 0, 0)
+          border-right-color: #000
+          border-width: 7px
+          margin-top: 0
+          right: 100%
+          top: 50%
+          +transform(translateY(-50%))
+      &:hover
+        .name
+          visibility: visible
+          +opacity(1)
+          margin-left: 15px
 
 .toggle-nav
   z-index: 1000
