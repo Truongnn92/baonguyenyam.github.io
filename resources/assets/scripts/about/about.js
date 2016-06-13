@@ -1,14 +1,55 @@
 // // set up the base pattern
 
+function getAbout() {
+    if ($(window).width() > 990 && $(".about-page").length) {
+        $('#page-wrap').perfectScrollbar('destroy');
+        // $(".about-page #page-wrap").wrapInner("<table cellspacing='30'><tr>");
+        // $(".about-page .post").wrap("<div class='waptable'>");
+        $('.about-page #page-wrap > .post').each(function() {
+            $(this).wrap("<div class='waptable'></div>");
+        });
 
-$(function(){
-	$(".about-page #page-wrap").wrapInner("<table cellspacing='30'><tr>");
-	$(".about-page .post").wrap("<td></td>");
-	$(".about-page").mousewheel(function(event, delta) {
-		this.scrollLeft -= (delta * 30);
-		event.preventDefault();
-	});
+        $(".about-page").mousewheel(function(event, delta) {
+            this.scrollLeft -= (delta * 10);
+            event.preventDefault();
+        });
+
+        // SET Drag 
+        var curDown = false,
+            curYPos = 0,
+            curXPos = 0;
+        $(window).mousemove(function(m) {
+            if (curDown === true) {
+                $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY));
+                $(window).scrollLeft($(window).scrollLeft() + (curXPos - m.pageX));
+            }
+        });
+
+        $(window).mousedown(function(m) {
+            curDown = true;
+            curYPos = m.pageY;
+            curXPos = m.pageX;
+        });
+
+        $(window).mouseup(function() {
+            curDown = false;
+        });
+    } else {
+        $(".about-page #page-wrap > .waptable").children().unwrap();
+        $('#page-wrap').addClass('scrollbar-dynamic');
+        $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar();
+    }
+}
+
+$(function() {
+    getAbout();
 });
+
+$(window).resize(function() {
+    getAbout();
+});
+
+
 
 // $(function() {
 //     var elemscroll = $.jInvertScroll(['.scroll'], {

@@ -125,24 +125,83 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
           </ul>
         </nav>
       </div>
-      <div class="bgset"></div>
-      <div class="bgcontent">
-        <div class="bg">
-          <div bg-img="img/3.jpg" class="avatar"></div>
+      <div id="page-wrap" class="clearfix">
+        <div class="post block-1">
+          <div class="boxcnt">
+            <div bg-img="img/sm-slider-01.png" class="boxleft filter"></div>
+            <div class="boxright bg-main padding">
+              <h3 class="text-uppercase mrb-0">Bao Nguyen Yam</h3>
+              <p class="text-voted mrb-2r">Pham Nguyen Bao Nguyen</p>
+              <p>Tôi đã từng khóc khi không có giày để mang và thôi không khóc nữa khi thấy một người không có chân mang giày.</p>
+              <p class="text-right mrt-3r"><i bn-sign></i></p>
+            </div>
+          </div>
         </div>
-        <div class="cnt">
-          <div class="textop text-center">
-            <h1 class="hvr-buzz">Pham Nguyen Bao Nguyen</h1>
-            <div class="lead">baonguyenyam@gmail.com</div>
-            <hr>
-            <ul class="nav nav-inline">
-              <li class="nav-item"><a href="https://www.facebook.com/pham.nguyen.bao.nguyen" class="nav-link hvr-float-shadow"><i class="mdi mdi-facebook-box"></i></a></li>
-              <li class="nav-item"><a href="https://github.com/baonguyenyam" class="nav-link hvr-float-shadow"><i class="mdi mdi-github-box"></i></a></li>
-            </ul>
+        <div class="post block-2">
+          <div class="boxcnt">
+            <div class="boxleft bg-con padding w40">
+              <h3 class="text-uppercase mrb-2r">Graphic Designer</h3>
+              <div class="lightgallery"><a href="img/album/slide_1.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_1.jpg"></figure></a><a href="img/album/slide_2.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_2.jpg"></figure></a><a href="img/album/slide_3.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_3.jpg"></figure></a><a href="img/album/slide_4.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_4.jpg"></figure></a><a href="img/album/slide_5.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_5.jpg"></figure></a><a href="img/album/slide_6.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_6.jpg"></figure></a><a href="img/album/slide_7.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_7.jpg"></figure></a><a href="img/album/slide_8.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_8.jpg"></figure></a><a href="img/album/slide_9.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_9.jpg"></figure></a><a href="img/album/slide_10.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_10.jpg"></figure></a><a href="img/album/slide_11.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_11.jpg"></figure></a><a href="img/album/slide_12.jpg" class="hvr-glow">
+                  <figure bg-img="img/album/slide_12.jpg"></figure></a>
+              </div>
+            </div>
+            <div class="boxright bg-warning padding w60">
+              <h3 class="text-uppercase mrb-2r">Front-End Developer</h3>
+              <p><span class="text-replace2"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="post block-3">
+          <div class="boxcnt">
+            <div class="boxleft bg-turquoise w70">
+              <section id="gmap_canvas" class="gmap map">
+                <div class="Lat">10.359352</div>
+                <div class="Lng">106.673089</div>
+                <div class="MarginLat">-0.0050</div>
+                <div class="MarginLng">0</div>
+                <div class="imgMap">img/logo_map.png</div>
+                <address>211A Ngô Tùng Châu, Gò Công, Tiền Giang, Việt Nam</address>
+                <div class="infoWindow">
+                  <h3>Bao Nguyen </h3>
+                  <p><strong>Tại Tiền Giang :</strong><br> 211A Ngô Tùng Châu, KP.3, P.1, Gò Công<br> Email: baonguyenyam@gmail.com<br> Tel : <a href="tel:+84969689893" onclick="_gaq.push(['_trackEvent', 'Mobile', 'Click to Call'])">0.9696.8989.3</a></p>
+                </div>
+                <div class="mapStyle">1</div>
+                <div class="mapZoom">15</div>
+                <div class="scrollwheel">false</div>
+                <div class="draggable">false</div>
+                <div class="disableDefaultUI">true</div>
+              </section>
+            </div>
+            <div class="boxright bg-con3 padding w30">
+              <h3 class="text-uppercase mrb-2r text-center">Contact </h3>
+              <div class="cnt">
+                <div class="textop text-center">
+                  <div bg-img="img/3.jpg" class="avatar"></div>
+                  <p>baonguyenyam@gmail.com</p>
+                  <hr>
+                  <ul class="nav nav-inline">
+                    <li class="nav-item"><a href="https://www.facebook.com/pham.nguyen.bao.nguyen" class="nav-link hvr-float-shadow"><i class="mdi mdi-facebook-box"></i></a></li>
+                    <li class="nav-item"><a href="https://github.com/baonguyenyam" class="nav-link hvr-float-shadow"><i class="mdi mdi-github-box"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
     <div class="loading">
       <div class="loaderstyle"></div>
     </div>
