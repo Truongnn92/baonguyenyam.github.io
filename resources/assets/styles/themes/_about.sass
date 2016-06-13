@@ -98,6 +98,10 @@
 						svg
 							*
 								stroke: $color-white
+							path:first-child
+								+animation(signstroke 4s infinite)
+							path:last-child
+								+animation(signstroke2 4s infinite 1s)
 	@include media-breakpoint-up(lg)
 		overflow-x: hidden
 		main
