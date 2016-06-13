@@ -1,73 +1,13 @@
 .about-page
 	width: 100%
 	height: 100%
-	overflow: hidden
-	.bgset
-		position: absolute
-		top: 0
-		left: 0
-		-webkit-filter: blur(3px)
-		-moz-filter: blur(3px)
-		-o-filter: blur(3px)
-		-ms-filter: blur(3px)
-		filter: blur(3px)
-		z-index: 500
+	overflow-x: hidden
+	main
 		width: 100%
 		height: 100%
-		overflow: hidden
-		svg
-			width: 100% !important
-			height: 100% !important
-			overflow: hidden
-	.bgcontent
-		background: rgba(255,255,255,.45)
-		+border-radius(10px)
-		width: 80%
-		max-width: 600px
-		min-height: 200px
-		transform: translateX(-50%) translateY(-50%)
-		top: 50%
-		left: 50%
-		position: absolute
-		z-index: 700
-		overflow: hidden
-		.bg
-			background: url('../img/slider-02.png')
-			background-size: cover
-			width: 100%
-			min-height: 120px
-			+border-radiuses(10px, 10px , 0, 0)
-			border-bottom: 3px solid $color-con1
-			position: relative
-			.avatar
-				margin-bottom: -40px
-				margin-left: -40px
-				position: absolute
-				bottom: 0%
-				left: 50%
-				width: 80px
-				height: 80px
-				+border-radius(50%)
-				border: 3px solid $color-con1
-				+transition(all .5s ease-in-out)
-				&:hover
-					+border-radius(0)
-		.cnt
-			position: relative
-			.textop
-				+pad(80px 1rem 2rem 1rem)
-				.nav
-					+mar(3rem,top)
-					a
-						color: $color-con1
-						&:hover
-							color: $color-main
-						.mdi
-							+fz(2rem)
-				@include media-breakpoint-down(md)
-					h1
-						+fz(1.3rem)
-					.lead
-						+fz(1rem)
-
-			
+		display: table
+		#page-wrap
+			display: table-cell
+			vertical-align: middle
+			.post
+				width: 800px

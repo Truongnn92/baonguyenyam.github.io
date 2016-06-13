@@ -24,7 +24,8 @@
     "ace": "^1.2.3",
     "kmaps": "*",
     "lightgallery": "^1.2.19",
-    "jquery-mousewheel": "^3.1.13"
+    "jquery-mousewheel": "^3.1.13",
+    "jInvertScroll": "https://github.com/pixxelfactory/jInvertScroll.git#^0.8.3"
   },
   "devDependencies": {}
 }
