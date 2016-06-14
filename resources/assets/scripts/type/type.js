@@ -41,8 +41,8 @@ $(function() {
     });
 
     $(".text-replace2").typed({
-        strings: ["<span class='main'>print</span><span class='text3'>('Hello, I am Bao Nguyen!')</span> ^500 <br><span class='main'>learnAbout</span><span class='text3'>('Js,Sass,Jade,TypeScript,Ps,Ai')</span> ^500 <br><span class='include'>let</span> sessions <span class='text3'>=</span> <span class='main2'>100</span> ^500 <br><span class='include'>let</span> skillsEngineers <span class='text3'>=</span> <span class='main2'>'90%'</span> ^500 <br><span class='include'>let</span> labs <span class='text3'>=</span> <span class='text2'>handsOn</span> ^500 <br><span class='include'>let</span> scholarships <span class='text3'>=</span> <span class='text2'>available</span> ^500 <br><span class='include'>let</span> date <span class='text3'>=</span> <span class='main'>'Aug 16-08-83'</span> ^500 <br><span class='include'>let</span> location <span class='text3'>=</span> <span class='text2'>\"GoCong - Tien Giang\"</span> ^500 <br><span class='include'>let</span> Companies <span class='text3'>></span> <span class='text2'>6</span>..."],
-        typeSpeed: 20,
+        strings: ["Làm đâu quận nhất thật xa xôi<br>Cái phận đeo mang cũng đã rồi<br>Nhấp nháp ly cà phê nhạt khói<br>Mài mò mấy đoạn code thâm môi<br><br>Tìm vui đem sống... còn thêm đợi!<br>Lấy đẹp cho đời... chỉ để coi!<br>Một xíu anh hào đâu quá nỗi<br>Sao còn ghen tị với mây trời?.<br>"],
+        typeSpeed: 60,
         backDelay: 500,
         loop: false,
         contentType: 'html',

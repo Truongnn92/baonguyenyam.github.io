@@ -22,6 +22,9 @@ function getAbout() {
             if (curDown === true) {
                 $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY));
                 $(window).scrollLeft($(window).scrollLeft() + (curXPos - m.pageX));
+            } else {
+                $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY));
+                $(window).scrollRight($(window).scrollRight() + (curXPos - m.pageX));
             }
         });
 
@@ -31,8 +34,10 @@ function getAbout() {
             curXPos = m.pageX;
         });
 
-        $(window).mouseup(function() {
+        $(window).mouseup(function(m) {
             curDown = false;
+            curYPos = m.pageY;
+            curXPos = m.pageX;
         });
     } else {
         $(".about-page #page-wrap > .waptable").children().unwrap();
