@@ -23,8 +23,8 @@ function getAbout() {
                 $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY));
                 $(window).scrollLeft($(window).scrollLeft() + (curXPos - m.pageX));
             } else {
-                $(window).scrollTop($(window).scrollTop() + (curYPos - m.pageY));
-                $(window).scrollRight($(window).scrollRight() + (curXPos - m.pageX));
+                // $(window).scrollTop($(window).scrollTop() - (m.pageY - curYPos));
+                // $(window).scrollLeft($(window).scrollLeft() - (m.pageX - curXPos));
             }
         });
 
