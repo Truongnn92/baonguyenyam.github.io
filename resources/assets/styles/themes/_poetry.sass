@@ -17,34 +17,34 @@
 		background-position: center center
 		background-size: cover
 		background-attachment: fixed
-	// header
-	// 	position: fixed
-	// 	width: 100%
-	// 	z-index: 100
-	// 	@include media-breakpoint-up(md)
-	// 		&.active
-	// 			.navbar
-	// 				background: rgba(255,255,255,.2)
-	// 				+box-shadow(0, 1px, 0px, rgba(255,255,255,.3))
-	// 				#BNGlobalMenu 
-	// 					.navbar-brand
-	// 						i
-	// 							svg
-	// 								*
-	// 									fill: $color-white
-	// 							&:before
-	// 								background-color: $color-white
-	// 					.nav.navbar-right 
-	// 						.nav-item
-	// 							.nav-link
-	// 								color: rgba(255,255,255,.5)
-	// 							&.active, &:hover
-	// 								.nav-link
-	// 									color: $color-white
-	// 									&:before
-	// 										background-color: $color-white
-	// 										bottom: -0.65rem
-	// 										top: initial
+	header
+		position: fixed
+		width: 100%
+		z-index: 100
+		@include media-breakpoint-up(md)
+			&.active
+				.navbar
+					background: rgba(255,255,255,.2)
+					+box-shadow(0, 1px, 0px, rgba(255,255,255,.5))
+					#BNGlobalMenu 
+						.navbar-brand
+							i
+								svg
+									*
+										fill: $color-con1
+								&:before
+									background-color: $color-con1
+						.nav.navbar-right 
+							.nav-item
+								.nav-link
+									color: rgba(0,0,0,.4)
+								&.active, &:hover
+									.nav-link
+										color: $color-con1
+										&:before
+											background-color: $color-con1
+											bottom: -0.65rem
+											top: initial
 	main
 		+mar(5rem,top)
 		max-height: 100%
@@ -68,7 +68,8 @@
 			.item
 				+pad(2rem)
 				+border-radius(3px)
-
+				width: 100%
+				overflow: auto
 				figure
 					img 
 						max-width: 100%
