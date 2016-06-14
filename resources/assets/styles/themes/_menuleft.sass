@@ -23,7 +23,13 @@
   &.open
     transform: translateX(0)
     transition: 250ms
+  nav
+    // overflow-y: auto
+    // overflow-x: hidden
   ul
+    overflow: hidden
+    @include media-breakpoint-up(md)
+      overflow: initial
     li
       position: relative
       a
@@ -78,11 +84,12 @@
           right: 100%
           top: 50%
           +transform(translateY(-50%))
-      &:hover
-        .name
-          visibility: visible
-          +opacity(1)
-          margin-left: 15px
+      @include media-breakpoint-up(md)
+        &:hover
+          .name
+            visibility: visible
+            +opacity(1)
+            margin-left: 15px
 
 .toggle-nav
   z-index: 1000

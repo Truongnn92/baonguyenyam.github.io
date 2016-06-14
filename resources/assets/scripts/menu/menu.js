@@ -31,7 +31,33 @@
         }
     });
 
+
+if ($(window).width() < 767 && $(".nav-pane").length) {
+    
+    $('.nav-pane nav').addClass('scrollbar-dynamic');
+    $('.scrollbar-dynamic').perfectScrollbar();
+
+};
+
+
 })(jQuery);
+
+$(window).resize(function() {
+
+
+if ($(window).width() < 767 && $(".nav-pane").length) {
+    
+    $('.nav-pane nav').addClass('scrollbar-dynamic');
+    $('.scrollbar-dynamic').perfectScrollbar();
+
+} else {
+    $('.nav-pane nav').perfectScrollbar('destroy');
+}
+
+
+});
+
+
 
 
 // $(document).ready(function() {
