@@ -9,10 +9,10 @@ $(document).ready(function() {
 });
 
 
-$(document).on('ps-y-reach-start', function() {
+$('.scrollbar-dynamic.wrapper').on('ps-y-reach-start', function() {
     $(".info-page header, .gallery-page header, .coding-page header, .poetry-page header").addClass('active');
 });
-$(document).on('ps-scroll-down', function() {
+$('.scrollbar-dynamic.wrapper').on('ps-scroll-down', function() {
     $(".info-page header, .gallery-page header, .coding-page header, .poetry-page header").removeClass('active');
 });
 
