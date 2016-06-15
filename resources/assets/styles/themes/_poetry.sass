@@ -21,10 +21,12 @@
 		position: fixed
 		width: 100%
 		z-index: 100
+		.navbar
+			background: rgba(255,255,255,.95)
 		@include media-breakpoint-up(md)
 			&.active
 				.navbar
-					background: rgba(255,255,255,.2)
+					background: rgba(255,255,255,.7)
 					+box-shadow(0, 1px, 0px, rgba(255,255,255,.5))
 					#BNGlobalMenu 
 						.navbar-brand
@@ -66,6 +68,7 @@
 			background: rgba(255,255,255,.3)
 			overflow: hidden
 			+pad(2rem)
+			cursor: pointer
 			.item
 				+border-radius(3px)
 				width: 100%

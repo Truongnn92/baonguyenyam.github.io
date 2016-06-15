@@ -6,14 +6,13 @@
 $(document).ready(function() {
     $(".info-page header, .gallery-page header, .coding-page header, .poetry-page header").addClass('active');
     $('.scrollbar-dynamic, .scrollbar-inner').perfectScrollbar();
-});
-
-
-$('.scrollbar-dynamic.wrapper').on('ps-y-reach-start', function() {
-    $(".info-page header, .gallery-page header, .coding-page header, .poetry-page header").addClass('active');
-});
-$('.scrollbar-dynamic.wrapper').on('ps-scroll-down', function() {
-    $(".info-page header, .gallery-page header, .coding-page header, .poetry-page header").removeClass('active');
+    $('.scrollbar-dynamic.wrapper').perfectScrollbar()
+        .on('ps-y-reach-start', function() {
+            $(".info-page header, .gallery-page header, .coding-page header, .poetry-page header").addClass('active');
+        })
+        .on('ps-scroll-down', function() {
+            $(".info-page header, .gallery-page header, .coding-page header, .poetry-page header").removeClass('active');
+        });
 });
 
 $(function() {
