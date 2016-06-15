@@ -107,7 +107,7 @@ $code: "Source Code Pro",
 "Consolas",
 monospace;
 .sublime {
-        z-index: 2000;
+        
     min-height: 270px;
     min-width: 200px;
     max-width: 3200px;
@@ -273,7 +273,7 @@ monospace;
             }
         }
         @media screen and ( max-width: 500px) {
-            display: none;
+            // display: none;
         }
     }
 }
