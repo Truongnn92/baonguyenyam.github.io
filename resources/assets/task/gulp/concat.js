@@ -11,31 +11,35 @@ import sourcemaps from 'gulp-sourcemaps';
 import gulpif from 'gulp-if';
 
 module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
-  let url = config;
-  let dest = path.join(target);
-  let destjs = path.join(target, url.scripts.assets);
-  let destcss = path.join(target, url.styles.assets);
+    let url = config;
+    let dest = path.join(target);
+    let destjs = path.join(target, url.scripts.assets);
+    let destcss = path.join(target, url.styles.assets);
 
-  // Run task
+    // Run task
 
-  gulp.task('concat', function() {
-    gulp.src(url.concat.js)
-      // .pipe(plugins.FileOrder([
-      //   'bower_components/jquery/jquery.js'
-      // ]))
-      .pipe(gulpif(!setgulp.production,plugins.sourcemaps.init()))
-      .pipe(concat('vendors.js'))
-      .pipe(gulpif(!setgulp.production,plugins.sourcemaps.write('./')))
-      .pipe(plugins.changed(dest))
-      .pipe(gulp.dest(destjs));
+    gulp.task('concat', function() {
+        gulp.src(url.concat.js)
+            // .pipe(plugins.FileOrder([
+            //   'bower_components/jquery/jquery.js'
+            // ]))
+            .pipe(gulpif(!setgulp.production, plugins.sourcemaps.init()))
+            .pipe(concat('polyfills.js'))
+            .pipe(gulpif(!setgulp.production, plugins.sourcemaps.write('./')))
+            .pipe(plugins.changed(dest))
+            .pipe(gulp.dest(destjs));
 
-    gulp.src(url.concat.css)
-      // .pipe(plugins.FileOrder([
-      //   'bower_components/animate.css/animate.css'
-      // ]))
-      .pipe(concatCss('vendors.css', {includePaths:'', rebaseUrls: false, inlineImports: false}))
-      .pipe(plugins.changed(dest))
-      .pipe(gulp.dest(destcss));
-  });
+        gulp.src(url.concat.css)
+            // .pipe(plugins.FileOrder([
+            //   'bower_components/animate.css/animate.css'
+            // ]))
+            .pipe(concatCss('vendors.css', {
+                includePaths: '',
+                rebaseUrls: false,
+                inlineImports: false
+            }))
+            .pipe(plugins.changed(dest))
+            .pipe(gulp.dest(destcss));
+    });
 
 }

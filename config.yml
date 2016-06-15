@@ -2,6 +2,9 @@ config:
   concat: 
     js: 
       - "bower_components/jquery/dist/jquery.js"
+      # - "bower_components/react/react.min.js"
+      # - "bower_components/react/react-dom.min.js"
+      # - "bower_components/react/react-with-addons.min.js"
       - "bower_components/tether/dist/js/tether.min.js"
       - "bower_components/bootstrap/dist/js/bootstrap.js"
       - "bower_components/owl.carousel/dist/owl.carousel.min.js"
