@@ -173,6 +173,7 @@ monospace;
         text-align: center;
         height: 22px;
         line-height: 22px;
+        font-family: 'BN-Fonts';
     }
     &__title {
         color: #333;
@@ -198,6 +199,7 @@ monospace;
     width: 100%;
     background: url(../img/sublime-tabs-bg.png);
     overflow: hidden;
+    font-family: 'BN-Fonts';
     &__tab {
         position: relative;
         display: inline-block;

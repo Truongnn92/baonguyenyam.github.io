@@ -19,6 +19,7 @@
 	main
 		width: 100%
 		height: 100%
+		font-family: 'Roboto Slab', serif
 		.lightgallery
 			a 
 				display: inline-block 
@@ -101,7 +102,7 @@
 							path:first-child
 								+animation(signstroke 4s infinite)
 							path:last-child
-								+animation(signstroke2 4s infinite 1s)
+								+animation(signstroke2 4s infinite)
 	@include media-breakpoint-up(lg)
 		overflow-x: hidden
 		main
@@ -122,6 +123,8 @@
 					user-select: none
 					display: table
 					min-width: 1000px
+					h3 
+						font-family: 'BN-Fonts'
 					.boxcnt
 						display: table
 						min-width: 1000px

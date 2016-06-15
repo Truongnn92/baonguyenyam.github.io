@@ -6,7 +6,7 @@ $(function() {
             // 	'height': 'initial'
             // });
             $('.scrollbar-dynamic , .scrollbar-macosx_menu').perfectScrollbar('destroy');
-            $('.cnt').perfectScrollbar();
+            // $('.cnt').perfectScrollbar();
         })
         .on('hide.bs.modal', function() {
             // $('.scrollbar-dynamic , .scrollbar-macosx_menu').css({
