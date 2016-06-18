@@ -98,36 +98,44 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
   <body bg-img="img/bg.jpg" class="coding-page">
     <div class="scrollbar-dynamic wrapper">
       <main>
-        <header class="pos-f-t">
-          <div role="banner" class="navbar navbar-light navbar-static-top bd-navbar">
-            <div class="clearfix mobile">
-              <button type="button" data-toggle="collapse" data-target="#BNGlobalMenu" class="navbar-toggler hidden-md-up pull-sm-right pull-xs-right"><i class="mdi mdi-menu"></i></button>
-              <ul class="nav navbar-nav hidden-md-up">
-                <li class="nav-item"><a href="/" class="navbar-brand"><i bn-icon class="hvr-wobble-horizontal app-icon bn"></i></a></li>
-              </ul>
-            </div>
-            <div id="BNGlobalMenu" class="collapse navbar-toggleable-sm"><a href="/" class="navbar-brand hidden-sm-down"><i bn-icon class="hvr-wobble-horizontal app-icon bn"></i></a>
-              <nav>
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="nav-item"><a href="about.html" title="About" class="nav-link">About</a></li>
-                  <li class="nav-item"><a href="info.html" title="Information" class="nav-link">Information</a></li>
-                  <li class="nav-item"><a href="gallery.html" title="Gallery" class="nav-link">Gallery</a></li>
-                  <li class="nav-item active"><a href="coding.html" title="Coding" class="nav-link">Coding</a></li>
-                  <li class="nav-item"><a href="portfolio.html" title="Portfolio" class="nav-link">Portfolio</a></li>
-                  <li class="nav-item"><a href="album.html" title="Album" class="nav-link">Album</a></li>
-                  <li class="nav-item"><a href="poetry.html" title="Poetry" class="nav-link">Poetry</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </header>
+        <div class="toggle-nav"><span class="m">M</span><span class="e"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span><span class="n">N</span><span class="u">U</span></div>
+        <div class="nav-pane slide-out">
+          <nav>
+            <ul class="nav">
+              <li class="nav-item"><a href="/" class="nav-link"><i class="mdi mdi-home"></i></a>
+                <div class="name">Home Page</div>
+              </li>
+              <li class="nav-item"><a href="about.html" class="nav-link"><i class="mdi mdi-account"></i></a>
+                <div class="name">About Us</div>
+              </li>
+              <li class="nav-item"><a href="info.html" class="nav-link"><i class="mdi mdi-alert-box"></i></a>
+                <div class="name">Information</div>
+              </li>
+              <li class="nav-item"><a href="gallery.html" class="nav-link"><i class="mdi mdi-image"></i></a>
+                <div class="name">Gallery</div>
+              </li>
+              <li class="nav-item"><a href="coding.html" class="nav-link"><i class="mdi mdi-pound-box"></i></a>
+                <div class="name">Coding</div>
+              </li>
+              <li class="nav-item"><a href="portfolio.html" class="nav-link"><i class="mdi mdi-poll"></i></a>
+                <div class="name">Portfolio</div>
+              </li>
+              <li class="nav-item"><a href="album.html" class="nav-link"><i class="mdi mdi-camera"></i></a>
+                <div class="name">Albums</div>
+              </li>
+              <li class="nav-item"><a href="poetry.html" class="nav-link"><i class="mdi mdi-file-document-box"></i></a>
+                <div class="name">Poetry</div>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <section class="container-fluid mrt-2r mrb-2r">
           <div class="row">
-            <div class="col-lg-4 mrb-2r">
+            <div class="col-lg-5 mrb-2r">
               <h1>Coding</h1>
               <div class="hero-content"><span class="text-replace"></span></div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-7">
               <div class="sublime">
                 <div class="sublime__title">BN</div>
                 <ul class="sublime-tabs">
@@ -135,7 +143,7 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
                   <li class="sublime-tabs__tab sublime-tabs__tab--soon hidden-sm-down"><a href="#_bn/mainjs" data-type="babel/js" data-project="mainjs" class="sublime-tabs__link">gulpfile.babel.js</a></li>
                   <li class="sublime-tabs__tab sublime-tabs__tab--soon hidden-sm-down"><a href="#_bn/maincss" data-type="sass/scss" data-project="maincss" class="sublime-tabs__link">main.sass</a></li>
                   <li class="sublime-tabs__tab sublime-tabs__tab--soon hidden-sm-down"><a href="#_bn/template" data-type="jade/pug" data-project="template" class="sublime-tabs__link">index.pug</a></li>
-                  <li class="sublime-tabs__tab sublime-tabs__tab--soon"><a href="#_bn/yml" data-type="yml" data-project="yml" class="sublime-tabs__link">config.yml</a></li>
+                  <li class="sublime-tabs__tab sublime-tabs__tab--soon hidden-lg-down"><a href="#_bn/yml" data-type="yml" data-project="yml" class="sublime-tabs__link">config.yml</a></li>
                   <li class="sublime-tabs__tab sublime-tabs__tab--soon hidden-lg-down"><a href="#_bn/sh" data-type="sh" data-project="sh" class="sublime-tabs__link">install.sh</a></li>
                 </ul>
                 <button tabindex="-1" class="sublime__button sublime__button--full js-sublime-maximise">go fullscreen</button>
@@ -379,7 +387,7 @@ exit 0
       <div class="loaderstyle"></div>
     </div>
     <script src="js/polyfills.min.js"></script>
-    <script src="js/app.bundler.min.js"></script>
+    <script src="js/app.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

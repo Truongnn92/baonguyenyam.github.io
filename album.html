@@ -95,86 +95,555 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
     <!-- inject:css-->
     <!-- endinject-->
   </head>
-  <body class="gallery-page">
-    <div class="scrollbar-dynamic wrapper">
-      <header class="pos-f-t">
-        <div role="banner" class="navbar navbar-light navbar-static-top bd-navbar">
-          <div class="clearfix mobile">
-            <button type="button" data-toggle="collapse" data-target="#BNGlobalMenu" class="navbar-toggler hidden-md-up pull-sm-right pull-xs-right"><i class="mdi mdi-menu"></i></button>
-            <ul class="nav navbar-nav hidden-md-up">
-              <li class="nav-item"><a href="/" class="navbar-brand"><i bn-icon class="hvr-wobble-horizontal app-icon bn"></i></a></li>
-            </ul>
-          </div>
-          <div id="BNGlobalMenu" class="collapse navbar-toggleable-sm"><a href="/" class="navbar-brand hidden-sm-down"><i bn-icon class="hvr-wobble-horizontal app-icon bn"></i></a>
-            <nav>
-              <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item"><a href="about.html" title="About" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="info.html" title="Information" class="nav-link">Information</a></li>
-                <li class="nav-item"><a href="gallery.html" title="Gallery" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="coding.html" title="Coding" class="nav-link">Coding</a></li>
-                <li class="nav-item"><a href="portfolio.html" title="Portfolio" class="nav-link">Portfolio</a></li>
-                <li class="nav-item active"><a href="album.html" title="Album" class="nav-link">Album</a></li>
-                <li class="nav-item"><a href="poetry.html" title="Poetry" class="nav-link">Poetry</a></li>
-              </ul>
-            </nav>
+  <body class="album-page">
+    <main>
+      <div id="togglenav"> <i class="mdi mdi-menu"></i><i class="mdi mdi-close"></i></div>
+      <div id="gmenu" class="scrollbar-dynamic wrapper">
+        <h2>My Albums</h2>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item"><a href="/" class="nav-link"><i class="mdi mdi-home"></i> 
+                Home Page</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="mdi mdi-account"></i> 
+                About Us</a></li>
+            <li class="nav-item"><a href="info.html" class="nav-link"><i class="mdi mdi-alert-box"></i> 
+                Information</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link"><i class="mdi mdi-image"></i> 
+                Gallery</a></li>
+            <li class="nav-item"><a href="coding.html" class="nav-link"><i class="mdi mdi-pound-box"></i> 
+                Coding</a></li>
+            <li class="nav-item"><a href="portfolio.html" class="nav-link"><i class="mdi mdi-poll"></i> 
+                Portfolio</a></li>
+            <li class="nav-item active"><a href="album.html" class="nav-link"><i class="mdi mdi-camera"></i> 
+                Albums</a></li>
+            <li class="nav-item"><a href="poetry.html" class="nav-link"><i class="mdi mdi-file-document-box"></i> 
+                Poetry</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="gcontent" class="isOpen">
+        <div class="scrollbar-dynamic wrapper">
+          <div class="gallery-body container-fluid">
+            <div class="row hidden-lg-up"> 
+              <div class="col-sm-12">
+                <h1>My Albums</h1>
+              </div>
+            </div>
+            <div class="lightgallery row">
+              <div href="img/album/slide_1.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_1.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_2.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_2.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_3.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_3.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_4.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_4.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_5.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_5.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_6.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_6.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_7.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_7.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_8.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_8.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_9.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_9.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_10.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_10.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_11.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_11.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_12.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_12.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_13.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_13.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_14.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_14.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_15.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_15.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_16.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_16.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_17.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_17.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_18.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_18.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_19.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_19.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_20.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_20.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_21.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_21.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_22.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_22.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_23.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_23.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_24.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_24.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_25.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_25.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_26.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_26.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_27.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_27.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_28.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_28.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_29.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_29.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_30.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_30.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_31.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_31.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_32.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_32.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_33.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_33.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_34.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_34.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_35.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_35.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_36.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_36.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_37.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_37.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_38.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_38.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_39.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_39.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_40.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_40.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_41.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_41.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div href="img/album/slide_42.jpg" class="col-sm-6 col-md-4 col-lg-3">
+                <div class="grid">
+                  <figure class="effect-layla"><img src="img/album/slide_42.jpg">
+                    <figcaption>
+                      <div> 
+                        <h2>BN <span>Project</span></h2>
+                        <p>View </p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
-      <main>
-        <div class="gallery-body"> 
-          <h1>My Albums</h1>
-          <div id="freewall">
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_1.jpg"><img src="img/album/slide_1.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_2.jpg"><img src="img/album/slide_2.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_3.jpg"><img src="img/album/slide_3.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_4.jpg"><img src="img/album/slide_4.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_5.jpg"><img src="img/album/slide_5.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_6.jpg"><img src="img/album/slide_6.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_7.jpg"><img src="img/album/slide_7.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_8.jpg"><img src="img/album/slide_8.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_9.jpg"><img src="img/album/slide_9.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_10.jpg"><img src="img/album/slide_10.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_11.jpg"><img src="img/album/slide_11.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_12.jpg"><img src="img/album/slide_12.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_13.jpg"><img src="img/album/slide_13.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_14.jpg"><img src="img/album/slide_14.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_15.jpg"><img src="img/album/slide_15.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_16.jpg"><img src="img/album/slide_16.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_17.jpg"><img src="img/album/slide_17.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_18.jpg"><img src="img/album/slide_18.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_19.jpg"><img src="img/album/slide_19.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_20.jpg"><img src="img/album/slide_20.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_21.jpg"><img src="img/album/slide_21.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_22.jpg"><img src="img/album/slide_22.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_23.jpg"><img src="img/album/slide_23.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_24.jpg"><img src="img/album/slide_24.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_25.jpg"><img src="img/album/slide_25.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_26.jpg"><img src="img/album/slide_26.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_27.jpg"><img src="img/album/slide_27.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_28.jpg"><img src="img/album/slide_28.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_29.jpg"><img src="img/album/slide_29.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_30.jpg"><img src="img/album/slide_30.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_31.jpg"><img src="img/album/slide_31.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_32.jpg"><img src="img/album/slide_32.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_33.jpg"><img src="img/album/slide_33.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_34.jpg"><img src="img/album/slide_34.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_35.jpg"><img src="img/album/slide_35.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_36.jpg"><img src="img/album/slide_36.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_37.jpg"><img src="img/album/slide_37.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_38.jpg"><img src="img/album/slide_38.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_39.jpg"><img src="img/album/slide_39.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_40.jpg"><img src="img/album/slide_40.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_41.jpg"><img src="img/album/slide_41.jpg"></a></div>
-            <div style="width:200px" class="brick hvr-glow hvr-bob lightgallery"><a href="img/album/slide_42.jpg"><img src="img/album/slide_42.jpg"></a></div>
-          </div>
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
     <div class="loading">
       <div class="loaderstyle"></div>
     </div>
     <script src="js/polyfills.min.js"></script>
-    <script src="js/app.bundler.min.js"></script>
+    <script src="js/app.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
