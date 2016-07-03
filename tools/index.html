@@ -91,18 +91,17 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
     <link rel="alternate" hreflang="x-default" href="//baonguyenyam.github.io/">
     <link rel="alternate" hreflang="vi-VN" href="//baonguyenyam.github.io/"><!-- inject:css -->
     <link rel="stylesheet" href="/css/addons.min-ec55655d.css">
-    <link rel="stylesheet" href="/css/main.min-d2fd1549.css">
+    <link rel="stylesheet" href="/css/main.min-fa654959.css">
     <!-- endinject -->
   </head>
   <body class="tools-page">
     <main>
       <div class="contenedor">
         <form>
-          <input id="Slide1" type="radio" name="slider" titulo="k-Sass Lib" autofocus checked>
+          <input id="Slide1" type="radio" name="slider" titulo="k-Sass Core" autofocus checked>
           <input id="Slide2" type="radio" name="slider" titulo="k-Flex Lib">
           <input id="Slide3" type="radio" name="slider" titulo="k-Maps SEO">
           <input id="Slide4" type="radio" name="slider" titulo="k-Gulp Task">
-          <input id="Slide5" type="radio" name="slider" titulo="k-OneClick Node">
           <div class="labels">
             <label id="Slide1" for="Slide1" class="Slide">
               <div class="content bg-main scrollbar-dynamic wrapper">
@@ -116,6 +115,7 @@ top: 0;
 right: 3rem !important;
 left: 0;</pre>
                 <p> <a href="https://github.com/baonguyenyam/k-sass-core">https://github.com/baonguyenyam/k-sass-core</a></p>
+                <p> <a href="/docs/k-sass-core" class="btn btn-secondary">View Documents</a></p>
               </div>
             </label>
             <label id="Slide2" for="Slide2" class="Slide">
@@ -127,6 +127,7 @@ left: 0;</pre>
                 <h4>Result</h4>
                 <pre class="prettyprint text-left lang-html">You view content center & middle item</pre>
                 <p> <a href="https://github.com/baonguyenyam/k-flex">https://github.com/baonguyenyam/k-flex</a></p>
+                <p> <a href="/docs/k-flex" class="btn btn-secondary">View Documents</a></p>
               </div>
             </label>
             <label id="Slide3" for="Slide3" class="Slide">
@@ -154,6 +155,7 @@ left: 0;</pre>
                 <h4>Result</h4>
                 <p>Display the map</p>
                 <p> <a href="https://github.com/baonguyenyam/k-gmaps">https://github.com/baonguyenyam/k-gmaps</a></p>
+                <p> <a href="/docs/k-gmaps" class="btn btn-secondary">View Documents</a></p>
               </div>
             </label>
             <label id="Slide4" for="Slide4" class="Slide">
@@ -182,62 +184,7 @@ left: 0;</pre>
   );
 });</pre>
                 <p> <a href="https://github.com/baonguyenyam/k-gulp-task">https://github.com/baonguyenyam/k-gulp-task</a></p>
-              </div>
-            </label>
-            <label id="Slide5" for="Slide5" class="Slide">
-              <div class="content bg-con3 scrollbar-dynamic wrapper">
-                <h2>BaoNguyen Node Tool</h2>
-                <p>The Install & Update system for NodeJS projects</p>
-                <h4>SH/BAT tag</h4>
-                <pre class="prettyprint text-left lang-js scrollbar-dynamic wrapper">#!/bin/bash
-printf "\033[1;36m=====================================\033[0m\n"
-printf "\033[1;36mWelcome to the BN-App. This is the products of Asian Mobile Ventures\033[0m\n"
-printf "\033[1;36mCopyright 2016\033[0m\n"
-printf "\033[1;36mBuild by BN Team\033[0m\n"
-printf "\033[1;36m=====================================\033[0m\n"
-printf "\033[0;33mAre You ready to install?!?\033[0m\n"
-read -p "Press enter to continue..." nothing
-file="install.lock"
-if [ -f "$file" ]
-then
-	printf "\033[1;31mApp is ready in your system. To Re-Install, please remove the 'install.lock' file and run again! Thanks.\033[0m\n"
-else
-	printf "\033[0;33mInstall Global Modules...\033[0m\n"
-	npm i pug-cli express gulp gulp-cli bower -g
-	printf "\033[0;33mUpdate Bower Components...\033[0m\n"
-	bower update
-	printf "\033[0;33mInstall Node Modules...\033[0m\n"
-	npm install --only=dev
-	npm install
-	printf "\033[0;33mInstall Composer Modules...\033[0m\n"
-	composer update
-	(
-	printf 'v0.0.1\n'
-	) > install.lock
-	printf "\033[1;32m-----------------------------\033[0m\n"
-	printf "\033[1;32mCongrats! Install Finished.\033[0m\n"
-fi
-choice=""
-while [ "$choice" != "q" ]
-do
-	echo
-	echo "Please choice a selection!"
-	echo "1) Run App"
-	echo "2) Exit Install"
-	echo "q) Quit"
-	echo
-
-	read choice
-
-	case $choice in
-		'1') gulp;;
-		'2') exit 0;;
-		'q') ;;
-		*)   printf "\033[0;33mMenu item is not available, try again!\033[0m\n";;
-	esac
-done
-exit 0</pre>
-                <p> <a href="https://github.com/baonguyenyam/k-click-node">https://github.com/baonguyenyam/k-click-node</a></p>
+                <p> <a href="/docs/k-gulp-task" class="btn btn-secondary">View Documents</a></p>
               </div>
             </label>
           </div>
@@ -270,7 +217,7 @@ exit 0</pre>
       <div class="closeloading">Close</div>
     </div><!-- inject:js -->
     <script src="/js/addons.min-c9c6cfff.js"></script>
-    <script src="/js/app.min-9a8dfec3.js"></script>
+    <script src="/js/app.min-a014fb3e.js"></script>
     <!-- endinject -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
