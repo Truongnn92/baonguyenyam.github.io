@@ -91,7 +91,7 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
     <link rel="alternate" hreflang="x-default" href="//baonguyenyam.github.io/">
     <link rel="alternate" hreflang="vi-VN" href="//baonguyenyam.github.io/"><!-- inject:css -->
     <link rel="stylesheet" href="/css/addons.min-ec55655d.css">
-    <link rel="stylesheet" href="/css/main.min-fa654959.css">
+    <link rel="stylesheet" href="/css/main.min-766a2268.css">
     <!-- endinject -->
   </head>
   <body class="tools-page">
@@ -102,6 +102,7 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
           <input id="Slide2" type="radio" name="slider" titulo="k-Flex Lib">
           <input id="Slide3" type="radio" name="slider" titulo="k-Maps SEO">
           <input id="Slide4" type="radio" name="slider" titulo="k-Gulp Task">
+          <input id="Slide5" type="radio" name="slider" titulo="k-Animation">
           <div class="labels">
             <label id="Slide1" for="Slide1" class="Slide">
               <div class="content bg-main scrollbar-dynamic wrapper">
@@ -187,6 +188,45 @@ left: 0;</pre>
                 <p> <a href="/docs/k-gulp-task" class="btn btn-secondary">View Documents</a></p>
               </div>
             </label>
+            <label id="Slide5" for="Slide5" class="Slide">
+              <div class="content bg-con3 scrollbar-dynamic wrapper">
+                <h2>BaoNguyen k-Animation</h2>
+                <p>The Animation for projects</p>
+                <h4>Code</h4>
+                <pre class="prettyprint text-left lang-js scrollbar-dynamic wrapper">$(document).ready(function() {
+  $('.events').kAnimation({
+    ClassName: 'animated fadeInUp',
+    Animation: [
+      'fadeIn',
+      'fadeOutUp',
+    ],
+    Delay: 1000,
+    Forever: true,
+    DelayForever: 3000,
+    onComplete: function(){
+      $(this).html('Text changed');
+    },
+    onClick: function(){
+      alert('Clicked');
+    },
+    onChange: function(){
+      console.log('onChange');
+    },
+    onBegin: function(){
+      console.log('onBegin');
+    },
+    onHover: function(){
+      alert('onHover');
+    },
+    unHover: function(){
+      alert('unHover');
+    }
+  });
+});</pre>
+                <p> <a href="https://github.com/baonguyenyam/k-animation">https://github.com/baonguyenyam/k-animation</a></p>
+                <p> <a href="/docs/k-animation" class="btn btn-secondary">View Documents</a></p>
+              </div>
+            </label>
           </div>
         </form>
       </div>
@@ -217,7 +257,7 @@ left: 0;</pre>
       <div class="closeloading">Close</div>
     </div><!-- inject:js -->
     <script src="/js/addons.min-c9c6cfff.js"></script>
-    <script src="/js/app.min-a014fb3e.js"></script>
+    <script src="/js/app.min-a5980b3f.js"></script>
     <!-- endinject -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
