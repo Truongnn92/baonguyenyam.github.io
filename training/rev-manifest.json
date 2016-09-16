@@ -1,0 +1,14 @@
+{
+  "css\\app.addons.css": "css\\app.addons-7e9d9c22.css",
+  "css\\app.addons.min.css": "css\\app.addons.min-846959a0.css",
+  "css\\app.polyfills.css": "css\\app.polyfills-ad47fc90.css",
+  "css\\app.polyfills.min.css": "css\\app.polyfills.min-e9236622.css",
+  "css\\nguyen.bundler.css": "css\\nguyen.bundler-9e96eca4.css",
+  "css\\nguyen.bundler.min.css": "css\\nguyen.bundler.min-895e750d.css",
+  "js\\app.addons.js": "js\\app.addons-893eca05.js",
+  "js\\app.addons.min.js": "js\\app.addons.min-7ea68c85.js",
+  "js\\app.polyfills.js": "js\\app.polyfills-1a559c3b.js",
+  "js\\app.polyfills.min.js": "js\\app.polyfills.min-9450b1ed.js",
+  "js\\nguyen.bundler.js": "js\\nguyen.bundler-3316944d.js",
+  "js\\nguyen.bundler.min.js": "js\\nguyen.bundler.min-a9e719e3.js"
+}
