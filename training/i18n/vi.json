@@ -17,12 +17,12 @@
         "Knowledge": "Kiến thức",
         "Terms": "Chính sách",
         "Features": {
-            "Main": "Tính năng",
-            "Rates": "Live FX Rates",
-            "Management": "Risk Management",
-            "Booking": "Customer Booking"
+            "Main": "Khóa học",
+            "Rates": "Front-End",
+            "Management": "Design",
+            "Booking": "PHP/.Net"
         },
-        "Pricing": "Bảng giá",
+        "Pricing": "Học phí",
         "Login": "Đăng nhập",
         "Try": "Dùng thử",
         "News": "Tin tức",
