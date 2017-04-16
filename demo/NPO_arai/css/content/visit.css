@@ -1,0 +1,188 @@
+/*
+ ////////////////////////////////////////////////////////
+ // Bao Nguyen Apps
+ // @version v1.0
+ // @link https://baonguyenyam.github.io
+ // @license MIT
+ // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
+ ////////////////////////////////////////////////////////
+*/.bn-visit .imagehome {
+  min-height: 130px;
+  background-image: url("../../images/visit/img_01-xs.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+  .bn-visit .imagehome {
+    background-image: url("../../images/visit/img_01-sm.jpg");
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bn-visit .imagehome {
+    background-image: url("../../images/visit/img_01.jpg");
+    min-height: 245px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bn-visit .imagehome {
+    min-height: 290px;
+    margin-top: -0.5rem;
+  }
+}
+
+.bn-visit .tabs .nav {
+  border-bottom: 2px solid #c2c2c2;
+}
+
+.bn-visit .tabs .nav li {
+  margin-top: 0;
+  margin-right: 2px;
+  margin-bottom: 0;
+  margin-left: 2px;
+}
+
+.bn-visit .tabs .nav li a {
+  padding-top: 1rem;
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  display: inline-block;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px #c2c2c2;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 260px;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.bn-visit .tabs .nav li a:hover, .bn-visit .tabs .nav li a:active {
+  filter: alpha(opacity=80);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  -webkit-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  -ms-opacity: 0.8;
+  -o-opacity: 0.8;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+@media (max-width: 575px) {
+  .bn-visit .tabs .nav {
+    border-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .bn-visit .tabs .nav li:first-child {
+    margin-bottom: 1rem;
+  }
+  .bn-visit .tabs .nav li a {
+    border-radius: 5px;
+    width: initial;
+    display: block;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+  }
+}
+
+.bn-visit .details .details-list .details-item h3 {
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.bn-visit .details .details-list .details-item .desc {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.bn-visit .details .details-list .details-item .desc img {
+  margin: 1rem 0;
+}
+
+.bn-visit .details .details-list .details-item .desc figcaption {
+  display: none;
+}
+
+.bn-visit .details .details-list .details-item h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+}
+
+.bn-visit .details .details-list .details-item h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+}
+
+.bn-visit .details .details-list .details-item h5 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.bn-visit .details .details-list .details-item .fa {
+  color: #84B528;
+}
+
+.bn-visit .details .details-list .details-item .btnclick {
+  background: white;
+  padding-top: 1rem;
+  padding-right: 1.2rem;
+  padding-bottom: 1rem;
+  padding-left: 1.2rem;
+  border: 2px solid #c2c2c2;
+  border-radius: 3rem;
+  line-height: 1.5rem;
+  text-decoration: none !important;
+  color: #757575;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.bn-visit .details .details-list .details-item .btnclick:hover {
+  background: #84B528;
+  color: #fff;
+  border: 2px solid white;
+}
+
+.bn-visit .details .details-list .details-item .btnclick:hover .fa {
+  color: #fff;
+}
+
+.bn-visit .details .details-list .details-item .table thead tr {
+  background: #eec8cd;
+}
+
+.bn-visit .details .details-list .details-item .table tbody tr {
+  background: white;
+}

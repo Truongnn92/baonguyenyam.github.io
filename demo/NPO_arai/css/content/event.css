@@ -1,0 +1,111 @@
+/*
+ ////////////////////////////////////////////////////////
+ // Bao Nguyen Apps
+ // @version v1.0
+ // @link https://baonguyenyam.github.io
+ // @license MIT
+ // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
+ ////////////////////////////////////////////////////////
+*/.bn-event .imagehome {
+  min-height: 130px;
+  background-image: url("../../images/event/img_01-xs.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+  .bn-event .imagehome {
+    background-image: url("../../images/event/img_01-sm.jpg");
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bn-event .imagehome {
+    background-image: url("../../images/event/img_01.jpg");
+    min-height: 245px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bn-event .imagehome {
+    min-height: 290px;
+    margin-top: -0.5rem;
+  }
+}
+
+.bn-event .list .event-list .event-item .bg-event {
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.bn-event .list .event-list .event-item .desc {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.bn-event .list .event-list .event-item .desc figcaption {
+  visibility: hidden;
+}
+
+.bn-event .list .nav .nav-item.home {
+  background: url("../../images/event/img_menu.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.bn-event .list .nav .nav-item.home img {
+  visibility: hidden;
+  max-height: 3rem;
+}
+
+.bn-event .list .nav .nav-item.home h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.bn-event .list .nav .nav-item .nav-link {
+  color: #000000;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .bn-event .list .nav .nav-item .nav-link {
+    padding-top: 0.25rem;
+    padding-right: 1rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    text-align: left;
+  }
+}
+
+.bn-event .list .nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+}

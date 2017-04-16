@@ -1,0 +1,120 @@
+/*
+ ////////////////////////////////////////////////////////
+ // Bao Nguyen Apps
+ // @version v1.0
+ // @link https://baonguyenyam.github.io
+ // @license MIT
+ // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
+ ////////////////////////////////////////////////////////
+*/.bn-commute .imagehome {
+  min-height: 130px;
+  background-image: url("../../images/commute/img_01-xs.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+  .bn-commute .imagehome {
+    background-image: url("../../images/commute/img_01-sm.jpg");
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bn-commute .imagehome {
+    background-image: url("../../images/commute/img_01.jpg");
+    min-height: 245px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bn-commute .imagehome {
+    min-height: 290px;
+    margin-top: -0.5rem;
+  }
+}
+
+.bn-commute .list .commute-list .commute-item .bg-commute {
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.bn-commute .list .commute-list .commute-item .desc figcaption {
+  visibility: hidden;
+}
+
+.bn-commute .list .tel {
+  font-family: CenturyGothic;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 31px;
+  height: 31px;
+}
+
+.bn-commute .list h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+}
+
+.bn-commute .list h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+}
+
+.bn-commute .list h5 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.bn-commute .list .desc {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.bn-commute .list .desc img {
+  margin: 1rem 0;
+}
+
+.bn-commute .list .desc figcaption {
+  display: none;
+}
+
+.bn-commute .list .bozcolor {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.bn-commute .list .bozcolor:before {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #e5d950), color-stop(100%, #ec202e));
+  background: -webkit-linear-gradient(270deg, #e5d950 0%, #ec202e 100%);
+  background: -webkit-linear-gradient(top, #e5d950 0%, #ec202e 100%);
+  background: linear-gradient(180deg, #e5d950 0%, #ec202e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5d950', endColorstr='#ec202e', GradientType=0 );
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

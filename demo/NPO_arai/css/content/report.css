@@ -1,0 +1,52 @@
+/*
+ ////////////////////////////////////////////////////////
+ // Bao Nguyen Apps
+ // @version v1.0
+ // @link https://baonguyenyam.github.io
+ // @license MIT
+ // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
+ ////////////////////////////////////////////////////////
+*/.bn-report .imagehome {
+  min-height: 130px;
+  background-image: url("../../images/report/img_01-xs.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+  .bn-report .imagehome {
+    background-image: url("../../images/report/img_01-sm.jpg");
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bn-report .imagehome {
+    background-image: url("../../images/report/img_01.jpg");
+    min-height: 245px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bn-report .imagehome {
+    min-height: 290px;
+    margin-top: -0.5rem;
+  }
+}
+
+.bn-report .list h3 {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.bn-report .list .list-group .list-group-item {
+  border-radius: 0;
+  background: none;
+  border-left: 0;
+  border-right: 0;
+}
