@@ -5,14 +5,17 @@
 <!--[if gte IE 9]><!-->
 <html class="no-js" lang="ja">
 <!--<![endif]-->
-<html dir="ltr" lang="ja" itemscope="" itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#" class="no-js">
+<html dir="ltr" lang="ja" itemscope itemtype="http://schema.org/WebSite" prefix="og: http://ogp.me/ns#" class="no-js">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
     <!-- ////////////// Mobile title color ////////////// -->
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
     <title>お問い合わせ - NPO法人アライ</title>
     <link rel="canonical" href="//demo-site.com/contact">
@@ -23,10 +26,10 @@
     <link rel="dns-prefetch" href="http://maps.googleapis.com/">
     <!-- SEO MAP-->
     <meta name="DC.title" content="お問い合わせ">
-    <meta name="geo.region" content="JP">
-    <meta name="geo.placename" content="NPO法人アライ">
-    <meta name="geo.position" content="36.204824;138.252924">
-    <meta name="ICBM" content="36.204824,138.252924">
+    <meta name="geo.placename" content="5-7 Takasu, Fujieda-shi, Shizuoka-ken 426-0046, Japan">
+    <meta name="geo.position" content="34.8404530;138.2615810">
+    <meta name="geo.region" content="JP-Shizuoka-ken">
+    <meta name="ICBM" content="34.8404530,138.2615810">
     <!-- SEO-->
     <meta name="author" content="NPO法人アライ">
     <!-- Social: Twitter-->
@@ -38,6 +41,7 @@
     <!-- Social: Facebook / Open Graph-->
     <meta property="og:url" content="//demo-site.com/contact">
     <meta property="og:title" content="お問い合わせ - NPO法人アライ">
+    <meta property="og:image" content="//demo-site.com/images/logo.png">
     <meta property="og:description" content="Description for お問い合わせ">
     <meta property="og:site_name" content="NPO法人アライ">
     <!-- Social: Google / Schema.org-->
@@ -53,15 +57,11 @@
     script(src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
     script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
     -->
+    <meta property="og:image" content="//demo-site.com/images/contact/img_01.jpg">
     <!-- ////////////// CSS Include ////////////// -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- ////////////// FAVICON ////////////// -->
-    <link href="../css/global/bootstrap.css" rel="stylesheet">
-    <link href="../css/global/font-awesome.css" rel="stylesheet">
-    <link href="../css/global/core.css" rel="stylesheet">
-    <link href="../css/global/styles.css" rel="stylesheet">
-    <link href="../css/content/contact.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="../favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../favicon/favicon-16x16.png" sizes="16x16">
@@ -72,6 +72,11 @@
     <meta name="msapplication-TileImage" content="../favicon/mstile-144x144.png">
     <meta name="msapplication-config" content="../favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link href="../css/global/bootstrap.css" rel="stylesheet">
+    <link href="../css/global/font-awesome.css" rel="stylesheet">
+    <link href="../css/global/core.css" rel="stylesheet">
+    <link href="../css/global/styles.css" rel="stylesheet">
+    <link href="../css/content/contact.css" rel="stylesheet">
 </head>
 
 <body id="vsbody" class="bn-contact"><a href="#vsbody" id="back-to-top" title="Back to top"><span>TOP</span><i class="fa fa-angle-up"></i></a>
@@ -196,16 +201,16 @@
                         <p class="text-xs-center">メールでのお問い合わせをご希望の方は下記のフォームに必要事項（※）をご入力の上、送信お願い致します。後日必ずご返答させて頂きます。</p>
                         <form id="contactForm" action="/sendmail/index.php" method="POST" enctype="multipart/form-data" class="mrt-xs-2r">
                             <div class="form-group row"><label for="name" class="col-3 col-form-label"><span class="text-danger">＊</span>お名前</label>
-                                <div class="col-9"><input id="name" name="name" require="" class="form-control"></div>
+                                <div class="col-9"><input id="name" name="name" require class="form-control"></div>
                             </div>
                             <div class="form-group row"><label for="kana" class="col-3 col-form-label">郵便番号</label>
                                 <div class="col-9"><input id="kana" name="kana" class="form-control"></div>
                             </div>
                             <div class="form-group row"><label for="zip1" class="col-3 col-form-label"><span class="text-danger">＊</span>ご住所</label>
-                                <div class="col-9"><input id="zip1" name="zip1" require="" class="form-control"></div>
+                                <div class="col-9"><input id="zip1" name="zip1" require class="form-control"></div>
                             </div>
                             <div class="form-group row"><label for="tel" class="col-3 col-form-label"><span class="text-danger">＊</span>電話番号</label>
-                                <div class="col-9"><input id="tel" name="tel" require="" class="form-control"></div>
+                                <div class="col-9"><input id="tel" name="tel" require class="form-control"></div>
                             </div>
                             <div class="form-group row"><label for="mail" class="col-3 col-form-label">メールアドレス</label>
                                 <div class="col-9"><input id="mail" name="mail" class="form-control"></div>

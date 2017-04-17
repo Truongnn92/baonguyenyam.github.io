@@ -1,12 +1,4 @@
-/*
- ////////////////////////////////////////////////////////
- // Bao Nguyen Apps
- // @version v1.0
- // @link https://baonguyenyam.github.io
- // @license MIT
- // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
- ////////////////////////////////////////////////////////
-*/'use strict';
+'use strict';
 
 if ($('#back-to-top').length) {
     var scrollTrigger = 100,
@@ -14,8 +6,10 @@ if ($('#back-to-top').length) {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > scrollTrigger) {
             $('#back-to-top').addClass('show');
+            $('header').addClass('active');
         } else {
             $('#back-to-top').removeClass('show');
+            $('header').removeClass('active');
         }
     };
     backToTop();

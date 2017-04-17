@@ -1,12 +1,4 @@
-/*
- ////////////////////////////////////////////////////////
- // Bao Nguyen Apps
- // @version v1.0
- // @link https://baonguyenyam.github.io
- // @license MIT
- // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
- ////////////////////////////////////////////////////////
-*/
+
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.')
 }

@@ -1,12 +1,4 @@
-/*
- ////////////////////////////////////////////////////////
- // Bao Nguyen Apps
- // @version v1.0
- // @link https://baonguyenyam.github.io
- // @license MIT
- // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
- ////////////////////////////////////////////////////////
-*/( function( global, factory ) {
+( function( global, factory ) {
 
 	"use strict";
 

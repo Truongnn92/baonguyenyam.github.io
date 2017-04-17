@@ -1,12 +1,4 @@
-/*
- ////////////////////////////////////////////////////////
- // Bao Nguyen Apps
- // @version v1.0
- // @link https://baonguyenyam.github.io
- // @license MIT
- // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
- ////////////////////////////////////////////////////////
-*/.bn-index .imagehome {
+.bn-index .imagehome {
   min-height: 135px;
   background-image: url("../../images/home/home_ads-xs.jpg");
   background-position: center center;

@@ -1,12 +1,4 @@
-/*
- ////////////////////////////////////////////////////////
- // Bao Nguyen Apps
- // @version v1.0
- // @link https://baonguyenyam.github.io
- // @license MIT
- // @Coding by Bao Nguyen - 0969689893 - baonguyenyam@gmail.com
- ////////////////////////////////////////////////////////
-*/.mrt-xs-0r {
+.mrt-xs-0r {
   margin-top: 0rem;
 }
 
@@ -787,6 +779,454 @@
 @media (min-width: 1200px) {
   .pdr-xl-6r {
     padding-right: 6rem;
+  }
+}
+
+.mrt-xs-7r {
+  margin-top: 7rem;
+}
+
+@media (min-width: 576px) {
+  .mrt-sm-7r {
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrt-md-7r {
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrt-lg-7r {
+    margin-top: 7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrt-xl-7r {
+    margin-top: 7rem;
+  }
+}
+
+.mrb-xs-7r {
+  margin-bottom: 7rem;
+}
+
+@media (min-width: 576px) {
+  .mrb-sm-7r {
+    margin-bottom: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrb-md-7r {
+    margin-bottom: 7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrb-lg-7r {
+    margin-bottom: 7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrb-xl-7r {
+    margin-bottom: 7rem;
+  }
+}
+
+.pdl-xs-7r {
+  padding-left: 7rem;
+}
+
+@media (min-width: 576px) {
+  .pdl-sm-7r {
+    padding-left: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdl-md-7r {
+    padding-left: 7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdl-lg-7r {
+    padding-left: 7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdl-xl-7r {
+    padding-left: 7rem;
+  }
+}
+
+.pdr-xs-7r {
+  padding-right: 7rem;
+}
+
+@media (min-width: 576px) {
+  .pdr-sm-7r {
+    padding-right: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdr-md-7r {
+    padding-right: 7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdr-lg-7r {
+    padding-right: 7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdr-xl-7r {
+    padding-right: 7rem;
+  }
+}
+
+.mrt-xs-8r {
+  margin-top: 8rem;
+}
+
+@media (min-width: 576px) {
+  .mrt-sm-8r {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrt-md-8r {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrt-lg-8r {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrt-xl-8r {
+    margin-top: 8rem;
+  }
+}
+
+.mrb-xs-8r {
+  margin-bottom: 8rem;
+}
+
+@media (min-width: 576px) {
+  .mrb-sm-8r {
+    margin-bottom: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrb-md-8r {
+    margin-bottom: 8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrb-lg-8r {
+    margin-bottom: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrb-xl-8r {
+    margin-bottom: 8rem;
+  }
+}
+
+.pdl-xs-8r {
+  padding-left: 8rem;
+}
+
+@media (min-width: 576px) {
+  .pdl-sm-8r {
+    padding-left: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdl-md-8r {
+    padding-left: 8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdl-lg-8r {
+    padding-left: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdl-xl-8r {
+    padding-left: 8rem;
+  }
+}
+
+.pdr-xs-8r {
+  padding-right: 8rem;
+}
+
+@media (min-width: 576px) {
+  .pdr-sm-8r {
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdr-md-8r {
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdr-lg-8r {
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdr-xl-8r {
+    padding-right: 8rem;
+  }
+}
+
+.mrt-xs-9r {
+  margin-top: 9rem;
+}
+
+@media (min-width: 576px) {
+  .mrt-sm-9r {
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrt-md-9r {
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrt-lg-9r {
+    margin-top: 9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrt-xl-9r {
+    margin-top: 9rem;
+  }
+}
+
+.mrb-xs-9r {
+  margin-bottom: 9rem;
+}
+
+@media (min-width: 576px) {
+  .mrb-sm-9r {
+    margin-bottom: 9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrb-md-9r {
+    margin-bottom: 9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrb-lg-9r {
+    margin-bottom: 9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrb-xl-9r {
+    margin-bottom: 9rem;
+  }
+}
+
+.pdl-xs-9r {
+  padding-left: 9rem;
+}
+
+@media (min-width: 576px) {
+  .pdl-sm-9r {
+    padding-left: 9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdl-md-9r {
+    padding-left: 9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdl-lg-9r {
+    padding-left: 9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdl-xl-9r {
+    padding-left: 9rem;
+  }
+}
+
+.pdr-xs-9r {
+  padding-right: 9rem;
+}
+
+@media (min-width: 576px) {
+  .pdr-sm-9r {
+    padding-right: 9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdr-md-9r {
+    padding-right: 9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdr-lg-9r {
+    padding-right: 9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdr-xl-9r {
+    padding-right: 9rem;
+  }
+}
+
+.mrt-xs-10r {
+  margin-top: 10rem;
+}
+
+@media (min-width: 576px) {
+  .mrt-sm-10r {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrt-md-10r {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrt-lg-10r {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrt-xl-10r {
+    margin-top: 10rem;
+  }
+}
+
+.mrb-xs-10r {
+  margin-bottom: 10rem;
+}
+
+@media (min-width: 576px) {
+  .mrb-sm-10r {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mrb-md-10r {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mrb-lg-10r {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mrb-xl-10r {
+    margin-bottom: 10rem;
+  }
+}
+
+.pdl-xs-10r {
+  padding-left: 10rem;
+}
+
+@media (min-width: 576px) {
+  .pdl-sm-10r {
+    padding-left: 10rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdl-md-10r {
+    padding-left: 10rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdl-lg-10r {
+    padding-left: 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdl-xl-10r {
+    padding-left: 10rem;
+  }
+}
+
+.pdr-xs-10r {
+  padding-right: 10rem;
+}
+
+@media (min-width: 576px) {
+  .pdr-sm-10r {
+    padding-right: 10rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pdr-md-10r {
+    padding-right: 10rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .pdr-lg-10r {
+    padding-right: 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pdr-xl-10r {
+    padding-right: 10rem;
   }
 }
 
