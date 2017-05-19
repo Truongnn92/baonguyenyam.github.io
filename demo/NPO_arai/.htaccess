@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule (.*) http://www.npo-a-nakama.jp/$1 [L,R=301]
