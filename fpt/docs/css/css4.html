@@ -59,12 +59,51 @@ a:visited {
 
 <script type="text/javascript">
 *document.getElementById("test").indeterminate = true;
-</script></pre></div></div></div></div><hr><div class="row"><div class="col-md-5 mb-3"><h5>Thêm bộ chọn về các phần tử theo cấu trúc cây</h5><p>Chúng ta đã quen với pseudo-class :nth-child giúp chúng ta chọn phần tử theo thứ tự hay một quy tắc nào đó. Ví dụ nếu muốn chọn các phần tử có thứ tự là chắn chúng ta có nth-child(even) nếu bây giờ chúng ta muốn chọn các phần tử là chẵn nhưng có tên class là .active thì sao. Để tăng khả năng chọn phần tử ở phiên bản tiếp theo của CSS chúng ta sẽ có pseudo-class :nth-math và nth-last-math. ví dụ:</p><p>:nth-last-math cũng tương tự như :nth-math nhưng nó sẽ bắt đầu theo thứ tự từ dưới lên. Hiện tại chưa có trình duyệt nào hỗ trợ những pseudo-class này.</p></div><div class="col-md-7"><div class="row"><div class="col-md-6"><h6 class="text-primary">CSS3</h6><pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre></div><div class="col-md-6"><h6 class="text-primary">CSS4</h6><pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">li:nth-match(even of .active) {
+</script></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <h5>Thêm bộ chọn về các phần tử theo cấu trúc cây</h5>
+                  <p>Chúng ta đã quen với pseudo-class :nth-child giúp chúng ta chọn phần tử theo thứ tự hay một quy tắc nào đó. Ví dụ nếu muốn chọn các phần tử có thứ tự là chắn chúng ta có nth-child(even) nếu bây giờ chúng ta muốn chọn các phần tử là chẵn nhưng có tên class là .active thì sao. Để tăng khả năng chọn phần tử ở phiên bản tiếp theo của CSS chúng ta sẽ có pseudo-class :nth-math và nth-last-math. ví dụ:</p>
+                  <p>:nth-last-math cũng tương tự như :nth-math nhưng nó sẽ bắt đầu theo thứ tự từ dưới lên. Hiện tại chưa có trình duyệt nào hỗ trợ những pseudo-class này.</p>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS3</h6>
+                      <pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS4</h6>
+                      <pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">li:nth-match(even of .active) {
 	*color: red;
 }
 p:nth-match(2n+1 of .active, .visible, .current) {
 	*color: red;
-}</pre></div></div></div></div><hr><div class="row"><div class="col-md-5 mb-3"><h5>Thêm bộ chọn với cấu trúc dạng table</h5><p>Mặc dù vẫn có các cách chọn các cột trong table với các selector theo cấu trúc cây DOM nhưng để thêm trực quan và ngắn gọn đồng thời nâng cao tính hữu dụng của table thì css4 sẽ có thêm một số pseudo-class mới, ví dụ:</p></div><div class="col-md-7"><div class="row"><div class="col-md-6"><h6 class="text-primary">CSS3</h6><pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre></div><div class="col-md-6"><h6 class="text-primary">CSS4</h6><pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">:column(.highlight) {
+}</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <h5>Thêm bộ chọn với cấu trúc dạng table</h5>
+                  <p>Mặc dù vẫn có các cách chọn các cột trong table với các selector theo cấu trúc cây DOM nhưng để thêm trực quan và ngắn gọn đồng thời nâng cao tính hữu dụng của table thì css4 sẽ có thêm một số pseudo-class mới, ví dụ:</p>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS3</h6>
+                      <pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS4</h6>
+                      <pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">:column(.highlight) {
 	*background-color: yellow;
 }
 :nth-column(2n+1) {
@@ -72,9 +111,49 @@ p:nth-match(2n+1 of .active, .visible, .current) {
 }
 :nth-last-column(3n+1) {
 	*background-color: green;
-}</pre></div></div></div></div><hr><div class="row"><div class="col-md-5 mb-3"><h5>Chọn phần tử cha</h5><p>Chúng ta vẫn đang thắc mắc làm sao để chọn phần tử tổ tiên của một phần tử với CSS, chúng ta không muốn thực hiện điều này bằng javaScript và một trong những điều mong đợi nhất này trong phiên bản tiếp theo của CSS sẽ có. Ví dụ:</p><p>Ví dụ bên phần từ được định kiểu với CSS là body bởi dấu "!". Thật quá hữu dụng với cách chọn này. Hiện tại chưa có trình duyệt nào hỗ trợ cách chọn này nhưng chúng ta tin rằng các trình duyệt sẽ mau chóng được cập nhật khi CSS4 được chính thức công bố.</p></div><div class="col-md-7"><div class="row"><div class="col-md-6"><h6 class="text-primary">CSS3</h6><pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre></div><div class="col-md-6"><h6 class="text-primary">CSS4</h6><pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">body! header a.styleSwitcher:hover {
+}</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <h5>Chọn phần tử cha</h5>
+                  <p>Chúng ta vẫn đang thắc mắc làm sao để chọn phần tử tổ tiên của một phần tử với CSS, chúng ta không muốn thực hiện điều này bằng javaScript và một trong những điều mong đợi nhất này trong phiên bản tiếp theo của CSS sẽ có. Ví dụ:</p>
+                  <p>Ví dụ bên phần từ được định kiểu với CSS là body bởi dấu "!". Thật quá hữu dụng với cách chọn này. Hiện tại chưa có trình duyệt nào hỗ trợ cách chọn này nhưng chúng ta tin rằng các trình duyệt sẽ mau chóng được cập nhật khi CSS4 được chính thức công bố.</p>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS3</h6>
+                      <pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS4</h6>
+                      <pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">body! header a.styleSwitcher:hover {
 	*background-color: green;
-}</pre></div></div></div></div><hr><div class="row"><div class="col-md-5 mb-3"><h5>Chọn phần tử trong form với trường yêu cầu bắt buộc và không bắt buộc</h5><p>Với form HTML5 chúng ta có thuộc tính required="required" để yêu cầu người dùng phải nhập những trường cần thiết và để định kiểu cho những trường yêu cầu bắt buộc hoặc không bắt buộc sẽ có 2 pseudo-class mới là :required và :optional. Ví dụ</p><p>Còn rất nhiều thứ nữa ở phiên bản css4 tiếp theo mọi thứ vẫn được tiến hành và đây mới chỉ là những bản thảo, chúng ta còn có các cải tiến css về text, về images, về background... chúng ta sẽ cùng chờ đợi. Có một điều chúng ta thấy rằng CSS ngày càng cải tiến thì nó càng có tác động mạnh mẽ đến giao diện người dùng trên web hơn, ngày càng ít phải dùng tới javaScript ở những chức năng đơn giản hơn, ngày càng ít phải sử dụng hình ảnh làm giao diện hơn và ngày càng ít phải dùng class name hơn kết hợp với những cải tiến ở ngôn ngữ đánh dấu HTML.</p></div><div class="col-md-7"><div class="row"><div class="col-md-6"><h6 class="text-primary">CSS3</h6><pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre></div><div class="col-md-6"><h6 class="text-primary">CSS4</h6><pre class="quine prettyprint text-left lang-html scrollbar-dynamic wrapper bg-white"><style>
+}</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <h5>Chọn phần tử trong form với trường yêu cầu bắt buộc và không bắt buộc</h5>
+                  <p>Với form HTML5 chúng ta có thuộc tính required="required" để yêu cầu người dùng phải nhập những trường cần thiết và để định kiểu cho những trường yêu cầu bắt buộc hoặc không bắt buộc sẽ có 2 pseudo-class mới là :required và :optional. Ví dụ</p>
+                  <p>Còn rất nhiều thứ nữa ở phiên bản css4 tiếp theo mọi thứ vẫn được tiến hành và đây mới chỉ là những bản thảo, chúng ta còn có các cải tiến css về text, về images, về background... chúng ta sẽ cùng chờ đợi. Có một điều chúng ta thấy rằng CSS ngày càng cải tiến thì nó càng có tác động mạnh mẽ đến giao diện người dùng trên web hơn, ngày càng ít phải dùng tới javaScript ở những chức năng đơn giản hơn, ngày càng ít phải sử dụng hình ảnh làm giao diện hơn và ngày càng ít phải dùng class name hơn kết hợp với những cải tiến ở ngôn ngữ đánh dấu HTML.</p>
+                </div>
+                <div class="col-md-7">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS3</h6>
+                      <pre class="quine prettyprint text-left lang-css scrollbar-dynamic wrapper bg-white">Không có</pre>
+                    </div>
+                    <div class="col-md-6">
+                      <h6 class="text-primary">CSS4</h6>
+                      <pre class="quine prettyprint text-left lang-html scrollbar-dynamic wrapper bg-white"><style>
 	*:required {
 		**border: 1px solid red;
 	*}
@@ -85,7 +164,41 @@ p:nth-match(2n+1 of .active, .visible, .current) {
 <form>
 	*<input required>
 	*<input>
-</form></pre></div></div></div></div></div></div></div></section></main><!-- ////////////// End Main ////////////// --><!-- ////////////// Footer ////////////// --><footer class="footer"><div class="container"></div></footer><div id="nguyenGames"><div id="nGames"></div><div id="nGameRestart"><button onclick="restartGame()">Chơi lại</button></div><div id="nGameCanvasContainer"></div><div id="nGameButton"><button class="up" ontouchstart="moveup()" onmousedown="moveup()" onmouseup="clearmove()">↑</button> <button class="le" ontouchstart="moveleft()" onmousedown="moveleft()" onmouseup="clearmove()">←</button> <button class="ri" ontouchstart="moveright()" onmousedown="moveright()" onmouseup="clearmove()">→</button> <button class="do" ontouchstart="movedown()" onmousedown="movedown()" onmouseup="clearmove()">↓</button></div></div><!-- ////////////// End Footer ////////////// --> <!-- ////////////// Back to Top ////////////// --><a href="#top-page" id="back-to-top" title="Back to top"><span>TOP</span><i class="fa fa-angle-up"></i></a><!-- ////////////// Javascript Include ////////////// --><!-- inject:js --><script src="https://baonguyenyam.github.io/fpt/js/core-ccf1a24492.min.js"></script><script src="https://baonguyenyam.github.io/fpt/js/plugins-0a12f3bd1f.min.js"></script><script src="https://baonguyenyam.github.io/fpt/js/app-98ff8891be.min.js"></script><!-- endinject --><!-- ////////////// Google Analytics ////////////// --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+</form></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main><!-- ////////////// End Main ////////////// -->
+<!-- ////////////// Footer ////////////// -->
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
+    <div id="nguyenGames">
+      <div id="nGames"></div>
+      <div id="nGameRestart">
+        <button onclick="restartGame()">Chơi lại</button>
+      </div>
+      <div id="nGameCanvasContainer"></div>
+      <div id="nGameButton">
+        <button class="up" ontouchstart="moveup()" onmousedown="moveup()" onmouseup="clearmove()">↑</button>
+        <button class="le" ontouchstart="moveleft()" onmousedown="moveleft()" onmouseup="clearmove()">←</button>
+        <button class="ri" ontouchstart="moveright()" onmousedown="moveright()" onmouseup="clearmove()">→</button>
+        <button class="do" ontouchstart="movedown()" onmousedown="movedown()" onmouseup="clearmove()">↓</button>
+      </div>
+    </div><!-- ////////////// End Footer ////////////// -->
+<!-- ////////////// Back to Top ////////////// --><a href="#top-page" id="back-to-top" title="Back to top"><span>TOP</span><i class="fa fa-angle-up"></i></a><!-- ////////////// Javascript Include ////////////// -->
+    <!-- inject:js -->
+    <script src="https://baonguyenyam.github.io/fpt/js/core-5dc3e68e1c.min.js"></script>
+    <script src="https://baonguyenyam.github.io/fpt/js/plugins-e37a42027b.min.js"></script>
+    <script src="https://baonguyenyam.github.io/fpt/js/app-ed5455ef9b.min.js"></script>
+    <!-- endinject --><!-- ////////////// Google Analytics ////////////// -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
