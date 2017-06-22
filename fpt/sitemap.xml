@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://baonguyenyam.github.io/fpt/</loc>
+<<<<<<< HEAD
         <lastmod>2017-06-22T22:50:36.346Z</lastmod>
     </url>
     <url>
@@ -127,5 +128,112 @@
     <url>
         <loc>https://baonguyenyam.github.io/fpt/docs/html-css/typography</loc>
         <lastmod>2017-06-22T22:50:36.548Z</lastmod>
+=======
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/design/ps/histogram.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/design/ps/</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/design/ps/layout.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/design/ps/settings.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/boxmodel/background.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/boxmodel/box.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/boxmodel/columns.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/boxmodel/</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/boxmodel/layout.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/css/colors.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/css/css4.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/css/</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/css/layout.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/css/mixin.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/css/style.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/code.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/form.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/layout.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/style.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/table.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/tag.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/html/use.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/position/</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/position/position.html</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://baonguyenyam.github.io/fpt/docs/html-css/typography/</loc>
+        <lastmod>2017-06-22T10:33:58.000Z</lastmod>
+>>>>>>> c0b3e20f7c977bba68176ebccef93126b38ab786
     </url>
 </urlset>
