@@ -41,7 +41,9 @@
     {
         "Name": "Photo",
         "URL": [
-            { "Name": "Comming soon...", "URL": "#", "Icon": "setup_icon.png" }
+            { "Name": "Lý thuyết màu", "URL": "/docs/photo/overview/ltm.html", "Icon": "setup_icon.png" }
+            // { "Name": "Typography", "URL": "/docs/photo/overview/typography.html", "Icon": "setup_icon.png" },
+            // { "Name": "Layout", "URL": "/docs/photo/overview/layout.html", "Icon": "setup_icon.png" }
         ],
         "Icon": "photo.png"
     },
