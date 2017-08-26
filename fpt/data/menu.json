@@ -46,8 +46,9 @@
         "Icon": "photo.png"
     },
     {
-        "Name": "NodeJS",
+        "Name": "Scripts",
         "URL": [
+            { "Name": "JavaScript", "URL": "/docs/node", "Icon": "setup_icon.png" },
             { "Name": "PUG/JADE", "URL": "/docs/node/pug.html", "Icon": "setup_icon.png" },
             { "Name": "SASS/LESS", "URL": "/docs/node/sass.html", "Icon": "setup_icon.png" },
             { "Name": "Gulp", "URL": "/docs/node/gulp.html", "Icon": "setup_icon.png" },
