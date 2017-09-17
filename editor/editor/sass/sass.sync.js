@@ -1,4 +1,13 @@
-/*! sass.js - v0.10.6 (f91eed9) - built 2017-07-28
+/*
+ ////////////////////////////////////////////////////////
+ // Bao Nguyen Apps
+ // @version v1.0
+ // @link https://baonguyenyam.github.io
+ // @license MIT
+ // @Coding by Bao Nguyen - 0969689893 - 0933112900
+ // @baonguyenyam@gmail.com
+ ////////////////////////////////////////////////////////
+*//*! sass.js - v0.10.6 (f91eed9) - built 2017-07-28
   providing libsass 3.4.5 (31573210)
   via emscripten 1.37.0 ()
  */
