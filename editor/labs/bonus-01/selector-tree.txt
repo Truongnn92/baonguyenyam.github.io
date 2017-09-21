@@ -14,6 +14,9 @@
 	  	body #hometown {
             background-color: blue;
         }
+        body > p {
+            color: white;
+        }
     </style>
 </head>
 
